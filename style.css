@@ -58,6 +58,7 @@ a.ulhyper
 	margin-right: auto;
 	text-align: justify;
 	padding-top: 10px;
+	font-size: calc(0,85em + 1vw);
 }
 .socials
 {
