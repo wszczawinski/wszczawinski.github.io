@@ -1,93 +1,21 @@
 body
 {
-	background-color: #303030;
-	color: #ffffff;
-	font-family: 'Lato', sans-serif;
-	font-size: 20px;
-	margin: 0 !important;
+	background-image: url("img/background.png");
+	/*This pattern is downloaded from www.subtlepatterns.com*/
+	margin: 0px !important;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
 }
-.wrapper
-{
-	width: 100%;
-	height: 100%;
-}
-.header
-{
-	width: 100%;
-	padding: 40px 0px;
 
-}
-a.socialhyper
-{
-	color: #ffffff;
-	text-decoration: none;
-	display: block;
-	width: 80px;
-	height: 40px;
-}
-a.ulhyper
-{
-	color: #ffffff;
-	text-decoration: none;
-	display: block;
-	height: 40px;
-}
-.logo
-{
-	width: 520px;
-	font-size: 48px;
-	/*border: 1px solid #ffffff;*/
-	margin-left: auto;
-	margin-right: auto;
-	font-family: 'Saira Stencil One', cursive;
-	text-align: center;
-}
 .nav
 {
 	width: 100%;
-	padding: 10px 0px;
-	background-color: #128870;
-	text-align: center;
-	border-top: 1px solid #ffffff;
-	border-bottom: 1px solid #ffffff;
-}
-.content
-{
-	width: 1000px;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: justify;
-	padding-top: 10px;
-}
-.socials
-{
-	width: 100%;
-	text-align: center;
-	background-color: #292929;
-
-}
-.socialdivs
-{
-	width: 240px;
-	margin-left: auto;
-	margin-right: auto;
-}
-.sociallink
-{
-	width: 80px;
-	height: 40px;
-	float: left;
-	padding-top: 10px;
-}
-.sociallink:hover
-{
-	background-color: #222222;
-}
-.footer
-{
-	text-align: center;
-	background-color: #222222;
-	padding: 20px;
+	height: 50px;
+	background-color: white;
+	font-family: 'Montserrat', sans-serif;
+	border-top: 1px solid lightgray;
+	border-bottom: 1px solid lightgray;
+	font-weight: 700;
 }
 .sticky
 {
@@ -97,68 +25,154 @@ a.ulhyper
 	top: 0;
 	z-index: 100;
 }
+.logo
+{
+	font-size: 16px;
+	padding-top: 16px;
+	padding-left: 20px;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	width: 300px;
+	float: left;
+	display: block;
+}
+.logo:hover
+{
 
-/* menu list edit*/
+}
+.menu
+{
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	float: right;
+	padding: 0;
+	margin: 0px;
+}
 ol
 {
-	padding: 0;
-	margin: 0;
 	list-style-type: none;
-	font-size: 18px;
-	height: 35px;
-	line-height: 200%;
-	display: inline-block;
+	padding: 0;
+	margin: 0px;
 }
 ol a
 {
-	color: #ffffff;
 	text-decoration: none;
-	display: block;
+	color: black;
 }
 ol > li
 {
-	float: left;
-	width: 150px;
-	height: 40px;
-	border-right: 1px dashed #ffffff;
-}
-ol > li:first-child
-{
-	border-left: 1px dashed #ffffff;
+	padding: 0 10px;
+	display: inline-block;
+	height: 34px;
+	padding-top: 16px;
 }
 ol > li:hover
 {
-	background-color: #017760;
+	color: #1e627a;
 }
-ol > li:hover > a
+
+.container
 {
-	color: #292929;
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
 }
-ol > li > ul
+
+.decrip
 {
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
-	height: 40px;
-	display: none;
+	padding: 20px 20px;	
+	text-align: center;
+	color: #696969;
 }
-/* drop down list */
-ol > li:hover > ul
+h1
 {
-	display: block;
+	font-size: 30px;
+	font-weight: 900;
+	margin-top: 0;
+	margin-bottom: 0;
 }
-ol > li > ul > li
+h2
 {
-	background-color: #239981;
-	position: relative;
-	z-index: 100;
-	border-top: 1px dashed #ffffff;
+	padding: 0 0;
+	font-size: 20px;
+	font-weight: 900;
+	color: #696969;
 }
-ol > li > ul > li:hover
+
+.pic
+{	
+	float: left;
+	text-align: right;
+	width: 470px;
+	padding: 0 20px 0 0;
+}
+.pic img
 {
-	background-color: #017760;
+	margin-top: 30px;
+	background-color: white;
+	border-radius: 20%;
+	border: 1px solid gray;
+  	padding: 5px;
 }
-ol > li > ul > li:hover > a
+.pic img:hover 
 {
-	color: #292929;
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
+
+.about
+{
+	float: left;
+	width: 350px;
+	margin-top: 40px;
+	text-align: justify;
+}
+.lorem
+{
+	margin-left: auto;
+	margin-right: auto;
+	width: 700px;
+}
+.footer
+{
+	width: 100%;
+	position: fixed;
+    bottom: 0;
+    height: 40px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #696969;
+}
+.copy
+{
+	float: left;
+	padding: 13px;
+}
+.socials
+{
+	float: right;
+}
+
+.sociallink
+{
+	float: right;
+	width: 50px;
+	font-size: 18px;
+	padding: 8px;
+}
+.sociallink a
+{
+	color: #696969;
+}
+
+a 
+{
+	text-decoration: none;
+	color: black;
+}
+a:hover
+{
+	color: #2f738a;
+}
+/*font-family: 'Open Sans', sans-serif;*/
