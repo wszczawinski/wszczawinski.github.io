@@ -17,6 +17,14 @@
 	<link rel="stylesheet" href="css/bootstrap.css" >
 
 	<link rel="stylesheet" type="text/css" href="style.css" />
+	
+    <style>
+    body
+    {
+        background-image: url("img/bg_about3.jpg") !important;
+        /*Photo by adrian on Unsplash*/
+    }
+    </style>
 
 	<!--http://fontello.com/-->
 	<link rel="stylesheet" type="text/css" href="fontello/css/fontello.css" />
@@ -46,16 +54,16 @@
 
 					<!--link to main page if there will be some more sepred pages with other content-->
 					<li class="nav-item">
-						<a class="nav-link  active " href="index.html"> start </a>
+						<a class="nav-link" href="index.html"> start </a>
 					</li>
 					<!--not active yet, will scroll down or link to sepret page, no decided yet-->
-					<li class="nav-item">
+					<li class="nav-item  active">
 						<a class="nav-link" href="about.html"> about </a>
 					</li>
 
 					<li class="nav-item dropdown">
 						<!--class=" nav-link  dropdown-toggle" to add arrow which shows that its a dropdown menu-->
-						<a class="nav-link" href="#" data-toggle="dropdown" role="button" aria-expanded="false" id="submenu1" aria-haspopup="true"> projects </a>
+						<a class="nav-link " href="#" data-toggle="dropdown" role="button" aria-expanded="false" id="submenu1" aria-haspopup="true"> projects </a>
 
 						<div class="dropdown-menu" aria-labelledby="submenu1">
 							<a class="dropdown-item" href="https://wszczawinski.github.io/hangmangame/" target="_blank">Hangman Game :)</a>
@@ -92,28 +100,27 @@
 		</nav>
 	</header>
 	
-	<section class="jumbotron jumbotron-fluid ">
-		<div class="container">
-			<h1 class="display-5">Hi, I'm Wojtek.</h1>
-			<p class="lead">Web Developer<br/>Mechatronics Engineer<br/>Open to New Opportunities</p>
-		</div>
-	</section>
+	<main class="container">
+        <section id="about" class="row justify-content-center align-items-center">
+            <div id="description" class="col-sm-6 order-1 order-sm-2 px-xs-5">
+                <h2> about </h2>
+				<p>My study background is mechatronics and mechanical engineering but IT was always my passion and recently I decided to redirect my career onto this path.<br />
+					In everything that surrounds me, I appreciate functionality that goes hand in hand with good design, so I try to keep this balance in the things I create.<br />
+					In addition, I like technological innovations, sports, books and quality coffee. ;)<br />
+                	Currently looking for a job in web development, but I'd consider offers in other IT brunches.</p> 
+            </div>
 
-        <!-- previous header, then jumbotron took its role, some content will be included in about section
-		<div class="container">
+            <div class="col-sm-6 order-2 order-sm-1">
+                <div class="row justify-content-center">
+                    <div class="col-8 col-sm-12 col-md-10 col-lg-8">
+                            <img src="img/avt.jpg" width="100%">
+                    </div>
+                </div>
+            </div>
+				
+        </section>
+    </main>
 
-			<a href="#" class="scrollup"></a>
-
-			<div class="pic"><img src="img/avt2.jpg" width="230" height="230"> </div>
-
-			<div class="about" >
-				<h2> about </h2>
-				I'm intrested in design and programming in general. Currently looking for a job in web development, but I'd consider offers in other IT brunches.</br>
-				My study background is mechatronics and mechanical engineering but IT was always my passion and recently I decided to redirect my career onto this path ;)
-			</div>
-
-		</div>
-		-->
 		<!-- Some Lorem Ipsum for testing purposes
 		<p>We have powerful friends. You're gonna regret this... I'm sure. Ugh! Ohhh, I can't bear to watch. Chewie? Chewie, is that you? Ah! Chew--Chewie! Wait. I can't see, pal. What's goin' on? Luke? Luke's crazy. He can't even take care of himself, much less rescue anybody. A...Jedi Knight? I--I'm out of it for a little while, everybody gets delusions of grandeur. I'm all right, pal. I'm all right. I must speak with Jabba. You will take me to Jabba now! You serve your master well. And you will be rewarded. At last! Master Luke's come to rescue me.</p>
 

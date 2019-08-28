@@ -121,3 +121,37 @@ nav
 {
 	color: lightgray;
 }
+#about
+    {
+	    margin-top: 10vw;
+    }
+img
+	{
+	 border-radius: 10%;
+	}
+@media (max-width: 575px) 
+{
+	#about
+    	{
+	    	margin-top: 55px;
+		}
+	#description
+		{
+			text-align: center !important;
+		}
+	#description p
+		{
+			padding: 10px;
+			font-size:  0.8rem !important;
+		}
+	
+}
+#description
+{
+	text-align: left;
+}
+#description p
+{
+	font-size:  0.9rem;
+	text-align: justify;
+}
