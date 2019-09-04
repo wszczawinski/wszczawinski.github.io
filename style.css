@@ -1,12 +1,9 @@
 body
 {
-	/*background: url(https://images.unsplash.com/photo-1543782248-03e2c5a93e18?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80);*/
 	background: url("img/bg_deer.jpg"); /*Photo by Asa Rodger on Unsplash*/
 	background-size: cover;
 	background-position:center;
 	background-repeat:no-repeat;
-	/* background-image: url("img/background.png");
-	This pattern is downloaded from www.subtlepatterns.com*/
 	font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
 }
@@ -22,46 +19,7 @@ nav
 {
 	padding-top: .25em;
 }
-@media screen and (max-width: 600px) 
-{
-	.display-5
-	{
-		font-size: 8vw !important;
-	}
-}
-.display-5
-{
-	font-size: 48px;
-}
-@media screen and (max-width: 600px) 
-{
-	.lead
-	{
-		font-size: 5vw !important;
-	}
-}
-.lead
-{
-	font-size: 30px;
-}
-#about
-{
-	font-family: 'Open Sans', sans-serif;
-	text-align: center;
-	padding-top: 5%;
-    padding-bottom: 35%;
-    text-shadow: 0px 1px 4px rgba(0,0,0,0.2),
-                 0px 1px 10px rgba(0,0,0,0.1),
-                 0px 1px 20px rgba(0,0,0,0.1);
-}
-@media screen and (max-width: 600px) 
-{
-	.jumbotron
-	{
-		padding-left: 0px !important;
-		margin-top: 50px !important;
-	}
-}
+/*--------Jumbotron properties-------*/
 .jumbotron
 {
 	background: none;
@@ -72,6 +30,103 @@ nav
                  0px 8px 20px rgba(0,0,0,0.1),
                  0px 18px 30px rgba(0,0,0,0.1);
 }
+.display-5
+{
+	font-size: 48px;
+}
+.lead
+{
+	font-size: 30px;
+}
+@media (max-width: 600px) 
+{
+	.jumbotron
+	{
+		padding-left: 0px;
+		margin-top: 50px;
+		text-shadow: none;
+	}
+	.display-5
+	{
+		font-size: 8vw !important;
+	}
+	.lead
+	{
+		font-size: 5vw;
+	}
+}
+
+/*--------cards in projects-------*/
+
+@media (min-width: 34em) {
+    .card-columns {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+}
+
+@media (min-width: 48em) {
+    .card-columns {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+    }
+}
+
+
+/*--------content properties-------*/
+#about
+{
+	text-align: center;
+	padding-top: 5%;
+    padding-bottom: 35%;
+    text-shadow: 0px 1px 4px rgba(0,0,0,0.2),
+                 0px 1px 10px rgba(0,0,0,0.1),
+                 0px 1px 20px rgba(0,0,0,0.1);
+	margin-top: 10vw;
+	padding-bottom: 0;
+}
+#about img
+{
+	border-radius: 10%;
+	border: 1px solid lightgray;
+	transition: all 0.6s;
+    -webkit-transition: all 0.6s;
+	-moz-transition: all 0.6s;
+	cursor: pointer;
+}
+#about img:hover
+{
+	transform: scale(0.99);
+}
+#description
+{
+	text-align: left;
+}
+#description p
+{
+	font-size:  0.9rem;
+	text-align: justify;
+}
+@media (max-width: 575px) 
+{
+	#about
+    	{
+	    	margin-top: 55px;
+		}
+	#description
+		{
+			text-align: center;
+		}
+	#description p
+		{
+			padding: 10px;
+			font-size:  0.8rem;
+		}
+}
+
+/*----------------footer properties------------------*/
 .footer
 {
 	width: 100%;
@@ -87,7 +142,6 @@ nav
 	float: left;
 	padding: 13px;
 }
-
 .socials
 {
 	float: right;
@@ -99,60 +153,22 @@ nav
 	font-size: 18px;
 	padding: 8px;
 }
-@media screen and (max-width: 350px) 
-{
-	.sociallink
-	{
-		font-size: 14px !important;
-		padding: 4px !important;
-		width: 30px !important;
-	}
-}
 .sociallink a
 {
 	color:seashell;
-}
-
-.sociallink a
-{
 	text-decoration: none;
 }
 .sociallink a:hover
 {
 	color: lightgray;
 }
-#about
-    {
-		margin-top: 10vw;
-		padding-bottom: 0;
-    }
-img
+
+@media (max-width: 350px) 
+{
+	.sociallink
 	{
-	 border-radius: 10%;
+		font-size: 14px;
+		padding: 4px;
+		width: 30px;
 	}
-@media (max-width: 575px) 
-{
-	#about
-    	{
-	    	margin-top: 55px;
-		}
-	#description
-		{
-			text-align: center !important;
-		}
-	#description p
-		{
-			padding: 10px;
-			font-size:  0.8rem !important;
-		}
-	
-}
-#description
-{
-	text-align: left;
-}
-#description p
-{
-	font-size:  0.9rem;
-	text-align: justify;
 }
