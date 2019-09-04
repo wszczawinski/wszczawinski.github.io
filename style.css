@@ -1,6 +1,7 @@
 body
 {
-	background: url("img/bg_deer.jpg"); /*Photo by Asa Rodger on Unsplash*/
+	background: url("img/bg_deer.jpg"); 
+	/*Photo by Asa Rodger on Unsplash*/
 	background-size: cover;
 	background-position:center;
 	background-repeat:no-repeat;
@@ -26,9 +27,9 @@ nav
 	margin-top: 60px;
     padding: 2rem 2rem;
 	font-weight: 700;
-	text-shadow: 0px 4px 4px rgba(0,0,0,0.4),
-                 0px 8px 20px rgba(0,0,0,0.1),
-                 0px 18px 30px rgba(0,0,0,0.1);
+	text-shadow: 0px 3px 2px rgba(0,0,0,0.2),
+                 0px 6px 4px rgba(0,0,0,0.1),
+                 0px 10px 6px rgba(0,0,0,0.1);
 }
 .display-5
 {
@@ -65,7 +66,6 @@ nav
         column-count: 2;
     }
 }
-
 @media (min-width: 48em) {
     .card-columns {
         -webkit-column-count: 3;
@@ -74,16 +74,15 @@ nav
     }
 }
 
-
 /*--------content properties-------*/
 #about
 {
 	text-align: center;
 	padding-top: 5%;
     padding-bottom: 35%;
-    text-shadow: 0px 1px 4px rgba(0,0,0,0.2),
-                 0px 1px 10px rgba(0,0,0,0.1),
-                 0px 1px 20px rgba(0,0,0,0.1);
+    text-shadow: 0px 2px 2px rgba(0,0,0,0.2),
+                 0px 1px 4px rgba(0,0,0,0.1),
+                 0px 1px 4px rgba(0,0,0,0.1);
 	margin-top: 10vw;
 	padding-bottom: 0;
 }
@@ -108,6 +107,8 @@ nav
 {
 	font-size:  0.9rem;
 	text-align: justify;
+	text-shadow: none;
+	font-weight: 500;
 }
 @media (max-width: 575px) 
 {
@@ -142,6 +143,10 @@ nav
 	float: left;
 	padding: 13px;
 }
+.copy:hover
+{
+	color: dimgray;
+}
 .socials
 {
 	float: right;
@@ -160,7 +165,7 @@ nav
 }
 .sociallink a:hover
 {
-	color: lightgray;
+	color: dimgray;
 }
 
 @media (max-width: 350px) 
