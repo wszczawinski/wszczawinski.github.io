@@ -31,6 +31,9 @@ nav
                  0px 6px 4px rgba(0,0,0,0.1),
                  0px 10px 6px rgba(0,0,0,0.1);
 }
+.projectJumbo{
+	text-shadow: none;
+}
 .display-5
 {
 	font-size: 48px;
@@ -128,8 +131,7 @@ nav
 }
 
 /*----------------footer properties------------------*/
-.footer
-{
+.footer	{
 	width: 100%;
 	position: fixed;
     bottom: 0;
@@ -138,40 +140,32 @@ nav
     font-weight: 700;
     color: seashell;
 }
-.copy
-{
+.copy	{
 	float: left;
 	padding: 13px;
 }
-.copy:hover
-{
+.copy:hover	{
 	color: dimgray;
 }
-.socials
-{
+.socials	{
 	float: right;
 }
-.sociallink
-{
+.sociallink	{
 	float: right;
 	width: 50px;
 	font-size: 18px;
 	padding: 8px;
 }
-.sociallink a
-{
+.sociallink a	{
 	color:seashell;
 	text-decoration: none;
 }
-.sociallink a:hover
-{
+.sociallink a:hover	{
 	color: dimgray;
 }
 
-@media (max-width: 350px) 
-{
-	.sociallink
-	{
+@media (max-width: 350px)	{
+	.sociallink	{
 		font-size: 14px;
 		padding: 4px;
 		width: 30px;
