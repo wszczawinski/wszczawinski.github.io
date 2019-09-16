@@ -10,19 +10,44 @@
 	<meta name="keywords" content="portfolio, engineering, programming, python, web developer, html, css, CV, front end, javascript, bootstrap, " />
 	<meta name="author" content="Wojtek Szczawinski" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<!-- Bootstrap CSS -->
+	<!-- Bootstrap CSS 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	-->
 	<!-- Custom CSS -->
 	<link rel="stylesheet" type="text/css" href="style.css" />
 	<!--http://fontello.com/-->
 	<link rel="stylesheet" type="text/css" href="fontello/css/fontello.css" />
+	<!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/6969821b65.js"></script>
 	<!--https://fonts.google.com/-->
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900|Montserrat:700|Open+Sans:400,600,700&display=swap" rel="stylesheet">
 </head>
 <body>
 
 	<header>
-		<!--Bootstrap based navigation-->
+		<!--New navigation-->
+		<nav class="navbar">
+			<span class="navbar-toggle" id="toggle">
+					<i class="fas fa-bars"></i>
+			</span>
+	
+			<a href="#" class="logo"><img height="50px" src="img/logo_deer.png"></a>
+			<ul class="main-nav" id="main">
+				<li>
+					<a href="projects.html" target="_blank" class="nav-links">projects</a>
+				</li>
+				<li>
+					<a href="https://github.com/wszczawinski" target="_blank" class="nav-links"><i class="icon-github"></i> GitHub</a>
+				</li>
+				<li>
+					<a href="https://www.linkedin.com/in/wszczawinski" target="_blank" class="nav-links"><i class="icon-linkedin"></i> LinkedIn</a>
+				</li>
+				<li>
+					<a class="nav-links" href="mailto:w.k.szczawinski@gmail.com?Subject=Hello%20again">e-mail me</a>
+				</li>
+			</ul>
+		</nav>
+		<!--
 		<nav class="navbar fixed-top navbar-light bg-white navbar-expand-sm p-0">
 			<a class="navbar-brand p-0 m-0 ml-sm-2 mr-sm-3" href="index.html">
 				<img class="d-inline-block m-0" height="50rem" src="img/logo_deer.png">
@@ -58,13 +83,14 @@
 				</ul>
 			</div>
 		</nav>
+		-->
 		<!---------------Jumbotron----------------->
 		<section class="jumbotron jumbotron-fluid ">
 			<div class="container">
 				<h1 class="display-5">Hi, I'm Wojtek.</h1>
-				<p class="lead">Web Developer<br/>Mechatronics Engineer<br/>Open to New Opportunities</p>
+				<p class="lead">Mechatronics Engineer<br/> Web Development Enthusiast<br/>Open to New Opportunities</p>
 			</div>
-		</section>
+		</section> 
 	</header>
 	<!---------------Footer + social links----------------->
 	<footer class="footer">
@@ -90,9 +116,12 @@
 			<div style="clear: both;"></div>
 		</div>
 	</footer>
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+	<script src="portfolio.js"></script>
+
+	<!-- jQuery first, then Popper.js, then Bootstrap JS 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
   </body>
 </html>
