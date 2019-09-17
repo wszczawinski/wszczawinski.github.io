@@ -22,7 +22,7 @@ html
 {
 	height: 100%;
 }
-/*Navbar*/
+/*Navigation bar*/
 header
 {
 	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -99,7 +99,7 @@ header
         color: rgba(0, 0, 0, 1);
     }
 }
-/*--------Jumbotron properties-------*/
+/*--------Page description properties-------*/
 .page-description
 {
 	margin-left: 10%;
@@ -135,7 +135,7 @@ header
 		font-size: 5vw;
 	}
 }
-/*--------cards in projects-------*/
+/*--------Cards in projects-------*/
 
 @media (min-width: 34em) {
     .card-columns {
@@ -152,7 +152,7 @@ header
     }
 }
 
-/*--------content properties-------*/
+/*--------Content properties-------*/
 #about
 {
 	text-align: center;

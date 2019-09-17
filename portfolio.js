@@ -1,4 +1,4 @@
-  
+//simple functions for toggle manu  
 var mainNav = document.querySelector('#main');
 var navBarToggle = document.getElementById('toggle');
 //boolen to keep value if clicked or not
