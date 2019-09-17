@@ -27,10 +27,10 @@ header
 {
 	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-.navbar{
-	background: transparent;
+.navigation{
+	background: white;
 }
-.navbar-toggle{
+.navigation-toggle{
 	position: absolute;
     top: 15px;
     right: 20px;
@@ -44,7 +44,7 @@ header
     margin-left: 5px;
     font-size: 0.9rem;
 }
-.main-nav{
+.main-navigation{
     list-style-type: none;
     font-size: 1rem;
     transition: all 0.4s ease-in-out;
@@ -56,23 +56,23 @@ header
     opacity: 1;
     height: auto;
 }
-.main-nav li{
+.main-navigation li{
 	text-align: center;
 	margin: 20px;
 }
-.nav-links, .logo, .navbar-toggle{
+.navigation-links, .logo, .navbar-toggle{
 	font-weight: 400;
     text-decoration: none;
     color: rgba(0, 0, 0, 0.7);
 }
 @media screen and (min-width: 768px){
-    .navbar{
+    .navigation{
         display: flex;
         justify-content: space-between;
         padding-bottom: 0;
         align-items: center;
     }
-    .main-nav{
+    .main-navigation{
         display: flex;
         margin-right: 30px;
         flex-direction: row;
@@ -85,27 +85,27 @@ header
 		font-size: 1.1rem;
 		margin-left: 20px;
     }
-    .main-nav li {
+    .main-navigation li {
         margin: 0;
     }
-    .nav-links  {
+    .navigation-links  {
         margin-left: 40px;
     }
-    .navbar-toggle  {
+    .navigation-toggle  {
         display: none;
     }
     .logo:hover,
-    .nav-links:hover{
+    .navigation-links:hover{
         color: rgba(0, 0, 0, 1);
     }
 }
 /*--------Jumbotron properties-------*/
-.jumbotron
+.page-description
 {
 	margin-left: 10%;
+	margin-right: 10%;
 	background: none;
-	margin-top: 50px;
-    padding: 2rem 2rem;
+    padding: 4vw 4vw;
 	font-weight: 500;
 }
 .display-5
@@ -120,22 +120,21 @@ header
 }
 @media (max-width: 600px) 
 {
-	.jumbotron
+	.page-description
 	{
-		padding-left: 15px;
-		margin-top: 40px;
+		margin-top: 25px;
+		margin-bottom: 25px;
 		text-shadow: none;
 	}
 	.display-5
 	{
-		font-size: 8vw !important;
+		font-size: 8vw;
 	}
 	.lead
 	{
 		font-size: 5vw;
 	}
 }
-
 /*--------cards in projects-------*/
 
 @media (min-width: 34em) {

@@ -30,11 +30,13 @@
     </style>
 	<!--http://fontello.com/-->
 	<link rel="stylesheet" type="text/css" href="fontello/css/fontello.css" />
+	<!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/6969821b65.js"></script>
 	<!--https://fonts.google.com/-->
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900|Montserrat:700|Open+Sans:400,600,700&display=swap" rel="stylesheet">
 </head>
 <body>
-		<!--Bootstrap based navbar-->
+		<!--Bootstrap based navbar
 		<nav class="navbar fixed-top navbar-light bg-white navbar-expand-sm p-0">
 			<a class="navbar-brand p-0 m-0 ml-sm-2 mr-sm-3" href="index.html">
 				<img class="d-inline-block m-0" height="50rem" src="img/logo_deer.png">
@@ -70,10 +72,32 @@
 					</li>
 				</ul>
 			</div>
-		</nav>
+		</nav> -->
 	<header>
-		<!---------------Jumbotron----------------->
-		<section class="projectJumbo jumbotron jumbotron-fluid" >
+		<!--New navigation-->
+		<nav class="navigation">
+			<span class="navigation-toggle" id="toggle">
+					<i class="fas fa-bars"></i>
+			</span>
+	
+			<a href="index.html" class="logo"><img height="50px" src="img/logo_deer.png"></a>
+			<ul class="main-navigation" id="main">
+				<li>
+					<a href="projects.html" target="_blank" class="navigation-links">projects</a>
+				</li>
+				<li>
+					<a href="https://github.com/wszczawinski" target="_blank" class="navigation-links"><i class="icon-github"></i> GitHub</a>
+				</li>
+				<li>
+					<a href="https://www.linkedin.com/in/wszczawinski" target="_blank" class="navigation-links"><i class="icon-linkedin"></i> LinkedIn</a>
+				</li>
+				<li>
+					<a href="mailto:w.k.szczawinski@gmail.com?Subject=Hello%20again" class="navigation-links" >e-mail me</a>
+				</li>
+			</ul>
+		</nav>
+		<!---------------Page-description----------------->
+		<section class="page-description" >
 				<div class="container">
 					<h1 class="display-5">Projects</h1>
 					<p class="lead">I would like to present some of my projects which I developed through my learning process. Some of them are still in progress and more will appear soon.</p>
@@ -310,6 +334,8 @@
 			<div style="clear: both;"></div>
 		</div>
 	</footer>
+	<!--JavaScript-->
+	<script src="portfolio.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
