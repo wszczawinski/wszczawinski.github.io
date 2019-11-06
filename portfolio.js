@@ -1,16 +1,14 @@
-//simple functions for toggle manu  
-var mainNav = document.querySelector('#main');
-var navBarToggle = document.getElementById('toggle');
-//boolen to keep value if clicked or not
-var state = true;
+const navbarToggler = document.querySelector('#burger');
+let togglerState = true;
 
-navBarToggle.addEventListener('click', function () {
-    mainNav.classList.toggle('active');
-    state = !state;
-    //condition for toggle button to change based on boolen
-    if (!state) {
-        navBarToggle.innerHTML = '<i class="fas fa-times"></i>';
+navbarToggler.addEventListener('click', () => {
+    const mainNav = document.querySelector('#main');
+
+    mainNav.classList.toggle('active-main');
+    togglerState = !togglerState;
+    if (togglerState) {
+        navbarToggler.innerHTML = '<i class="fas fa-bars"></i>'
     } else {
-        navBarToggle.innerHTML = '<i class="fas fa-bars"></i>';
+        navbarToggler.innerHTML = '<i class="fas fa-hamburger"></i>'
     }
-});
+})

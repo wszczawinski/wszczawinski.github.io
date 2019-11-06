@@ -16,39 +16,222 @@
 	<script src="https://kit.fontawesome.com/6969821b65.js"></script>
 	<!--Fonts Google-->
 	<link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans|Quicksand&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
 	<header>
-		<h3><img src="img/deer_logo.png" alt="logo"><img><a href="index.html">Wojtek Szczawinski</a></h3>
+		<span class="navigation-toggle" id="burger">
+			<i class="fas fa-bars"></i>
+		</span>
 
-		<nav>
+		<h3>
+			<img src="img/deer_logo.png" alt="logo"><img>
+			<a href="index.html">Wojtek Szczawinski</a>
+		</h3>
+
+		<nav id="main" class="main-navbar">
 			<li>
-				<a href="#"><i class="fas fa-code"></i> projects</a>
+				<a href="https://github.com/wszczawinski" target="_blank">
+					<i class="fab fa-github"></i> GitHub
+				</a>
 			</li>
 			<li>
-				<a href="https://github.com/wszczawinski" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+				<a href="https://www.linkedin.com/in/wszczawinski" target="_blank">
+					<i class="fab fa-linkedin-in"></i> LinkedIn
+				</a>
 			</li>
 			<li>
-				<a href="https://www.linkedin.com/in/wszczawinski" target="_blank"><i class="fab fa-linkedin-in"></i>
-					LinkedIn</a>
-			</li>
-			<li>
-				<a href="mailto:w.k.szczawinski@gmail.com"><i class="far fa-envelope"></i> e-mail </a>
+				<a href="mailto:w.k.szczawinski@gmail.com">
+					<i class="far fa-envelope"></i> e-mail
+				</a>
 			</li>
 		</nav>
 
 	</header>
+	<main>
+		<section class="hero">
 
-	<section class="hero">
-		<div class="background-image" style="background-image: url('img/bg_deer.jpg');"></div>
-		<div class="hero-content-area">
-			<h1>Hi, I'm Wojtek.</h1>
-			<h3> Web Developer <br /> Mechatronics Engineer <br /> Open to New Opportunities </h3>
-			<a href="#" class="btn">My Projects</a>
+			<div class="background-image" style="background-image: url('img/bg_6.jpg');"></div>
+			<div class="hero-content-area">
+				<h1><b>Hi</b>, I'm Wojtek.</h1>
+				<h3> Junior JavaScript Developer <br /> Mechatronics Engineer <br /> Open to New Opportunities </h3>
+				<a href="#" class="btn">My Projects</a>
+			</div>
+
+		</section>
+		<section class="projects">
+			<h3>My Recent Projects</h3>
+			<p>
+				I would like to present some of my projects which I developed through my learning process. Some of them
+				are still in progress and more will appear soon.
+			</p>
+			<div class="project-cards">
+				<article class="card">
+					<h4 class="title">My Portfolio</h4>
+					<p>
+						This website which is for now just information about me and the opportunity to show my skills.
+						It is still in
+						development and along with the increase of my skills, it will be transferred to external
+						hosting.
+					</p>
+					<div class="links">
+						<a href="https://github.com/wszczawinski/wszczawinski.github.io">View code</a>
+					</div>
+				</article>
+				<article class="card">
+					<h4 class="title">Search Series</h4>
+					<a href="https://wszczawinski.github.io/search-series/" target="_blank"><img class="cover"
+							src="/img/p_search-series.png" alt="search-series"></a>
+					<p>
+						Web application which allows searching series by name and then sorting/filtering results. It is
+						connecting to OMDb API and collecting right data also has lazy loding funcionality.
+					</p>
+					<div class="links">
+						<a href="https://wszczawinski.github.io/search-series/">Visit site</a>
+						<a href="https://wszczawinski.github.io/search-series/">View code</a>
+					</div>
+				</article>
+				<article class="card">
+					<h4 class="title">Durability Calculations</h4>
+					<a href="https://wszczawinski.github.io/barCalculations/"><img class="cover"
+							src="/img/p_barcalculation.png" alt="search-series"></a>
+					<p>
+						Work in progress.. <br />
+						This app will be a help tool for students while learning mechanical engineering classes. App
+						will display calculated data in form of charts (Chart.js) and tables for simple cases of bar
+						elements.
+					</p>
+					<div class="links">
+						<a href="https://wszczawinski.github.io/barCalculations/">Visit site</a>
+						<a href="https://github.com/wszczawinski/barCalculations">View code</a>
+					</div>
+				</article>
+				<article class="card">
+					<h4 class="title">Apartment website</h4>
+					<a href="https://wszczawinski.github.io/waterlane34/"><img class="cover" src="/img/p_waterlane.png"
+							alt="search-series"></a>
+					<p>Bootstrap based website of apartment for rent in Gdańsk's old town.
+					</p>
+					<div class="links">
+						<a href="https://wszczawinski.github.io/waterlane34/">Visit site</a>
+						<a href="https://github.com/wszczawinski/waterlane34">View code</a>
+					</div>
+				</article>
+				<article class="card">
+					<h4 class="title">Web Dev Bootcamp</h4>
+					<p>
+						These are the project which I am developing through Udemy course, and base of that I am
+						learning the entire spectrum of full stack web development.
+					</p>
+					<p>
+						Main project code
+
+						<a href="https://github.com/wszczawinski/YealCampProject">Campgrounds</a>
+						<a href="https://github.com/wszczawinski/BlogProject">Blog project</a>
+						<a
+							href="https://www.notion.so/wszczawinski/7b796e69b3ff4dfda840069e1b8a6bc4?v=01f4b0c7ebc44a66b78eec1c13b758be">Notes</a>
+					</p>
+					<div class="links">
+						<a href="https://wszczawinski.github.io/JavaScript30/">Visit site</a>
+						<a href="https://github.com/wszczawinski/JavaScript30">View code</a>
+					</div>
+				</article>
+				<article class="card">
+					<h4 class="title">My JavaScript30</h4>
+					<a href="https://wszczawinski.github.io/JavaScript30/"><img class="cover" src="/img/p-js30.png"
+							alt="search-series"></a>
+					<p>
+						That is a challenge, created by Wes Bos, which aim to code 30 Vanilla JS projects in 30 days to
+						inprove JS skills.
+					</p>
+					<div class="links">
+						<a href="https://wszczawinski.github.io/JavaScript30/">Visit site</a>
+						<a href="https://github.com/wszczawinski/JavaScript30">View code</a>
+					</div>
+				</article>
+				<article class="card">
+					<h4 class="title">Game of Colors</h4>
+					<a href="https://wszczawinski.github.io/gameOfColors/"><img class="cover" src="/img/p_rgbgame.PNG"
+							alt="search-series"></a>
+					<p>
+						Guess which tile has a right RGB color. Another project to get more
+						practise in JS.
+					</p>
+					<div class="links">
+						<a href="https://wszczawinski.github.io/gameOfColors/">Visit site</a>
+						<a href="https://github.com/wszczawinski/gameOfColors">View code</a>
+					</div>
+				</article>
+				<article class="card">
+					<h4 class="title">Hangman Game</h4>
+					<a href="https://wszczawinski.github.io/hangmanGame/"><img class="cover" src="/img/p_hangman.PNG"
+							alt="search-series"></a>
+					<p>
+						Simple hangman with random Star Wars quotes using JavaScript. The goal was to get to know JS
+						better through making some working project.
+					</p>
+					<div class="links">
+						<a href="https://wszczawinski.github.io/hangmanGame/">Visit site</a>
+						<a href="https://github.com/wszczawinski/hangmanGame">View code</a>
+					</div>
+				</article>
+				<!--Code joke-->
+				<article class="card">
+					<p class="card-text">
+						SELECT <span style="color: red;">*</span><br />
+						FROM <span style="color: red;">'world'</span><br />
+						WHERE <span style="color: red;">'someone'</span><br />
+						LIKE <span style="color:darkgoldenrod;">'&you'</span>
+						<br /> <br />/> result: <br />
+						<span style="color: red;">'Just You'</span>
+					</p>
+				</article>
+				<article class="card">
+					<p class="card-text">
+						You might not think that programmers are artists, but programming is an extremely creative
+						profession. It's logic-based creativity. <br />
+						John Romero, <cite>game designer.</cite>
+					</p>
+				</article>
+				<article class="card">
+					<p class="card-text">
+						Code is there to explain comments to the computer. <br />
+						Some guy in <cite>that lecture on YT</cite>
+					</p>
+				</article>
+
+			</div>
+		</section>
+		<section class="skills">
+			<h3>Web Development Skills</h3>
+			<p></p>
+		</section>
+	</main>
+	<footer class="footer">
+		<div class="copy">
+			2019 &copy; Wojtek Szczawinski
 		</div>
-	</section>
+		<div class="socials">
+			<div class="sociallink">
+				<a href="https://github.com/wszczawinski" target="_blank">
+					<i class="fab fa-github-square"></i>
+				</a>
+			</div>
+			<div class="sociallink">
+				<a href="https://www.linkedin.com/in/wszczawinski" target="_blank">
+					<i class="fab fa-linkedin"></i>
+				</a>
+			</div>
+			<div class="sociallink">
+				<a href="https://www.facebook.com/w.szczawinski" target="_blank">
+
+				</a>
+			</div>
+		</div>
+	</footer>
+
+	<!--JavaScript-->
+	<script src="portfolio.js"></script>
 </body>
 
 </html>
