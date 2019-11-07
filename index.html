@@ -14,6 +14,7 @@
 	<link rel="stylesheet" href="style.css">
 	<!--Font Awesome-->
 	<script src="https://kit.fontawesome.com/6969821b65.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<!--Fonts Google-->
 	<link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans|Quicksand&display=swap" rel="stylesheet">
 </head>
@@ -55,11 +56,11 @@
 			<div class="hero-content-area">
 				<h1><b>Hi</b>, I'm Wojtek.</h1>
 				<h3> Junior JavaScript Developer <br /> Mechatronics Engineer <br /> Open to New Opportunities </h3>
-				<a href="#" class="btn">My Projects</a>
+				<a href="#projects" class="btn scroll_to" >My Projects</a>
 			</div>
 
 		</section>
-		<section class="projects">
+		<section id="projects" class="projects" >
 			<h3>My Recent Projects</h3>
 			<p>
 				I would like to present some of my projects which I developed through my learning process. Some of them
@@ -75,7 +76,7 @@
 						hosting.
 					</p>
 					<div class="links">
-						<a href="https://github.com/wszczawinski/wszczawinski.github.io">View code</a>
+						<a href="https://github.com/wszczawinski/wszczawinski.github.io" target="_blank">View code</a>
 					</div>
 				</article>
 				<article class="card">
@@ -87,34 +88,33 @@
 						connecting to OMDb API and collecting right data also has lazy loding funcionality.
 					</p>
 					<div class="links">
-						<a href="https://wszczawinski.github.io/search-series/">Visit site</a>
-						<a href="https://wszczawinski.github.io/search-series/">View code</a>
+						<a href="https://wszczawinski.github.io/search-series/" target="_blank">Visit site</a>
+						<a href="https://wszczawinski.github.io/search-series/" target="_blank">View code</a>
 					</div>
 				</article>
 				<article class="card">
 					<h4 class="title">Durability Calculations</h4>
-					<a href="https://wszczawinski.github.io/barCalculations/"><img class="cover"
+					<a href="https://wszczawinski.github.io/barCalculations/" target="_blank"><img class="cover"
 							src="/img/p_barcalculation.png" alt="search-series"></a>
 					<p>
-						Work in progress.. <br />
 						This app will be a help tool for students while learning mechanical engineering classes. App
 						will display calculated data in form of charts (Chart.js) and tables for simple cases of bar
 						elements.
 					</p>
 					<div class="links">
-						<a href="https://wszczawinski.github.io/barCalculations/">Visit site</a>
-						<a href="https://github.com/wszczawinski/barCalculations">View code</a>
+						<a href="https://wszczawinski.github.io/barCalculations/" target="_blank">Visit site</a>
+						<a href="https://github.com/wszczawinski/barCalculations" target="_blank">View code</a>
 					</div>
 				</article>
 				<article class="card">
 					<h4 class="title">Apartment website</h4>
-					<a href="https://wszczawinski.github.io/waterlane34/"><img class="cover" src="/img/p_waterlane.png"
-							alt="search-series"></a>
+					<a href="https://wszczawinski.github.io/waterlane34/" target="_blank"><img class="cover"
+							src="/img/p_waterlane.png" alt="search-series"></a>
 					<p>Bootstrap based website of apartment for rent in Gdańsk's old town.
 					</p>
 					<div class="links">
-						<a href="https://wszczawinski.github.io/waterlane34/">Visit site</a>
-						<a href="https://github.com/wszczawinski/waterlane34">View code</a>
+						<a href="https://wszczawinski.github.io/waterlane34/" target="_blank">Visit site</a>
+						<a href="https://github.com/wszczawinski/waterlane34" target="_blank">View code</a>
 					</div>
 				</article>
 				<article class="card">
@@ -126,79 +126,77 @@
 					<p>
 						Main project code
 
-						<a href="https://github.com/wszczawinski/YealCampProject">Campgrounds</a>
-						<a href="https://github.com/wszczawinski/BlogProject">Blog project</a>
-						<a
-							href="https://www.notion.so/wszczawinski/7b796e69b3ff4dfda840069e1b8a6bc4?v=01f4b0c7ebc44a66b78eec1c13b758be">Notes</a>
+						<a href="https://github.com/wszczawinski/YealCampProject" target="_blank">Campgrounds</a>
+						<a href="https://github.com/wszczawinski/BlogProject" target="_blank">Blog project</a>
+						<a href="https://www.notion.so/wszczawinski/7b796e69b3ff4dfda840069e1b8a6bc4?v=01f4b0c7ebc44a66b78eec1c13b758be"
+							target="_blank">Notes</a>
 					</p>
 					<div class="links">
-						<a href="https://wszczawinski.github.io/JavaScript30/">Visit site</a>
-						<a href="https://github.com/wszczawinski/JavaScript30">View code</a>
+						<a href="https://wszczawinski.github.io/JavaScript30/" target="_blank">Visit site</a>
+						<a href="https://github.com/wszczawinski/JavaScript30" target="_blank">View code</a>
 					</div>
 				</article>
 				<article class="card">
 					<h4 class="title">My JavaScript30</h4>
-					<a href="https://wszczawinski.github.io/JavaScript30/"><img class="cover" src="/img/p-js30.png"
-							alt="search-series"></a>
+					<a href="https://wszczawinski.github.io/JavaScript30/" target="_blank"><img class="cover"
+							src="/img/p-js30.png" alt="search-series"></a>
 					<p>
 						That is a challenge, created by Wes Bos, which aim to code 30 Vanilla JS projects in 30 days to
 						inprove JS skills.
 					</p>
 					<div class="links">
-						<a href="https://wszczawinski.github.io/JavaScript30/">Visit site</a>
-						<a href="https://github.com/wszczawinski/JavaScript30">View code</a>
+						<a href="https://wszczawinski.github.io/JavaScript30/" target="_blank">Visit site</a>
+						<a href="https://github.com/wszczawinski/JavaScript30" target="_blank">View code</a>
+					</div>
+				</article>
+				<!--Quotes-->
+				<article class="card no-border">
+					<div class="card-small">
+						<p class="card-text">
+							You might not think that programmers are artists, but programming is an extremely creative
+							profession. It's logic-based creativity.<br /><br />
+							<cite>~John Romero</cite>, game designer.
+						</p>
+					</div>
+					<div class="card-small">
+						<p class="card-text">
+							SELECT <span style="color: red;">*</span><br />
+							FROM <span style="color: red;">'world'</span><br />
+							WHERE <span style="color: red;">'someone'</span><br />
+							LIKE <span style="color:darkgoldenrod;">'&you'</span>
+							<br /> <br />/> result: <br />
+							<span style="color: red;">'Just You'</span>
+						</p>
 					</div>
 				</article>
 				<article class="card">
 					<h4 class="title">Game of Colors</h4>
-					<a href="https://wszczawinski.github.io/gameOfColors/"><img class="cover" src="/img/p_rgbgame.PNG"
-							alt="search-series"></a>
+					<a href="https://wszczawinski.github.io/gameOfColors/" target="_blank"><img class="cover"
+							src="/img/p_rgbgame.PNG" alt="search-series"></a>
 					<p>
 						Guess which tile has a right RGB color. Another project to get more
 						practise in JS.
 					</p>
 					<div class="links">
-						<a href="https://wszczawinski.github.io/gameOfColors/">Visit site</a>
-						<a href="https://github.com/wszczawinski/gameOfColors">View code</a>
+						<a href="https://wszczawinski.github.io/gameOfColors/" target="_blank">Visit site</a>
+						<a href="https://github.com/wszczawinski/gameOfColors" target="_blank">View code</a>
 					</div>
 				</article>
 				<article class="card">
 					<h4 class="title">Hangman Game</h4>
-					<a href="https://wszczawinski.github.io/hangmanGame/"><img class="cover" src="/img/p_hangman.PNG"
-							alt="search-series"></a>
+					<a href="https://wszczawinski.github.io/hangmanGame/" target="_blank"><img class="cover"
+							src="/img/p_hangman.PNG" alt="search-series"></a>
 					<p>
 						Simple hangman with random Star Wars quotes using JavaScript. The goal was to get to know JS
 						better through making some working project.
 					</p>
 					<div class="links">
-						<a href="https://wszczawinski.github.io/hangmanGame/">Visit site</a>
-						<a href="https://github.com/wszczawinski/hangmanGame">View code</a>
+						<a href="https://wszczawinski.github.io/hangmanGame/" target="_blank">Visit site</a>
+						<a href="https://github.com/wszczawinski/hangmanGame" target="_blank">View code</a>
 					</div>
 				</article>
-				<!--Code joke-->
-				<article class="card">
-					<p class="card-text">
-						SELECT <span style="color: red;">*</span><br />
-						FROM <span style="color: red;">'world'</span><br />
-						WHERE <span style="color: red;">'someone'</span><br />
-						LIKE <span style="color:darkgoldenrod;">'&you'</span>
-						<br /> <br />/> result: <br />
-						<span style="color: red;">'Just You'</span>
-					</p>
-				</article>
-				<article class="card">
-					<p class="card-text">
-						You might not think that programmers are artists, but programming is an extremely creative
-						profession. It's logic-based creativity. <br />
-						John Romero, <cite>game designer.</cite>
-					</p>
-				</article>
-				<article class="card">
-					<p class="card-text">
-						Code is there to explain comments to the computer. <br />
-						Some guy in <cite>that lecture on YT</cite>
-					</p>
-				</article>
+
+
 
 			</div>
 		</section>
@@ -231,6 +229,7 @@
 	</footer>
 
 	<!--JavaScript-->
+	
 	<script src="portfolio.js"></script>
 </body>
 
