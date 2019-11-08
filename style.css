@@ -23,13 +23,6 @@ html {
     color: #555;
     background-color: #d8dbdd44;
 }
-@media all and (min-width: 950px){
-    html{
-        font-size: 20px;
-    }
-
-
-}
 nav,
 ul {
     list-style: none;
@@ -247,6 +240,7 @@ header h3 {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    max-width: 1250px;
 }
 
 .card {
@@ -301,6 +295,7 @@ header h3 {
 .links {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .links a {
@@ -319,7 +314,35 @@ header h3 {
     border: 1px solid rgb(48, 189, 30);
     color: black;
 }
-
+.links button{
+    margin: 3px;
+    padding: 2px 5px;
+    font-size: 10px;
+    color: black;
+    border: none;
+    background-color: transparent;
+    border-radius: 5px;
+}
+.links .red{
+    background: red;
+    color: white;
+}
+.links .blue{
+    background: #0275d8;
+    color: white;
+}
+.links .yellow{
+    background: #f0ad4e;
+    color: white;
+}
+.links .green{
+    background: rgb(95, 196, 95);
+    color: white;
+}
+.links .purple{
+    background: #553C7B;
+    color: white;
+}
 .card img.cover {
     width: 100%;
     border-top: 1px solid lightgray;
