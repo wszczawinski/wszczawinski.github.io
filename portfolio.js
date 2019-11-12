@@ -13,9 +13,11 @@ navbarToggler.addEventListener('click', () => {
     }
 })
 
-jQuery('.scroll_to').click(function(e){
+jQuery('.scroll_to').click(function (e) {
     var jump = $(this).attr('href');
     var new_position = $(jump).offset();
-    $('html, body').animate({ scrollTop: new_position.top }, 500);
+    $('html, body').animate({
+        scrollTop: new_position.top
+    }, 1000);
     e.preventDefault();
 });
