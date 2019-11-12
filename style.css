@@ -266,6 +266,7 @@ header h3 {
     border: 1px solid blue;
     border-radius: 8px;
     color: black;
+    background-color: white;
 }
 
 .card h4 {
@@ -291,13 +292,18 @@ header h3 {
 .card a:hover {
     opacity: 0.85;
 }
-
-.links {
+#p-technologies{
+    padding: 0px 20px 15px 20px;
+}
+.links{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
-
+.technologies {
+    padding: 0 10px;
+    margin-top: 0px;
+}
 .links a {
     margin: 0px 10px 20px 10px;
     padding: 3px;
@@ -316,7 +322,8 @@ header h3 {
 }
 .links button{
     margin: 3px;
-    padding: 2px 5px;
+    text-align: center;
+    padding: 3px 6px;
     font-size: 10px;
     color: black;
     border: none;
@@ -367,7 +374,21 @@ footer{
     display: inline-block;
 }
 .sociallink i{
+    color: #555;
     margin-left: 20px;
     font-size: 1.2rem;
 }
-
+@media all and (min-width: 600px){
+    footer{
+        padding: 40px 50px;
+    }
+    .sociallink i{
+        margin-left: 45px;
+        font-size: 1.2rem;
+    }
+}
+@media all and (min-width: 950px){
+    footer{
+        padding: 45px 100px;
+    }
+}
