@@ -23,6 +23,7 @@ html {
     color: #555;
     background-color: #d8dbdd44;
 }
+
 nav,
 ul {
     list-style: none;
@@ -89,20 +90,24 @@ header {
     opacity: 0;
     animation: 1s fadein 0.5s forwards;
 }
+
 @keyframes fadein {
     100% {
         opacity: 1;
     }
 }
+
 header img {
     height: 50px;
 }
+
 header h3 {
     font-family: 'Quicksand', sans-serif;
     font-size: 1.25rem;
     display: flex;
     align-items: center;
 }
+
 .main-navbar {
     opacity: 0;
     height: 0;
@@ -110,14 +115,17 @@ header h3 {
     flex-direction: column;
     align-items: center;
 }
+
 .active-main {
     opacity: 1;
     height: auto;
 }
+
 .main-navbar li {
     margin-top: 10px;
     font-size: 0.9rem;
 }
+
 .navigation-toggle {
     position: absolute;
     top: 35px;
@@ -125,39 +133,46 @@ header h3 {
     cursor: pointer;
     font-size: 1.1rem;
 }
-@media all and (min-width: 450px)
-{
-    .main-navbar > li {
+
+@media all and (min-width: 450px) {
+    .main-navbar>li {
         margin-top: 25px;
     }
 }
-@media all and (min-width: 600px){
-    header{
+
+@media all and (min-width: 600px) {
+    header {
         flex-direction: row;
         justify-content: space-between;
         padding: 30px;
     }
-    .main-navbar{
+
+    .main-navbar {
         height: auto;
         opacity: 1;
         flex-direction: row;
     }
+
     .main-navbar li {
         margin-left: 20px;
         margin-top: 0;
         font-size: 1rem;
     }
+
     .navigation-toggle {
         display: none;
     }
 }
-@media all and (min-width: 950px){
-    header{
+
+@media all and (min-width: 950px) {
+    header {
         padding: 45px 100px;
     }
+
     header img {
         height: 60px;
     }
+
     .main-navbar li {
         margin-left: 40px;
     }
@@ -203,30 +218,36 @@ header h3 {
     width: 90%;
 }
 
-@media all and (min-width: 600px){
-    .hero{
+@media all and (min-width: 600px) {
+    .hero {
         text-align: left;
     }
+
     .hero h1 {
         font-size: 2.5rem;
     }
+
     .hero h3 {
         font-size: 1.5rem;
     }
+
     .hero a.btn {
         font-size: 1rem;
         padding: 15px 25px;
     }
+
     .hero-content-area {
         width: 65%;
     }
 }
+
 @keyframes slidefade {
     100% {
         opacity: 1;
         margin: 0;
     }
 }
+
 /*Projects*/
 .project-cards {
     display: flex;
@@ -236,6 +257,7 @@ header h3 {
     align-items: center;
     max-width: 1250px;
 }
+
 .card {
     font-family: 'Open Sans', sans-serif;
     margin: 15px 20px;
@@ -249,24 +271,28 @@ header h3 {
     max-width: 300px;
     background-color: white;
 }
+
 .no-border {
     height: 350px;
     border: none;
     justify-content: space-between;
     background-color: transparent;
-} 
-.card-small{
+}
+
+.card-small {
     border: 1px solid blue;
     border-radius: 8px;
     color: black;
     background-color: white;
 }
+
 .card h4 {
     font-size: 18px;
     font-weight: 100;
     margin: 20px 20px;
     border-bottom: #555;
 }
+
 .card p {
     margin: 0;
     font-size: 12px;
@@ -274,25 +300,31 @@ header h3 {
     padding: 20px;
     flex-grow: 2;
 }
+
 .card a {
     opacity: 1;
     transition: all 0.3s ease-in-out;
 }
+
 .card a:hover {
     opacity: 0.85;
 }
-#p-technologies{
+
+#p-technologies {
     padding: 0px 20px 15px 20px;
 }
-.links{
+
+.links {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
+
 .technologies {
     padding: 0 10px;
     margin-top: 0px;
 }
+
 .links a {
     margin: 0px 10px 20px 10px;
     padding: 3px;
@@ -304,11 +336,13 @@ header h3 {
     border-radius: 10px;
     transform: all 0.2s ease-in-out;
 }
+
 .links a:hover {
     border: 1px solid rgb(48, 189, 30);
     color: black;
 }
-.links button{
+
+.links button {
     margin: 3px;
     text-align: center;
     padding: 3px 6px;
@@ -318,30 +352,37 @@ header h3 {
     background-color: transparent;
     border-radius: 5px;
 }
-.links .red{
+
+.links .red {
     background: red;
     color: white;
 }
-.links .blue{
+
+.links .blue {
     background: #0275d8;
     color: white;
 }
-.links .yellow{
+
+.links .yellow {
     background: #f0ad4e;
     color: white;
 }
-.links .green{
+
+.links .green {
     background: rgb(95, 196, 95);
     color: white;
 }
-.links .purple{
+
+.links .purple {
     background: #553C7B;
     color: white;
 }
+
 .card img.cover {
     width: 100%;
     border-top: 1px solid lightgray;
 }
+
 @media all and (min-width: 620px) {
     .card {
         width: 250px;
@@ -349,32 +390,40 @@ header h3 {
         height: 400px;
     }
 }
+
 /*Footer*/
-footer{
-    border-top: 1px solid rgb(201, 198, 198);
+footer {
+    border-top: 1px solid rgb(201, 198, 198, 0.7);
     display: flex;
     justify-content: space-between;
     padding: 30px 20px;
+    max-width: 1250px;
+    margin: 0 auto;
 }
-.sociallink{
+
+.sociallink {
     display: inline-block;
 }
-.sociallink i{
+
+.sociallink i {
     color: #555;
     margin-left: 20px;
     font-size: 1.2rem;
 }
-@media all and (min-width: 600px){
-    footer{
+
+@media all and (min-width: 600px) {
+    footer {
         padding: 40px 50px;
     }
-    .sociallink i{
+
+    .sociallink i {
         margin-left: 45px;
         font-size: 1.2rem;
     }
 }
-@media all and (min-width: 950px){
-    footer{
+
+@media all and (min-width: 950px) {
+    footer {
         padding: 45px 100px;
     }
 }
