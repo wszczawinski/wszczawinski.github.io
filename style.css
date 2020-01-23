@@ -224,7 +224,8 @@ header h3 {
 }
 
 .hero a.btn {
-    padding: 10px 20px;
+    margin-right: 10px;
+    padding: 10px 10px;
 }
 
 .hero-content-area {
@@ -248,6 +249,7 @@ header h3 {
     }
 
     .hero a.btn {
+        margin-right: 30px;
         font-size: 1rem;
         padding: 15px 25px;
     }
