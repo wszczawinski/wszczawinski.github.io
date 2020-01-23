@@ -21,3 +21,12 @@ jQuery('.scroll_to').click(function (e) {
     }, 1000);
     e.preventDefault();
 });
+
+jQuery('.scroll_to2').click(function (e) {
+    var jump = $(this).attr('href');
+    var new_position = $(jump).offset();
+    $('html, body').animate({
+        scrollTop: new_position.top
+    }, 1000);
+    e.preventDefault();
+});
