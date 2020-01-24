@@ -56,10 +56,11 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px 20px;
+    border-top: 1px solid rgb(201, 198, 198, 0.7);
+    margin-bottom: 20px;
 }
 
-section > .title {
+section>.title {
     text-transform: capitalize;
     font: 1.3rem "Open Sans", sans-serif;
     margin: 30px;
@@ -69,13 +70,14 @@ section > .title {
 section p {
     max-width: 610px;
     line-height: 1.5;
-    margin: 10px 20px;
+    margin: 0 30px 20px 30px;
     text-align: center;
     font-size: 0.8rem;
+    text-align: justify;
 }
 
 section img#avt {
-    margin: 30px;
+    margin: 20px;
     max-width: 250px;
     border-radius: 20px;
     border: 1px solid rgb(48, 189, 30);
@@ -83,7 +85,8 @@ section img#avt {
 
 @media all and (min-width: 600px) {
     section p {
-        font-size: 1rem;
+        font-size: 1.05rem;
+        text-align: center;
     }
 
     section>.title {
@@ -98,7 +101,7 @@ section img#avt {
 
 @media all and (min-width: 950px) {
     section p {
-        max-width: 800px;
+        max-width: 850px;
     }
 }
 
@@ -207,6 +210,7 @@ header h3 {
     justify-content: center;
     text-align: center;
     min-height: 100vh;
+    margin: 0;
 }
 
 .hero .background-image {
@@ -281,7 +285,7 @@ header h3 {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    max-width: 1250px;
+    max-width: 1000px;
 }
 
 .card {
@@ -291,24 +295,10 @@ header h3 {
     flex-direction: column;
     border: 1px solid rgb(48, 189, 30);
     border-radius: 8px;
-    flex-basis: 250px;
+    flex-basis: 200px;
     flex-shrink: 0;
     flex-grow: 1;
     max-width: 300px;
-    background-color: white;
-}
-
-.no-border {
-    height: 350px;
-    border: none;
-    justify-content: space-between;
-    background-color: transparent;
-}
-
-.card-small {
-    border: 1px solid blue;
-    border-radius: 8px;
-    color: black;
     background-color: white;
 }
 
@@ -409,19 +399,35 @@ header h3 {
     border-top: 1px solid lightgray;
 }
 
+@media all and (min-width: 495px) {
+    .card {
+        margin: 15px 10px;
+        flex-grow: 0;
+        height: 350px;
+    }
+    .links button {
+        font-size: 0.5rem;
+    }
+}
+
 @media all and (min-width: 620px) {
     .card {
-        width: 250px;
-        flex-grow: 0;
-        height: 400px;
+        height: 375px;
+        flex-basis: 250px;
+        margin: 15px 20px;
     }
+
     .card h4 {
         margin: 20px 20px;
+    }
+    .links button {
+        font-size: 0.7rem;
     }
 }
 
 /*Footer*/
 footer {
+    font-size: 0.8rem;
     border-top: 1px solid rgb(201, 198, 198, 0.7);
     display: flex;
     justify-content: space-between;
@@ -441,6 +447,7 @@ footer {
 
 @media all and (min-width: 600px) {
     footer {
+        font-size: 1rem;
         padding: 40px 50px;
     }
 
