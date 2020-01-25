@@ -41,6 +41,7 @@ a.btn {
     border: 1px solid rgb(53, 53, 53);
     opacity: 1;
     transition: all 0.3s ease-in-out;
+    padding: 10px 10px;
 }
 
 a.btn:hover {
@@ -93,8 +94,14 @@ section img#avt {
         font-size: 1.5rem;
     }
 
+    a.btn {
+        font-size: 1rem;
+        padding: 15px 25px;
+        margin: 30px;
+    }
+
     section img#avt {
-        margin: 40px;
+        margin: 30px;
         max-width: 300px;
     }
 }
@@ -214,6 +221,7 @@ header h3 {
 }
 
 .hero .background-image {
+    background-image: url('img/bg_large.jpg');
     position: absolute;
     top: 0;
     left: 0;
@@ -223,6 +231,10 @@ header h3 {
     background-position: center;
     background-repeat: no-repeat;
     z-index: -1;
+}
+
+.hero .background-image-small {
+    background-image: url('img/bg_small.jpg');
 }
 
 .hero h1 {
@@ -235,8 +247,7 @@ header h3 {
 }
 
 .hero a.btn {
-    margin-right: 10px;
-    padding: 10px 10px;
+    margin: 0 10px 0 0;
 }
 
 .hero-content-area {
@@ -260,9 +271,7 @@ header h3 {
     }
 
     .hero a.btn {
-        margin-right: 30px;
-        font-size: 1rem;
-        padding: 15px 25px;
+        margin: 0 30px 0 0;
     }
 
     .hero-content-area {
@@ -337,8 +346,7 @@ header h3 {
 }
 
 .technologies {
-    padding: 0 10px;
-    margin-top: 0px;
+    padding: 0 0px 20px 0px;
 }
 
 .links a {
@@ -362,7 +370,7 @@ header h3 {
     margin: 3px;
     text-align: center;
     padding: 3px 6px;
-    font-size: 10px;
+    font-size: 0.5rem;
     color: black;
     border: none;
     background-color: transparent;
@@ -399,29 +407,33 @@ header h3 {
     border-top: 1px solid lightgray;
 }
 
-@media all and (min-width: 495px) {
+@media all and (min-width: 480px) {
     .card {
         margin: 15px 10px;
         flex-grow: 0;
         height: 350px;
     }
-    .links button {
-        font-size: 0.5rem;
+    .technologies {
+        padding: 0px 0 40px 0;
     }
 }
 
-@media all and (min-width: 620px) {
+@media all and (min-width: 600px) {
     .card {
         height: 375px;
         flex-basis: 250px;
-        margin: 15px 20px;
+        margin: 0 20px 30px 20px;
     }
 
     .card h4 {
         margin: 20px 20px;
     }
+
     .links button {
         font-size: 0.7rem;
+    }
+    .technologies {
+        padding: 0px 0 70px 0;
     }
 }
 
