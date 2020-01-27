@@ -16,6 +16,7 @@ html {
     font-size: 16px;
     color: #555;
     background-color: #f7f7f7;
+    scroll-behavior: smooth;
 }
 
 nav,
@@ -73,7 +74,7 @@ section p {
     line-height: 1.5;
     margin: 0 30px 20px 30px;
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 0.95rem;
     text-align: justify;
 }
 
@@ -233,16 +234,12 @@ header h3 {
     z-index: -1;
 }
 
-.hero .background-image-small {
-    background-image: url('img/bg_small.jpg');
-}
-
 .hero h1 {
     font: 200 1.6rem "Open Sans", sans-serif;
 }
 
 .hero h3 {
-    font: 100 0.9rem "Open Sans", sans-serif;
+    font: 100 0.95rem "Open Sans", sans-serif;
     margin: 50px 0;
 }
 
@@ -318,6 +315,11 @@ header h3 {
     border-bottom: #555;
 }
 
+.card img.cover {
+    width: 100%;
+    border-top: 1px solid lightgray;
+}
+
 .card p {
     margin: 0;
     font-size: 12px;
@@ -333,10 +335,6 @@ header h3 {
 
 .card a:hover {
     opacity: 0.85;
-}
-
-#p-technologies {
-    padding: 0px 20px 15px 20px;
 }
 
 .links {
@@ -377,34 +375,29 @@ header h3 {
     border-radius: 5px;
 }
 
-.links .red {
+.technologies .red {
     background: red;
     color: white;
 }
 
-.links .blue {
+.technologies .blue {
     background: #0275d8;
     color: white;
 }
 
-.links .yellow {
+.technologies .yellow {
     background: #f0ad4e;
     color: white;
 }
 
-.links .green {
+.technologies .green {
     background: rgb(95, 196, 95);
     color: white;
 }
 
-.links .purple {
+.technologies .purple {
     background: #553C7B;
     color: white;
-}
-
-.card img.cover {
-    width: 100%;
-    border-top: 1px solid lightgray;
 }
 
 @media all and (min-width: 480px) {

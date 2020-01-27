@@ -1,11 +1,5 @@
 const navbarToggler = document.querySelector('#burger');
-const background = document.querySelector('.background-image');
 let togglerState = true;
-
-const setBackground = () => {
-    let viewportWidth = window.innerWidth;
-    viewportWidth < 600 ? background.classList.add('background-image-small') : null;
-}
 
 navbarToggler.addEventListener('click', () => {
     const mainNav = document.querySelector('#main');
