@@ -345,15 +345,41 @@ header
     .purple  
         background: #553C7B;
         color: white;
-      
+
 .tech
+    text-align: center
+    margin-bottom: 0
+
     i
         font-size: 1.5rem
         padding: 3px
         transform: color 0.2s ease-in-out
+        position: relative
+        margin-bottom: 25px
+        
+    i .tooltiptext
+        font-family: 'Lato', sans-serif;
+        font-weight: 600
+        visibility: hidden
+        position: absolute
+        z-index: 1
+        top: 100%
+        left: 50%
+        border-radius: 4px
+        border: 1px solid rgb(48, 189, 30);
+        color: black
+        text-align: center
+        font-size: 0.8rem
+        padding: 5px
+        width: 80px
+        margin-left: -40px
+
     i:hover
-        color: rgb(48, 189, 30) 
-  
+        color: rgb(48, 189, 30)
+
+    i:hover .tooltiptext
+        visibility: visible
+    
 @media all and (min-width: 480px)  
     .card  
         margin: 15px 10px;
