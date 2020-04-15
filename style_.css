@@ -475,6 +475,17 @@ header h3 {
   color: white;
 }
 
+.tech i {
+  font-size: 1.5rem;
+  padding: 3px;
+  -webkit-transform: color 0.2s ease-in-out;
+          transform: color 0.2s ease-in-out;
+}
+
+.tech i:hover {
+  color: #30bd1e;
+}
+
 @media all and (min-width: 480px) {
   .card {
     margin: 15px 10px;
@@ -486,6 +497,10 @@ header h3 {
   .technologies {
     padding: 0px 0 40px 0;
     width: auto;
+  }
+  .tech i {
+    font-size: 1.7rem;
+    padding: 7px;
   }
 }
 
@@ -504,6 +519,10 @@ header h3 {
   }
   .technologies {
     padding: 0px 0 70px 0;
+  }
+  .tech i {
+    font-size: 2rem;
+    padding: 10px;
   }
 }
 
