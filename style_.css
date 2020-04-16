@@ -486,12 +486,19 @@ header h3 {
   -webkit-transform: color 0.2s ease-in-out;
           transform: color 0.2s ease-in-out;
   position: relative;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.tech .icon-svg {
+  max-width: 24px;
+  height: 22px;
 }
 
 .tech i .tooltiptext {
   font-family: 'Lato', sans-serif;
   font-weight: 600;
+  font-size: 0.9rem;
   visibility: hidden;
   position: absolute;
   z-index: 1;
@@ -530,6 +537,14 @@ header h3 {
   .tech i {
     font-size: 1.7rem;
     padding: 7px;
+    margin-bottom: 40px;
+  }
+  .tech .tooltiptext {
+    font-size: 1rem;
+  }
+  .tech .icon-svg {
+    max-width: 28px;
+    height: 25px;
   }
 }
 
@@ -552,6 +567,10 @@ header h3 {
   .tech i {
     font-size: 2rem;
     padding: 10px;
+  }
+  .tech .icon-svg {
+    max-width: 32px;
+    height: 30px;
   }
 }
 
