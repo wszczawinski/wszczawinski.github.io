@@ -437,70 +437,29 @@ header h3 {
   border-radius: 5px;
 }
 
-.technologies {
-  padding: 0 0px 20px 0px;
-  width: 195px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-
-.technologies .red {
-  background: red;
-  color: white;
-}
-
-.technologies .pink {
-  background: #cc6699;
-  color: white;
-}
-
-.technologies .blue {
-  background: #0275d8;
-  color: white;
-}
-
-.technologies .yellow {
-  background: #f0ad4e;
-  color: white;
-}
-
-.technologies .green {
-  background: #5fc45f;
-  color: white;
-}
-
-.technologies .purple {
-  background: #553C7B;
-  color: white;
-}
-
 .tech {
   text-align: center;
   margin-bottom: 0;
 }
 
 .tech i {
-  font-size: 1.5rem;
   padding: 3px;
-  -webkit-transform: color 0.2s ease-in-out;
-          transform: color 0.2s ease-in-out;
   position: relative;
-  margin-bottom: 30px;
   cursor: pointer;
 }
 
 .tech .icon-svg {
   max-width: 24px;
   height: 22px;
+  margin-bottom: 30px;
 }
 
 .tech i .tooltiptext {
   font-family: 'Lato', sans-serif;
   font-weight: 600;
-  font-size: 0.9rem;
-  visibility: hidden;
+  font-size: 0.8rem;
   position: absolute;
+  visibility: hidden;
   z-index: 1;
   top: 100%;
   left: 50%;
@@ -508,14 +467,11 @@ header h3 {
   border: 1px solid #30bd1e;
   color: black;
   text-align: center;
-  font-size: 0.8rem;
   padding: 5px;
   width: 80px;
+  margin-top: -30px;
   margin-left: -40px;
-}
-
-.tech i:hover {
-  color: #30bd1e;
+  line-height: 1;
 }
 
 .tech i:hover .tooltiptext {
@@ -535,12 +491,11 @@ header h3 {
     width: auto;
   }
   .tech i {
-    font-size: 1.7rem;
     padding: 7px;
     margin-bottom: 40px;
   }
-  .tech .tooltiptext {
-    font-size: 1rem;
+  .tech i .tooltiptext {
+    margin-top: -37px;
   }
   .tech .icon-svg {
     max-width: 28px;
