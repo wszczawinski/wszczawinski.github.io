@@ -1,7 +1,9 @@
+const path = require("path");
+
 module.exports = {
   entry: "./src/portfolio.js",
   output: {
-    path: "dist",
     filename: "bundle.js",
+    path: path.resolve(__dirname, "public"),
   },
 };
