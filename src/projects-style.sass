@@ -1,0 +1,162 @@
+/*Projects*/
+.project-cards  
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+  
+
+.card  
+    font-family: 'Open Sans', sans-serif;
+    margin: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(48, 189, 30);
+    border-radius: 8px;
+    flex-basis: 200px;
+    flex-shrink: 0;
+    flex-grow: 1;
+    max-width: 300px;
+    background-color: white;
+  
+    h4  
+        font-size: 18px;
+        font-weight: 100;
+        margin: 10px 20px;
+        border-bottom: #555;
+        text-align: left;
+  
+    img.cover  
+        width: 100%;
+        border-top: 1px solid lightgray;
+  
+    p  
+        margin: 0;
+        font-size: 12px;
+        text-align: justify;
+        padding: 20px;
+        flex-grow: 2;
+  
+    a  
+        opacity: 1;
+        transition: all 0.3s ease-in-out;
+  
+    a:hover  
+        opacity: 0.85;
+
+.links  
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    a  
+        margin: 0px 10px 20px 10px;
+        padding: 3px;
+        font-size: 12px;
+        color: #555;
+        border: 1px solid #555;
+        width: 70px;
+        text-align: center;
+        border-radius: 10px;
+        transform: all 0.2s ease-in-out;
+  
+    a:hover  
+        border: 1px solid rgb(48, 189, 30);
+        color: black;
+
+    button  
+        margin: 3px;
+        text-align: center;
+        padding: 3px 6px;
+        font-size: 0.6rem;
+        color: black;
+        border: none;
+        background-color: transparent;
+        border-radius: 5px;
+
+.tech
+    text-align: center
+    margin-bottom: 0
+
+    i
+        padding: 3px
+        position: relative
+        cursor: pointer
+
+    .icon-svg
+        max-width: 24px
+        height: 22px
+        margin-bottom: 30px
+        
+    i .tooltiptext
+        font-family: 'Lato', sans-serif;
+        font-weight: 600
+        font-size: 0.8rem
+        position: absolute
+        visibility: hidden
+        z-index: 1
+        top: 100%
+        left: 50%
+        border-radius: 4px
+        border: 1px solid rgb(48, 189, 30);
+        color: black
+        text-align: center
+        padding: 5px
+        width: 80px
+        margin-top: -30px
+        margin-left: -40px
+        line-height: 1
+
+    i:hover .tooltiptext
+        visibility: visible
+    
+@media all and (min-width: 480px)  
+    .card  
+        margin: 15px 10px;
+        flex-grow: 0;
+        height: 350px;
+      
+    .technologies  
+        padding: 0px 0 40px 0;
+        width: auto;
+
+    .tech
+        i
+            padding: 7px
+            margin-bottom: 40px
+
+        i .tooltiptext
+            margin-top: -37px
+
+        .icon-svg
+            max-width: 28px
+            height: 25px
+      
+@media all and (min-width: 600px)  
+    .card  
+        height: 375px;
+        flex-basis: 250px;
+        margin: 0 20px 30px 20px;
+      
+        h4  
+            margin: 20px 20px;
+      
+    .links 
+        button      
+            font-size: 0.7rem;
+
+    .technologies  
+        padding: 0px 0 70px 0;
+
+    .tech
+        i
+            font-size: 2rem
+            padding: 10px
+
+        .icon-svg
+            max-width: 32px
+            height: 30px
+      
