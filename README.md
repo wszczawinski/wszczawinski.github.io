@@ -1,6 +1,9 @@
+### Repository of my portfolio website, for more information about me and my projects visit:
 
-
-
-## Repository of my portfolio website, for more information about me and my projects visit:
-
-# <a href="https://wojtekszczawinski.com">wojtekszczawinski.com</a>
+<p align="center">
+  <a href="https://wszczawinski.github.io">
+    <h4  align="center"> 
+      wszczawinski.github.io
+    </h4>
+  </a>
+</p>
