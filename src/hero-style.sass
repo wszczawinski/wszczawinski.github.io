@@ -26,6 +26,17 @@
         margin-top: 50px
         align-items: center
 
+    .hero-text
+        width: 90%
+        max-width: 350px
+        margin: 30px auto
+        padding: 10px
+        border-radius: 8px
+        text-align: justify
+        text-justify: inter-word
+        border: 1px solid grey
+        background: rgba(247, 247, 247, 0.6)
+
     .btn-hero
         width: 220px
 
@@ -35,19 +46,46 @@
     animation: 1s slidefade 1s forwards
     width: 90%
 
+.down-arrow
+    font-size: 1.2rem
+    position: absolute
+    top: 90vh
+    animation: PulseEffect 2s infinite
+
+@keyframes PulseEffect
+    0%
+        opacity: 0.8
+    50%
+        opacity: 0.2
+    100%
+        opacity: 0.8
+
 @media all and (min-width: 610px)
     .hero
         text-align: left
 
         h1
-            font-size: 2.5rem
+            font-size: 3rem
 
         .hero-links
             align-items: flex-start
 
+        .hero-text
+            width: 90%
+            max-width: 630px
+            margin: 50px 0
+            padding: 15px 20px
+            border-radius: 8px
+            text-align: justify
+            text-justify: inter-word
+            border: 1px solid grey
+            background: rgba(247, 247, 247, 0.6)
+
         .btn-hero
-            width: 250px
+            margin-bottom: 20px
+            width: 300px
             margin-left: 0
+            font-size: 1.2rem
 
     .hero-content-area
         width: 65%

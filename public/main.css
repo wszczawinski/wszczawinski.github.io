@@ -49,6 +49,10 @@ a:hover {
   transition: 0.5s ease-in-out;
 }
 
+.btn-contact {
+  margin: 10px;
+}
+
 .btn:hover {
   border: 1px solid #30bd1e;
   color: black;
@@ -82,9 +86,10 @@ section p {
 }
 section img#avt {
   margin: 20px;
-  max-width: 250px;
+  width: 90%;
+  max-width: 350px;
   border-radius: 20px;
-  border: 1px solid #30bd1e;
+  border: 1px solid rgba(201, 198, 198, 0.7);
 }
 
 @media all and (min-width: 600px) {
@@ -96,15 +101,14 @@ section img#avt {
     font-size: 1.5rem;
   }
   section img#avt {
-    margin: 30px;
-    max-width: 300px;
+    margin: 0;
+    max-width: 350px;
   }
 
   .btn {
     font-size: 1rem;
     padding: 10px 10px;
     margin: 10px;
-    width: 250px;
   }
 }
 @media all and (min-width: 950px) {
@@ -153,6 +157,15 @@ header h3 {
 .active-main {
   opacity: 1;
   height: auto;
+  align-items: flex-end;
+}
+.active-main li {
+  margin-top: 10px;
+  width: 110px;
+  padding: 10px;
+  background: #f7f7f7;
+  border: 1px solid #000000;
+  border-radius: 8px;
 }
 
 .navigation-toggle {
@@ -230,6 +243,17 @@ header h3 {
   margin-top: 50px;
   align-items: center;
 }
+.hero .hero-text {
+  width: 90%;
+  max-width: 350px;
+  margin: 30px auto;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: justify;
+  text-justify: inter-word;
+  border: 1px solid grey;
+  background: rgba(247, 247, 247, 0.6);
+}
 .hero .btn-hero {
   width: 220px;
 }
@@ -241,19 +265,50 @@ header h3 {
   width: 90%;
 }
 
+.down-arrow {
+  font-size: 1.2rem;
+  position: absolute;
+  top: 90vh;
+  animation: PulseEffect 2s infinite;
+}
+
+@keyframes PulseEffect {
+  0% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
 @media all and (min-width: 610px) {
   .hero {
     text-align: left;
   }
   .hero h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
   .hero .hero-links {
     align-items: flex-start;
   }
+  .hero .hero-text {
+    width: 90%;
+    max-width: 630px;
+    margin: 50px 0;
+    padding: 15px 20px;
+    border-radius: 8px;
+    text-align: justify;
+    text-justify: inter-word;
+    border: 1px solid grey;
+    background: rgba(247, 247, 247, 0.6);
+  }
   .hero .btn-hero {
-    width: 250px;
+    margin-bottom: 20px;
+    width: 300px;
     margin-left: 0;
+    font-size: 1.2rem;
   }
 
   .hero-content-area {
