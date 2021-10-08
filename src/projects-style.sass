@@ -1,5 +1,5 @@
 /*Projects*/
-.project-cards  
+.project-cards
     margin-top: 30px
     display: flex
     flex-direction: row
@@ -7,9 +7,8 @@
     justify-content: center
     align-items: center
     max-width: 1000px
-  
 
-.card  
+.card
     font-family: 'Open Sans', sans-serif
     margin: 15px 20px
     display: flex
@@ -21,38 +20,38 @@
     flex-grow: 1
     max-width: 300px
     background-color: white
-  
-    h4  
+
+    h4
         font-size: 18px
         font-weight: 100
         margin: 10px 20px
         border-bottom: #555
         text-align: left
-  
-    img.cover  
+
+    img.cover
         width: 100%
         border-top: 1px solid lightgray
-  
-    p  
+
+    p
         margin: 0
         font-size: 12px
         text-align: justify
         padding: 20px
         flex-grow: 2
-  
-    a  
+
+    a
         opacity: 1
         transition: all 0.3s ease-in-out
-  
-    a:hover  
+
+    a:hover
         opacity: 0.85
 
-.links  
+.links
     display: flex
     justify-content: center
     flex-wrap: wrap
 
-    a  
+    a
         margin: 0px 10px 20px 10px
         padding: 3px
         font-size: 12px
@@ -62,12 +61,12 @@
         text-align: center
         border-radius: 10px
         transform: all 0.2s ease-in-out
-  
-    a:hover  
+
+    a:hover
         border: 1px solid rgb(48, 189, 30)
         color: black
 
-    button  
+    button
         margin: 3px
         text-align: center
         padding: 3px 6px
@@ -90,7 +89,7 @@
         max-width: 24px
         height: 22px
         margin-bottom: 30px
-        
+
     i .tooltiptext
         font-family: 'Lato', sans-serif
         font-weight: 600
@@ -112,14 +111,22 @@
 
     i:hover .tooltiptext
         visibility: visible
-    
-@media all and (min-width: 480px)  
-    .card  
+
+.tech-skills
+    display: flex
+    flex-direction: column
+    width: 80%
+    font-size: 0.8rem
+    i
+        padding-bottom: 3px
+
+@media all and (min-width: 480px)
+    .card
         margin: 15px 10px
         flex-grow: 0
         height: 350px
-      
-    .technologies  
+
+    .technologies
         padding: 0px 0 40px 0
         width: auto
 
@@ -134,21 +141,21 @@
         .icon-svg
             max-width: 28px
             height: 25px
-      
-@media all and (min-width: 600px)  
-    .card  
+
+@media all and (min-width: 610px)
+    .card
         height: 375px
         flex-basis: 250px
         margin: 0 20px 30px 20px
-      
-        h4  
+
+        h4
             margin: 20px 20px
-      
-    .links 
-        button      
+
+    .links
+        button
             font-size: 0.7rem
 
-    .technologies  
+    .technologies
         padding: 0px 0 70px 0
 
     .tech
@@ -159,4 +166,9 @@
         .icon-svg
             max-width: 32px
             height: 30px
-      
+
+    .tech-skills
+        align-items: center
+        font-size: 0.9rem
+        i
+            padding-bottom: 10px
