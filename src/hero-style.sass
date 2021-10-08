@@ -20,12 +20,14 @@
     h1
         font: 200 1.6rem "Open Sans", sans-serif
 
-    h3
-        font: 100 0.95rem "Open Sans", sans-serif
-        margin: 50px 0
+    .hero-links
+        display: flex
+        flex-direction: column
+        margin-top: 50px
+        align-items: center
 
-    a.btn
-        margin: 0 10px 0 0
+    .btn-hero
+        width: 220px
 
 .hero-content-area
     opacity: 0
@@ -33,18 +35,19 @@
     animation: 1s slidefade 1s forwards
     width: 90%
 
-@media all and (min-width: 600px)
+@media all and (min-width: 610px)
     .hero
         text-align: left
 
         h1
             font-size: 2.5rem
 
-        h3
-            font-size: 1.5rem
+        .hero-links
+            align-items: flex-start
 
-        a.btn
-            margin: 0 30px 0 0
+        .btn-hero
+            width: 250px
+            margin-left: 0
 
     .hero-content-area
         width: 65%
