@@ -1,3 +1,4 @@
+/*Common*/
 *
     -webkit-font-smoothing: antialiased
     -moz-osx-font-smoothing: grayscale
@@ -23,26 +24,31 @@ a
     text-decoration: none
     opacity: 0.75
     color: #000
-
-a.btn
-    border-radius: 4px
-    color: rgb(53, 53, 53)
-    font-size: 0.9rem
-    font-weight: bold
-    border: 1px solid rgb(53, 53, 53)
-    opacity: 1
-    transition: all 0.3s ease-in-out
-    padding: 10px 10px
-
-a.btn:hover
-    color: black
-    border-color: black
-
-a.btn:active
-    border-color: transparent
+    transition: 0.5s ease-in-out
 
 a:hover
     opacity: 1
+
+.btn
+    border-radius: 4px
+    color: rgb(53, 53, 53)
+    font-size: 0.9rem
+    border: 1px solid rgb(53, 53, 53)
+    opacity: 1
+    margin-top: 20px
+    padding: 6px 6px
+    transition: 0.5s ease-in-out
+
+.btn-contact
+    margin: 10px
+
+.btn:hover
+    border: 1px solid rgb(48, 189, 30)
+    color: black
+    opacity: 0.8
+
+.btn:active
+    border-color: transparent
 
 section
     display: flex
@@ -67,9 +73,10 @@ section
 
     img#avt
         margin: 20px
-        max-width: 250px
-        border-radius: 20px
-        border: 1px solid rgb(48, 189, 30)
+        width: 90%
+        max-width: 350px
+        border-radius: 10px
+        border: 1px solid rgba(201, 198, 198, 0.7)
 
 @media all and (min-width: 600px)
     section
@@ -81,13 +88,13 @@ section
             font-size: 1.5rem
 
         img#avt
-            margin: 30px
-            max-width: 300px
+            margin: 0
+            max-width: 350px
 
-    a.btn
+    .btn
         font-size: 1rem
-        padding: 15px 25px
-        margin: 30px
+        padding: 10px 10px
+        margin: 10px
 
 @media all and (min-width: 950px)
     section
