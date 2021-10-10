@@ -102,7 +102,10 @@ section img#avt {
   }
   section img#avt {
     margin: 0;
-    max-width: 350px;
+    width: 40vh;
+    max-width: 500px;
+    border-radius: 10px;
+    border: 1px solid rgba(201, 198, 198, 0.7);
   }
 
   .btn {
