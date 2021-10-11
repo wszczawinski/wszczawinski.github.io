@@ -38,6 +38,13 @@ a:hover {
   opacity: 1;
 }
 
+a.disabled {
+  opacity: 1;
+  pointer-events: none;
+  cursor: default;
+  color: #21be0c;
+}
+
 .btn {
   border-radius: 4px;
   color: #353535;
@@ -261,6 +268,12 @@ header h3 {
 .hero .btn-hero {
   width: 220px;
 }
+.hero .contact-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
 
 .hero-content-area {
   opacity: 0;
@@ -272,7 +285,7 @@ header h3 {
 .down-arrow {
   font-size: 1.2rem;
   position: absolute;
-  top: 90vh;
+  top: 85vh;
   animation: PulseEffect 2s infinite;
 }
 
@@ -314,9 +327,20 @@ header h3 {
     margin-left: 0;
     font-size: 1.2rem;
   }
+  .hero .contact-btn {
+    width: 90%;
+    max-width: 630px;
+    margin-left: 0;
+  }
 
   .hero-content-area {
     width: 65%;
+  }
+
+  .down-arrow {
+    font-size: 1.2rem;
+    position: absolute;
+    top: 90vh;
   }
 }
 @keyframes slidefade {
@@ -325,7 +349,28 @@ header h3 {
     margin: 0;
   }
 }
-/*Projects*/
+/*Sections*/
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-content img#avt {
+  margin: 20px;
+}
+
+.about-text {
+  width: 90%;
+  margin: 30px auto;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: justify;
+  text-justify: inter-word;
+  border: 1px solid grey;
+  background: rgba(247, 247, 247, 0.6);
+  color: #333333;
+}
+
 .project-cards {
   margin-top: 30px;
   display: flex;
@@ -510,6 +555,25 @@ header h3 {
   }
   .tech-skills i {
     padding-bottom: 10px;
+  }
+}
+@media all and (min-width: 900px) {
+  .about-content {
+    display: flex;
+    flex-direction: row;
+    max-width: 80%;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  .about-content .about-text {
+    max-width: 400px;
+    margin: 20px;
+  }
+  .about-content img#avt {
+    width: 400px;
+    max-width: 400px;
+    margin: 30px 20px;
   }
 }
 /*Footer*/
