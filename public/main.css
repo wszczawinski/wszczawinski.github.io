@@ -500,9 +500,17 @@ header h3 {
 
 @media all and (min-width: 480px) {
   .card {
-    margin: 15px 10px;
-    flex-grow: 0;
-    height: 350px;
+    flex-basis: 300px;
+    max-width: 400px;
+    margin: 15px 20px;
+    height: 400px;
+  }
+
+  .card-mech {
+    flex-grow: 1;
+    flex-basis: 400px;
+    max-width: 500px;
+    height: 500px;
   }
 
   .technologies {
@@ -527,9 +535,16 @@ header h3 {
     height: 375px;
     flex-basis: 250px;
     margin: 0 20px 30px 20px;
+    max-width: 300px;
   }
   .card h4 {
     margin: 20px 20px;
+  }
+
+  .card-mech {
+    flex-basis: 500px;
+    max-width: 500px;
+    height: 500px;
   }
 
   .links button {
@@ -558,6 +573,10 @@ header h3 {
   }
 }
 @media all and (min-width: 900px) {
+  .tech-skills {
+    font-size: 1rem;
+  }
+
   .about-content {
     display: flex;
     flex-direction: row;
