@@ -1,9 +1,20 @@
-### Repository of my portfolio website, for more information about me and my projects visit:
+## Portfolio website repository created using SvelteKit
 
-<p align="center">
-  <a href="https://wszczawinski.github.io">
-    <h4  align="center"> 
-      wszczawinski.github.io
-    </h4>
-  </a>
-</p>
+
+## Development
+
+```bash
+npm install
+npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
+
+## Building
+
+To create a production version:
+
+```bash
+npm run build
+```
