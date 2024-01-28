@@ -34,10 +34,14 @@
 		{:else if $page.url.pathname === ROUTES.SOFTWARE}
 			<h1>Software Developer</h1>
 			<p class="hero-text">
-				IT was always my passion and recently I have decided to dive deeper into web development and
-				machine learning world. These particular branches of IT attracts me the most because they
-				are still developing very quickly and the possibility of continuous improvement of my skills
-				is especially important for me.
+				I've been immersed in the field of web development for over 1.5 years, where my true passion
+				has flourished. The dynamic nature of this domain continually challenges and motivates me to
+				enhance my skills. My journey began with a focus on frontend development, allowing my
+				passion for creating engaging user interfaces to thrive. Now, I'm eager to broaden my
+				expertise by delving into backend development. This strategic move aims to augment my skill
+				set and bring a more comprehensive understanding of web development to my repertoire. The
+				rapid evolution within web development fuels my enthusiasm, providing constant opportunities
+				for improvement and growth in my expertise.
 			</p>
 		{:else if $page.url.pathname === ROUTES.MECHANICAL}
 			<h1>Mechanical Design Engineer</h1>
