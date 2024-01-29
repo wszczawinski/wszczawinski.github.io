@@ -1,7 +1,5 @@
 <script lang="ts">
-	import { ROUTES } from '../constants';
 	import { page } from '$app/stores';
-	import logo from '$lib/images/deer_logo.png';
 
 	// @ts-ignore - no types for this package
 	import Icon from 'svelte-icons-pack/Icon.svelte';
@@ -11,11 +9,22 @@
 	import FaSolidBars from 'svelte-icons-pack/fa/FaSolidBars';
 	import FaSolidHamburger from 'svelte-icons-pack/fa/FaSolidHamburger';
 
+	import { ROUTES } from '../constants';
+	import logo from '$lib/images/deer_logo.png';
+
 	let isMobileNavigation = false;
+	let windowPosition = 0;
+
 	const togleMobileNavVisibility = () => (isMobileNavigation = !isMobileNavigation);
+
+	const checkScrollPosition = () => {
+		windowPosition = window.scrollY;
+	};
 </script>
 
-<header>
+<svelte:window on:scroll={checkScrollPosition} />
+
+<header class={`${!!windowPosition && 'headerBackground'}`}>
 	<button class="navigation-toggle" on:click={togleMobileNavVisibility}>
 		<Icon src={isMobileNavigation ? FaSolidHamburger : FaSolidBars} />
 	</button>
@@ -61,13 +70,19 @@
 
 <style>
 	header {
-		position: absolute;
+		position: fixed;
+		top: 0;
 		width: 100%;
 		z-index: 100;
 		display: flex;
 		flex-direction: column;
-		padding: 20px 20px 0;
+		padding: 20px;
 		opacity: 1;
+	}
+
+	.headerBackground {
+		background-color: rgba(255, 255, 255, 0.8);
+		transition: all 0.5s ease-in-out;
 	}
 
 	header img {
@@ -193,7 +208,7 @@
 
 	@media (min-width: 950px) {
 		header {
-			padding: 45px 100px;
+			padding: 35px 100px;
 		}
 
 		header img {

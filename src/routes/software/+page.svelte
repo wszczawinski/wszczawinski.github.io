@@ -12,12 +12,12 @@
 	import jupiterIcon from '$lib/icons/jupyter-icon.svg';
 	import octaveIcon from '$lib/icons/octave-icon.svg';
 
-	import pictureSearchImg from '$lib/images/projects/p_picture-search.png';
-	import bearingAnalysesImg from '$lib/images/projects/p_analyses.png';
-	import sendEthImg from '$lib/images/projects/p-sendeth.png';
-	import germaniImg from '$lib/images/projects/p-germani.png';
+	import searchImg from '$lib/images/projects/p_picture-search.png';
+	import bearingImg from '$lib/images/projects/p_analyses.png';
+	import sendEthImg from '$lib/images/projects/p_sendeth.png';
+	import germaniImg from '$lib/images/projects/p_germani.png';
 	import passiveImg from '$lib/images/projects/p_passive.png';
-	import weatherImg from '$lib/images/projects/p-weather.png';
+	import weatherImg from '$lib/images/projects/p_weather.png';
 </script>
 
 <!--Technologies-->
@@ -159,7 +159,7 @@
 		<article class="card">
 			<h4 class="title">Picture Search</h4>
 			<a href="https://github.com/wszczawinski/PictureSearch" target="_blank"
-				><img class="cover" src={pictureSearchImg} alt="pirture-search" /></a
+				><img class="cover" src={searchImg} alt="pirture-search" /></a
 			>
 			<p>
 				The main function of this <b>React</b> based simple <b>PWA</b> is to search for beautiful
@@ -174,7 +174,7 @@
 		<article class="card">
 			<h4 class="title">Bearing Analysis</h4>
 			<a href="https://github.com/wszczawinski/master-thesis/tree/master/analyses" target="_blank"
-				><img class="cover" src={bearingAnalysesImg} alt="analyses" /></a
+				><img class="cover" src={bearingImg} alt="analyses" /></a
 			>
 			<p>
 				Python and Jupyter based analysis of the plain bearings measurements results using data
