@@ -30,6 +30,7 @@
 			<Icon src={FaSolidLaptopCode} />
 			<a
 				href={ROUTES.SOFTWARE}
+				on:click={togleMobileNavVisibility}
 				aria-current={$page.url.pathname === ROUTES.SOFTWARE ? 'page' : undefined}
 			>
 				software
@@ -39,6 +40,7 @@
 			<Icon src={IoRocketOutline} />
 			<a
 				href={ROUTES.MECHANICAL}
+				on:click={togleMobileNavVisibility}
 				aria-current={$page.url.pathname === ROUTES.MECHANICAL ? 'page' : undefined}
 			>
 				mechanical
@@ -48,6 +50,7 @@
 			<Icon src={FaAddressCard} />
 			<a
 				href={ROUTES.ABOUT}
+				on:click={togleMobileNavVisibility}
 				aria-current={$page.url.pathname === ROUTES.ABOUT ? 'page' : undefined}
 			>
 				about
@@ -89,6 +92,11 @@
 	.main-navbar li {
 		margin-top: 20px;
 		font-size: 0.9rem;
+		display: flex;
+		flex-direction: row;
+		gap: 5px;
+		align-items: center;
+		justify-content: center;
 	}
 
 	li {
@@ -118,6 +126,24 @@
 		font-size: 1.1rem;
 	}
 
+	@media (max-width: 450px) {
+		.main-navbar {
+			padding: 0 7px;
+		}
+		.main-navbar li {
+			margin: 7px 0;
+		}
+	}
+
+	@media (min-width: 450px) {
+		.main-navbar {
+			padding: 0 12px;
+		}
+		.main-navbar li {
+			margin: 12px 0;
+		}
+	}
+
 	@media (max-width: 615px) {
 		.active-main {
 			opacity: 1;
@@ -127,17 +153,15 @@
 
 		.active-main li {
 			margin-top: 10px;
-			width: 110px;
+			width: 100%;
 			padding: 10px;
 			background: #f7f7f7;
 			border: 1px solid #000000;
 			border-radius: 8px;
 		}
-	}
 
-	@media (min-width: 450px) {
-		.main-navbar li {
-			margin-top: 25px;
+		.main-navbar {
+			background-color: rgba(255, 255, 255, 0.8);
 		}
 	}
 
@@ -152,11 +176,13 @@
 			height: auto;
 			opacity: 1;
 			flex-direction: row;
+			padding: 0;
 		}
 
 		.main-navbar li {
+			width: 100%;
+			margin: 0;
 			margin-left: 20px;
-			margin-top: 0;
 			font-size: 1rem;
 		}
 
