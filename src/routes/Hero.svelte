@@ -1,16 +1,10 @@
 <script lang="ts">
+	import Icon from '@iconify/svelte';
+
 	import { page } from '$app/stores';
 	import background from '$lib/images/hero_background.jpg';
-	import { ROUTES } from '../constants';
 
-	// @ts-ignore - no types for this package
-	import Icon from 'svelte-icons-pack/Icon.svelte';
-	import FaSolidAngleDoubleDown from 'svelte-icons-pack/fa/FaSolidAngleDoubleDown';
-	import FaEnvelope from 'svelte-icons-pack/fa/FaEnvelope';
-	import FaBrandsLinkedinIn from 'svelte-icons-pack/fa/FaBrandsLinkedinIn';
-	import FaAddressCard from 'svelte-icons-pack/fa/FaAddressCard';
-	import FaSolidLaptopCode from 'svelte-icons-pack/fa/FaSolidLaptopCode';
-	import IoRocketOutline from 'svelte-icons-pack/io/IoRocketOutline';
+	import { ROUTES } from '../constants';
 
 	$: bgImage = `background-image: url("${background}");`;
 </script>
@@ -22,13 +16,13 @@
 			<h1><b>Hi</b>, I'm Wojtek.</h1>
 			<div class="hero-links">
 				<a href={ROUTES.SOFTWARE} class="btn btn-hero">
-					<Icon src={FaSolidLaptopCode} /> Software Developer
+					<Icon icon="fa6-solid:laptop-code" /> Software Developer
 				</a>
 				<a href={ROUTES.MECHANICAL} class="btn btn-hero">
-					<Icon src={IoRocketOutline} /> Mechanical Design Engineer
+					<Icon icon="octicon:rocket-16" /> Mechanical Design Engineer
 				</a>
 				<a href={ROUTES.ABOUT} class="btn btn-hero">
-					<Icon src={FaAddressCard} /> Open to new opportunities
+					<Icon icon="fa6-regular:address-card" /> Open to new opportunities
 				</a>
 			</div>
 		{:else if $page.url.pathname === ROUTES.SOFTWARE}
@@ -58,18 +52,18 @@
 				technological innovations, sports, books and quality coffee.
 			</p>
 			<p class="contact-btn">
-				<a href="https://www.linkedin.com/in/wszczawinski" class="btn btn-contact" target="_blank">
-					<Icon src={FaBrandsLinkedinIn} /> LinkedIn
+				<a href="https://github.com/wszczawinski" class="btn btn-contact">
+					<Icon icon="fa-brands:github" /> GitHub
 				</a>
-				<a href="mailto:w.szczawinski@outlook.com" class="btn btn-contact">
-					<Icon src={FaEnvelope} /> Email me
+				<a href="https://www.linkedin.com/in/wszczawinski" class="btn btn-contact" target="_blank">
+					<Icon icon="fa-brands:linkedin-in" /> LinkedIn
 				</a>
 			</p>
 		{/if}
 	</div>
 	{#if $page.url.pathname !== ROUTES.HOME}
 		<div class="down-arrow pulse">
-			<Icon src={FaSolidAngleDoubleDown} />
+			<Icon icon="fa-solid:angle-double-down" />
 		</div>
 	{/if}
 </section>

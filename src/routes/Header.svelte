@@ -1,16 +1,10 @@
 <script lang="ts">
-	import { page } from '$app/stores';
+	import Icon from '@iconify/svelte';
 
-	// @ts-ignore - no types for this package
-	import Icon from 'svelte-icons-pack/Icon.svelte';
-	import FaSolidLaptopCode from 'svelte-icons-pack/fa/FaSolidLaptopCode';
-	import IoRocketOutline from 'svelte-icons-pack/io/IoRocketOutline';
-	import FaAddressCard from 'svelte-icons-pack/fa/FaAddressCard';
-	import FaSolidBars from 'svelte-icons-pack/fa/FaSolidBars';
-	import FaSolidHamburger from 'svelte-icons-pack/fa/FaSolidHamburger';
+	import { page } from '$app/stores';
+	import logo from '$lib/images/deer_logo.png';
 
 	import { ROUTES } from '../constants';
-	import logo from '$lib/images/deer_logo.png';
 
 	let isMobileNavigation = false;
 	let windowPosition = 0;
@@ -26,7 +20,7 @@
 
 <header class={`${!!windowPosition && 'headerBackground'}`}>
 	<button class="navigation-toggle" on:click={togleMobileNavVisibility}>
-		<Icon src={isMobileNavigation ? FaSolidHamburger : FaSolidBars} />
+		<Icon icon={isMobileNavigation ? 'fa-solid:hamburger' : 'fa-solid:bars'} />
 	</button>
 
 	<h3>
@@ -36,7 +30,7 @@
 
 	<nav id="main" class={`main-navbar ${isMobileNavigation && 'active-main'}`}>
 		<li>
-			<Icon src={FaSolidLaptopCode} />
+			<Icon icon="fa6-solid:laptop-code" />
 			<a
 				href={ROUTES.SOFTWARE}
 				on:click={togleMobileNavVisibility}
@@ -46,7 +40,7 @@
 			</a>
 		</li>
 		<li>
-			<Icon src={IoRocketOutline} />
+			<Icon icon="octicon:rocket-16" />
 			<a
 				href={ROUTES.MECHANICAL}
 				on:click={togleMobileNavVisibility}
@@ -56,7 +50,7 @@
 			</a>
 		</li>
 		<li>
-			<Icon src={FaAddressCard} />
+			<Icon icon="fa6-regular:address-card" />
 			<a
 				href={ROUTES.ABOUT}
 				on:click={togleMobileNavVisibility}

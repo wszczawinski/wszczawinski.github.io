@@ -1,19 +1,16 @@
 <script lang="ts">
-	// @ts-ignore - no types for this package
-	import Icon from 'svelte-icons-pack/Icon.svelte';
-	import FaGithub from 'svelte-icons-pack/fa/FaBrandsGithubSquare';
-	import FaLinkedin from 'svelte-icons-pack/fa/FaBrandsLinkedin';
+	import Icon from '@iconify/svelte';
 </script>
 
 <footer class="footer">
 	<div class="copy">&copy; Wojtek Szczawinski</div>
 	<div class="socials">
 		<a href="https://github.com/wszczawinski" target="_blank">
-			<Icon src={FaGithub} className="icon" />
+			<Icon icon="fa-brands:github-square" class="icon" />
 		</a>
 
 		<a href="https://www.linkedin.com/in/wszczawinski" target="_blank">
-			<Icon src={FaLinkedin} className="icon" />
+			<Icon icon="fa-brands:linkedin" class="icon" />
 		</a>
 	</div>
 </footer>
@@ -36,7 +33,7 @@
 		gap: 20px;
 	}
 
-	:global(.icon) {
+	:global(.icon path) {
 		fill: #555;
 	}
 

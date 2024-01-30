@@ -264,16 +264,6 @@
 		border: 1px solid #30bd1e;
 		color: black;
 	}
-	.links button {
-		margin: 3px;
-		text-align: center;
-		padding: 3px 6px;
-		font-size: 0.6rem;
-		color: black;
-		border: none;
-		background-color: transparent;
-		border-radius: 5px;
-	}
 
 	.tech {
 		text-align: center;
@@ -312,33 +302,14 @@
 		visibility: visible;
 	}
 
-	.tech-skills {
-		display: flex;
-		flex-direction: column;
-		width: 80%;
-		font-size: 0.8rem;
-	}
-	.tech-skills i {
-		padding-bottom: 3px;
-	}
-
-	@media all and (min-width: 480px) {
+	@media (min-width: 480px) {
 		.card {
 			flex-basis: 300px;
 			max-width: 400px;
 			margin: 15px 20px;
 			height: 400px;
 		}
-		.card-mech {
-			flex-grow: 1;
-			flex-basis: 400px;
-			max-width: 500px;
-			height: 500px;
-		}
-		.technologies {
-			padding: 0px 0 40px 0;
-			width: auto;
-		}
+
 		.tech i {
 			padding: 7px;
 			margin-bottom: 40px;
@@ -352,7 +323,7 @@
 		}
 	}
 
-	@media all and (min-width: 610px) {
+	@media (min-width: 610px) {
 		.card {
 			height: 375px;
 			flex-basis: 250px;
@@ -362,17 +333,7 @@
 		.card h4 {
 			margin: 20px 20px;
 		}
-		.card-mech {
-			flex-basis: 500px;
-			max-width: 500px;
-			height: 500px;
-		}
-		.links button {
-			font-size: 0.7rem;
-		}
-		.technologies {
-			padding: 0px 0 70px 0;
-		}
+
 		.tech i {
 			font-size: 2rem;
 			padding: 10px;
@@ -380,36 +341,6 @@
 		.tech .icon-svg {
 			max-width: 32px;
 			height: 30px;
-		}
-		.tech-skills {
-			align-items: center;
-			font-size: 0.9rem;
-		}
-		.tech-skills i {
-			padding-bottom: 10px;
-		}
-	}
-
-	@media all and (min-width: 900px) {
-		.tech-skills {
-			font-size: 1rem;
-		}
-		.about-content {
-			display: flex;
-			flex-direction: row;
-			max-width: 80%;
-			align-items: center;
-			justify-content: space-evenly;
-			width: 100%;
-		}
-		.about-content .about-text {
-			max-width: 400px;
-			margin: 20px;
-		}
-		.about-content img#avt {
-			width: 400px;
-			max-width: 400px;
-			margin: 30px 20px;
 		}
 	}
 </style>
