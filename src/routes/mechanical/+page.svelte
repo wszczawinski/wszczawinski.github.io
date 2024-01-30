@@ -1,5 +1,7 @@
 <script lang="ts">
 	import Icon from '@iconify/svelte';
+	import Helmet from './Helmet.svelte';
+	import { Canvas } from '@threlte/core';
 </script>
 
 <section id="technologies">
@@ -18,6 +20,11 @@
 		<i><Icon icon="fa-solid:industry" /> understending of technological processes</i>
 		<i><Icon icon="fa6-solid:wrench" /> workshop experience</i>
 	</article>
+	<article class="mech-example">
+		<Canvas>
+			<Helmet />
+		</Canvas>
+	</article>
 </section>
 
 <style>
@@ -27,6 +34,7 @@
 		width: 80%;
 		font-size: 0.8rem;
 	}
+
 	.tech-skills i {
 		padding-bottom: 3px;
 		display: flex;
@@ -35,17 +43,28 @@
 		gap: 10px;
 	}
 
-	@media all and (min-width: 610px) {
+	.mech-example {
+		width: 100%;
+		height: 50vh;
+	}
+
+	@media (min-width: 610px) {
 		.tech-skills {
 			font-size: 0.9rem;
 			width: auto;
 		}
+
 		.tech-skills i {
 			padding-bottom: 10px;
 		}
+
+		.mech-example {
+			width: 100%;
+			height: 60vh;
+		}
 	}
 
-	@media all and (min-width: 900px) {
+	@media (min-width: 900px) {
 		.tech-skills {
 			font-size: 1rem;
 		}

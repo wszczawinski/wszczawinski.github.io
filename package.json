@@ -34,6 +34,10 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@vercel/speed-insights": "^1.0.8"
+		"@threlte/core": "^7.0.12",
+		"@threlte/extras": "^8.4.0",
+		"@types/three": "^0.160.0",
+		"@vercel/speed-insights": "^1.0.8",
+		"three": "^0.160.1"
 	}
 }
