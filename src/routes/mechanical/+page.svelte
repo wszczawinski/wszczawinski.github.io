@@ -6,11 +6,6 @@
 
 <section id="technologies">
 	<h4 class="title">Skills</h4>
-	<p>
-		Being able to think of ways to solve a problem and create things useful for other people gives
-		me a sense of fulfilment. I consider this to be the most important because I apply this mindset
-		in different projects it only requires the use of different tools.
-	</p>
 	<article class="tech-skills">
 		<i><Icon icon="fa-solid:cubes" /> CAD: Inventor, AutoCad, Solidworks, SolidEdge</i>
 		<i><Icon icon="fa6-solid:compass-drafting" /> GPS/GD&T: Geometrical Product Specifications</i>

@@ -14,13 +14,19 @@
 	const checkScrollPosition = () => {
 		windowPosition = window.scrollY;
 	};
+
+	const navElements = [
+		{ route: ROUTES.SOFTWARE, label: 'software', icon: 'fa6-solid:laptop-code' },
+		{ route: ROUTES.MECHANICAL, label: 'mechanical', icon: 'octicon:rocket-16' },
+		{ route: ROUTES.ABOUT, label: 'about', icon: 'fa6-regular:address-card' }
+	];
 </script>
 
 <svelte:window on:scroll={checkScrollPosition} />
 
 <header class={`${!!windowPosition && 'headerBackground'}`}>
 	<button class="navigation-toggle" on:click={togleMobileNavVisibility}>
-		<Icon icon={isMobileNavigation ? 'fa-solid:hamburger' : 'fa-solid:bars'} />
+		<Icon class="icon" icon={isMobileNavigation ? 'fa-solid:hamburger' : 'fa-solid:bars'} />
 	</button>
 
 	<h3>
@@ -29,36 +35,16 @@
 	</h3>
 
 	<nav id="main" class={`main-navbar ${isMobileNavigation && 'active-main'}`}>
-		<li>
-			<Icon icon="fa6-solid:laptop-code" />
+		{#each navElements as navElement}
 			<a
-				href={ROUTES.SOFTWARE}
+				href={navElement.route}
 				on:click={togleMobileNavVisibility}
-				aria-current={$page.url.pathname === ROUTES.SOFTWARE ? 'page' : undefined}
+				aria-current={$page.url.pathname === navElement.route ? 'page' : undefined}
 			>
-				software
+				<Icon icon={navElement.icon} />
+				<p>{navElement.label}</p>
 			</a>
-		</li>
-		<li>
-			<Icon icon="octicon:rocket-16" />
-			<a
-				href={ROUTES.MECHANICAL}
-				on:click={togleMobileNavVisibility}
-				aria-current={$page.url.pathname === ROUTES.MECHANICAL ? 'page' : undefined}
-			>
-				mechanical
-			</a>
-		</li>
-		<li>
-			<Icon icon="fa6-regular:address-card" />
-			<a
-				href={ROUTES.ABOUT}
-				on:click={togleMobileNavVisibility}
-				aria-current={$page.url.pathname === ROUTES.ABOUT ? 'page' : undefined}
-			>
-				about
-			</a>
-		</li>
+		{/each}
 	</nav>
 </header>
 
@@ -98,7 +84,7 @@
 		align-items: center;
 	}
 
-	.main-navbar li {
+	.main-navbar a {
 		margin-top: 20px;
 		font-size: 0.9rem;
 		display: flex;
@@ -108,7 +94,7 @@
 		justify-content: center;
 	}
 
-	li {
+	a {
 		display: flex;
 		flex-direction: row;
 		gap: 5px;
@@ -139,7 +125,7 @@
 		.main-navbar {
 			padding: 0 7px;
 		}
-		.main-navbar li {
+		.main-navbar a {
 			margin: 7px 0;
 		}
 	}
@@ -148,7 +134,7 @@
 		.main-navbar {
 			padding: 0 12px;
 		}
-		.main-navbar li {
+		.main-navbar a {
 			margin: 12px 0;
 		}
 	}
@@ -160,7 +146,7 @@
 			align-items: flex-end;
 		}
 
-		.active-main li {
+		.active-main a {
 			margin-top: 10px;
 			width: 100%;
 			padding: 10px;
@@ -171,6 +157,7 @@
 
 		.main-navbar {
 			background-color: rgba(255, 255, 255, 0.8);
+			border-radius: 5px;
 		}
 	}
 
@@ -188,7 +175,7 @@
 			padding: 0;
 		}
 
-		.main-navbar li {
+		.main-navbar a {
 			width: 100%;
 			margin: 0;
 			margin-left: 20px;
@@ -209,7 +196,7 @@
 			height: 60px;
 		}
 
-		.main-navbar li {
+		.main-navbar a {
 			margin-left: 40px;
 		}
 	}

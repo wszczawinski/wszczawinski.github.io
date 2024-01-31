@@ -24,8 +24,10 @@
 <section id="technologies">
 	<h4 class="title">Tech Stack</h4>
 	<p>
-		My learning process is always based on reading documentation, tutorials and creating real
-		projects. The desire to create more complex things leads me to explore various technologies.
+		My approach to learning is rooted in thorough exploration, involving reading of documentation,
+		tutorials, and hands-on engagement through real project development. The pursuit of creating
+		increasingly intricate solutions propels me to delve into a diverse array of technologies,
+		fostering a dynamic and ever-evolving learning journey.
 	</p>
 	<p class="tech">
 		<i>
@@ -83,12 +85,11 @@
 <section id="projects" class="projects">
 	<h3 class="title">My Recent Projects</h3>
 	<p>
-		I would like to present several projects which I am currently working on. Some of them are
-		developed in team and few by myself and thereby I'm improving my programming skills.
-		<br />
-		Most of them are still in progress. Most recent are pinned on to
-		<b><a href="https://github.com/wszczawinski" target="_blank">GitHub</a></b>
-		dashboard and can be easily found there.
+		I am excited to share a glimpse of several projects that I have recently been involved in. These
+		endeavors showcase a blend of collaborative team efforts and individual initiatives, allowing me
+		to continually enhance my programming skills. The latest projects have been pinned on my
+		<b><a href="https://github.com/wszczawinski" target="_blank">GitHub</a></b> dashboard, offering convenient
+		access for exploration.
 	</p>
 
 	<div class="project-cards">
@@ -99,12 +100,8 @@
 				<img class="cover" src={weatherImg} alt="Weather" />
 			</a>
 			<p>
-				A weather application that presents only the most necessary information. Based on <b
-					>React Native</b
-				>
-				with
-				<b>TypeScript</b>,
-				<b>Expo</b> and <b>React Query</b>.
+				A weather application that presents only the most necessary information. Based on
+				<b>React Native</b> with <b>TypeScript</b>, <b>Expo</b> and <b>React Query</b>.
 			</p>
 			<div class="links">
 				<a href="https://github.com/wszczawinski/Weather" target="_blank">View code</a>
@@ -132,8 +129,7 @@
 			>
 			<p>
 				Single page website which will be a portfolio for a language school, project based on static
-				solutions, configured with
-				<b>Webpack</b>.
+				solutions, configured with <b>Webpack</b>.
 			</p>
 			<div class="links">
 				<a href="http://germ-ani.pl/" target="_blank">Live</a>
@@ -173,17 +169,20 @@
 		<!--Bearings measurement-->
 		<article class="card">
 			<h4 class="title">Bearing Analysis</h4>
-			<a href="https://github.com/wszczawinski/master-thesis/tree/master/analyses" target="_blank"
-				><img class="cover" src={bearingImg} alt="analyses" /></a
-			>
+			<a href="https://github.com/wszczawinski/master-thesis/tree/master/analyses" target="_blank">
+				<img class="cover" src={bearingImg} alt="analyses" />
+			</a>
 			<p>
 				Python and Jupyter based analysis of the plain bearings measurements results using data
 				science methods.
 			</p>
 			<div class="links">
-				<a href="https://github.com/wszczawinski/master-thesis/tree/master/analyses" target="_blank"
-					>View code</a
+				<a
+					href="https://github.com/wszczawinski/master-thesis/tree/master/analyses"
+					target="_blank"
 				>
+					View code
+				</a>
 			</div>
 		</article>
 	</div>

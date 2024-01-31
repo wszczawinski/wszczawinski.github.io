@@ -33,10 +33,6 @@
 		gap: 20px;
 	}
 
-	:global(.icon path) {
-		fill: #555;
-	}
-
 	@media (min-width: 600px) {
 		footer {
 			font-size: 1rem;

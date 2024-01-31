@@ -28,14 +28,11 @@
 		{:else if $page.url.pathname === ROUTES.SOFTWARE}
 			<h1>Software Developer</h1>
 			<p class="hero-text">
-				I've been immersed in the field of web development for over 1.5 years, where my true passion
-				has flourished. The dynamic nature of this domain continually challenges and motivates me to
+				The dynamic nature of software engineering continually challenges and motivates me to
 				enhance my skills. My journey began with a focus on frontend development, allowing my
 				passion for creating engaging user interfaces to thrive. Now, I'm eager to broaden my
 				expertise by delving into backend development. This strategic move aims to augment my skill
-				set and bring a more comprehensive understanding of web development to my repertoire. The
-				rapid evolution within web development fuels my enthusiasm, providing constant opportunities
-				for improvement and growth in my expertise.
+				set and bring a more comprehensive understanding of web development to my repertoire.
 			</p>
 		{:else if $page.url.pathname === ROUTES.MECHANICAL}
 			<h1>Mechanical Design Engineer</h1>
@@ -46,10 +43,12 @@
 				working devices as the end result.
 			</p>
 		{:else if $page.url.pathname === ROUTES.ABOUT}
+			<h1>About</h1>
 			<p class="hero-text">
-				In everything that surrounds me, I appreciate functionality that goes hand in hand with good
-				design, so I try to keep this balance in the things I create. In addition, I like
-				technological innovations, sports, books and quality coffee.
+				I am a passionate engineer who is not afraid to learn and get to know new technologies. I
+				have decided to dive deeper into web development world because it is still developing
+				rapidly. I believe that there is still a lot of room for improvement and learning
+				possibilities.
 			</p>
 			<p class="contact-btn">
 				<a href="https://github.com/wszczawinski" class="btn btn-contact">
