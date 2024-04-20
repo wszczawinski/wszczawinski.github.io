@@ -1,7 +1,8 @@
 <script>
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
+	import { inject } from '@vercel/analytics';
 
-	import { browser } from '$app/environment';
+	import { browser, dev } from '$app/environment';
 	import favicon from '$lib/images/favicon.png';
 	import faviconDark from '$lib/images/favicon_dark.png';
 
@@ -17,6 +18,7 @@
 	}
 
 	injectSpeedInsights();
+	inject({ mode: dev ? 'development' : 'production' });
 </script>
 
 <svelte:head>
