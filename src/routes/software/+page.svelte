@@ -6,16 +6,12 @@
 	import webpackIcon from '$lib/icons/webpack-icon.svg';
 	import tsIcon from '$lib/icons/typescript-icon.svg';
 	import gitIcon from '$lib/icons/git-icon.svg';
-	import bashIcon from '$lib/icons/bash-icon.svg';
-	import sshIcon from '$lib/icons/ssh-icon.svg';
 	import pythonIcon from '$lib/icons/python-icon.svg';
 	import jupiterIcon from '$lib/icons/jupyter-icon.svg';
 	import octaveIcon from '$lib/icons/octave-icon.svg';
 
-	import searchImg from '$lib/images/projects/p_picture-search.png';
 	import bearingImg from '$lib/images/projects/p_analyses.png';
 	import sendEthImg from '$lib/images/projects/p_sendeth.png';
-	import germaniImg from '$lib/images/projects/p_germani.png';
 	import passiveImg from '$lib/images/projects/p_passive.png';
 	import weatherImg from '$lib/images/projects/p_weather.png';
 </script>
@@ -58,14 +54,6 @@
 			<img class="icon-svg" src={gitIcon} alt="git-icon" />
 			<span class="tooltiptext">Git</span>
 		</i>
-		<i>
-			<img class="icon-svg" src={bashIcon} alt="bash-icon" />
-			<span class="tooltiptext">Bash</span>
-		</i>
-		<i>
-			<img class="icon-svg" src={sshIcon} alt="ssh-icon" />
-			<span class="tooltiptext">SSH</span>
-		</i>
 		<br />
 		<i>
 			<img class="icon-svg" src={pythonIcon} alt="python-icon" />
@@ -88,8 +76,7 @@
 		I am excited to share a glimpse of several projects that I have recently been involved in. These
 		endeavors showcase a blend of collaborative team efforts and individual initiatives, allowing me
 		to continually enhance my programming skills. The latest projects have been pinned on my
-		<b><a href="https://github.com/wszczawinski" target="_blank">GitHub</a></b> dashboard, offering convenient
-		access for exploration.
+		<b><a href="https://github.com/wszczawinski" target="_blank">GitHub</a></b> dashboard.
 	</p>
 
 	<div class="project-cards">
@@ -121,21 +108,6 @@
 				<a href="https://github.com/wszczawinski/Passivhaus" target="_blank">View code</a>
 			</div>
 		</article>
-		<!--GermAni-->
-		<article class="card">
-			<h4 class="title">GermAni</h4>
-			<a href="https://github.com/Kinga-Zawarczynska/germAni" target="_blank"
-				><img class="cover" src={germaniImg} alt="GermAni" /></a
-			>
-			<p>
-				Single page website which will be a portfolio for a language school, project based on static
-				solutions, configured with <b>Webpack</b>.
-			</p>
-			<div class="links">
-				<a href="http://germ-ani.pl/" target="_blank">Live</a>
-				<a href="https://github.com/Kinga-Zawarczynska/germAni" target="_blank">View code</a>
-			</div>
-		</article>
 		<!--SendEth-->
 		<article class="card">
 			<h4 class="title">SendEth</h4>
@@ -149,21 +121,6 @@
 			<div class="links">
 				<a href="https://ethandgif.onrender.com" target="_blank">Live</a>
 				<a href="https://github.com/wszczawinski/send-eth" target="_blank">View code</a>
-			</div>
-		</article>
-		<!--Picture Search-->
-		<article class="card">
-			<h4 class="title">Picture Search</h4>
-			<a href="https://github.com/wszczawinski/PictureSearch" target="_blank"
-				><img class="cover" src={searchImg} alt="pirture-search" /></a
-			>
-			<p>
-				The main function of this <b>React</b> based simple <b>PWA</b> is to search for beautiful
-				pictures. The aplication is fetching Unsplash native <b>API</b>.
-			</p>
-			<div class="links">
-				<a href="https://picture-search.onrender.com" target="_blank">Live</a>
-				<a href="https://github.com/wszczawinski/PictureSearch" target="_blank">View code</a>
 			</div>
 		</article>
 		<!--Bearings measurement-->
@@ -186,11 +143,6 @@
 			</div>
 		</article>
 	</div>
-	<!-- <h3 class="title">Python/Data Science</h3>
-
-	<div class="project-cards">
-		
-	</div> -->
 </section>
 
 <style>
