@@ -1,14 +1,5 @@
 <script>
-	import jsIcon from '$lib/icons/javascript-icon.svg';
-	import reactIcon from '$lib/icons/react-icon.svg';
-	import gatsbyIcon from '$lib/icons/gatsbyjs-icon.svg';
-	import jestIcon from '$lib/icons/jest-icon.svg';
-	import webpackIcon from '$lib/icons/webpack-icon.svg';
-	import tsIcon from '$lib/icons/typescript-icon.svg';
-	import gitIcon from '$lib/icons/git-icon.svg';
-	import pythonIcon from '$lib/icons/python-icon.svg';
-	import jupiterIcon from '$lib/icons/jupyter-icon.svg';
-	import octaveIcon from '$lib/icons/octave-icon.svg';
+	import Icon from '@iconify/svelte';
 
 	import bearingImg from '$lib/images/projects/p_analyses.png';
 	import sendEthImg from '$lib/images/projects/p_sendeth.png';
@@ -27,45 +18,92 @@
 	</p>
 	<p class="tech">
 		<i>
-			<img class="icon-svg" src={jsIcon} alt="javascript-icon" />
-			<span class="tooltiptext">JavaScript</span>
-		</i>
-		<i>
-			<img class="icon-svg" src={reactIcon} alt="react-icon" />
-			<span class="tooltiptext">React.js</span>
-		</i>
-		<i>
-			<img class="icon-svg" src={gatsbyIcon} alt="gatsby-icon" />
-			<span class="tooltiptext">Gatsby.js</span>
-		</i>
-		<i>
-			<img class="icon-svg" src={jestIcon} alt="jest-icon" />
-			<span class="tooltiptext">Jest</span>
-		</i>
-		<i>
-			<img class="icon-svg" src={webpackIcon} alt="webpack-icon" />
-			<span class="tooltiptext">Webpack</span>
-		</i>
-		<i>
-			<img class="icon-svg" src={tsIcon} alt="typescript-icon" />
+			<Icon icon="material-icon-theme:typescript" />
 			<span class="tooltiptext">TypeScript</span>
 		</i>
 		<i>
-			<img class="icon-svg" src={gitIcon} alt="git-icon" />
-			<span class="tooltiptext">Git</span>
+			<Icon icon="material-icon-theme:javascript" />
+			<span class="tooltiptext">JavaScript</span>
 		</i>
-		<br />
 		<i>
-			<img class="icon-svg" src={pythonIcon} alt="python-icon" />
+			<Icon icon="material-icon-theme:react" />
+			<span class="tooltiptext">React.js</span>
+		</i>
+		<i>
+			<Icon icon="material-icon-theme:gatsby" />
+			<span class="tooltiptext">Gatsby.js</span>
+		</i>
+		<i>
+			<Icon icon="material-icon-theme:tailwindcss" />
+			<span class="tooltiptext">Tailwind</span>
+		</i>
+		<i>
+			<Icon icon="vscode-icons:file-type-styled" />
+			<span class="tooltiptext">styled components</span>
+		</i>
+		<i>
+			<Icon icon="logos:react-query-icon" />
+			<span class="tooltiptext">Tanstack Query</span>
+		</i>
+	</p>
+	<p class="tech">
+		<i>
+			<Icon icon="simple-icons:ajv" />
+			<span class="tooltiptext">AJV</span>
+		</i>
+		<i>
+			<Icon icon="material-icon-theme:jest" />
+			<span class="tooltiptext">Jest</span>
+		</i>
+		<i>
+			<Icon icon="material-icon-theme:storybook" />
+			<span class="tooltiptext">Storybook</span>
+		</i>
+		<i>
+			<Icon icon="material-icon-theme:webpack" />
+			<span class="tooltiptext">Webpack</span>
+		</i>
+		<i>
+			<Icon icon="material-icon-theme:vite" />
+			<span class="tooltiptext">Vite</span>
+		</i>
+		<i>
+			<Icon icon="material-icon-theme:nx" />
+			<span class="tooltiptext">Nx</span>
+		</i>
+	</p>
+	<p class="tech">
+		<i>
+			<Icon icon="material-icon-theme:java" />
+			<span class="tooltiptext">Java</span>
+		</i>
+		<i>
+			<Icon icon="simple-icons:springboot" color="green" />
+			<span class="tooltiptext">Spring Boot</span>
+		</i>
+		<i>
+			<Icon icon="simple-icons:swagger" color="green" />
+			<span class="tooltiptext">Swagger</span>
+		</i>
+		<i>
+			<Icon icon="vscode-icons:file-type-pgsql"  />
+			<span class="tooltiptext">SQL</span>
+		</i>
+		<i>
+			<Icon icon="material-icon-theme:python" />
 			<span class="tooltiptext">Python</span>
 		</i>
 		<i>
-			<img class="icon-svg" src={jupiterIcon} alt="jupyter-icon" />
-			<span class="tooltiptext">Jupyter</span>
+			<Icon icon="material-icon-theme:nodejs" />
+			<span class="tooltiptext">Node.	js</span>
 		</i>
 		<i>
-			<img class="icon-svg" src={octaveIcon} alt="octave-icon" />
-			<span class="tooltiptext">Octave</span>
+			<Icon icon="material-icon-theme:gitlab" />
+			<span class="tooltiptext">Gitlab CI/CD</span>
+		</i>
+		<i>
+			<Icon icon="material-icon-theme:docker" />
+			<span class="tooltiptext">Docker</span>
 		</i>
 	</p>
 </section>
@@ -215,20 +253,16 @@
 		border: 1px solid #30bd1e;
 		color: black;
 	}
-
 	.tech {
-		text-align: center;
-		margin-bottom: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 1.6rem;
+		gap: 12px;
 	}
 	.tech i {
-		padding: 3px;
 		position: relative;
 		cursor: pointer;
-	}
-	.tech .icon-svg {
-		max-width: 24px;
-		height: 22px;
-		margin-bottom: 30px;
 	}
 	.tech i .tooltiptext {
 		font-family: 'Lato', sans-serif;
@@ -237,7 +271,7 @@
 		position: absolute;
 		visibility: hidden;
 		z-index: 1;
-		top: 100%;
+		top: 160%;
 		left: 50%;
 		border-radius: 4px;
 		border: 1px solid #30bd1e;
@@ -260,18 +294,6 @@
 			margin: 15px 20px;
 			height: 400px;
 		}
-
-		.tech i {
-			padding: 7px;
-			margin-bottom: 40px;
-		}
-		.tech i .tooltiptext {
-			margin-top: -37px;
-		}
-		.tech .icon-svg {
-			max-width: 28px;
-			height: 25px;
-		}
 	}
 
 	@media (min-width: 610px) {
@@ -283,15 +305,6 @@
 		}
 		.card h4 {
 			margin: 20px 20px;
-		}
-
-		.tech i {
-			font-size: 2rem;
-			padding: 10px;
-		}
-		.tech .icon-svg {
-			max-width: 32px;
-			height: 30px;
 		}
 	}
 </style>
