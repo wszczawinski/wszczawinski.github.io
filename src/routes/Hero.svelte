@@ -10,7 +10,7 @@
 </script>
 
 <section class="hero">
-	<div class="background-image" style={bgImage} />
+	<div class="background-image" style={bgImage} ></div>
 	<div class="hero-content-area">
 		{#if $page.url.pathname === ROUTES.HOME}
 			<h1><b>Hi</b>, I'm Wojtek.</h1>
