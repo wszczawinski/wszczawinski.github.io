@@ -1,37 +1,36 @@
-<script>
+<script lang="ts">
+	import '../app.css';
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
 	import { inject } from '@vercel/analytics';
+	import { QueryClientProvider } from '@tanstack/svelte-query';
+	import { SvelteQueryDevtools } from '@tanstack/svelte-query-devtools';
 
-	import { browser, dev } from '$app/environment';
-	import favicon from '$lib/images/favicon.png';
-	import faviconDark from '$lib/images/favicon_dark.png';
+	import { dev } from '$app/environment';
+	import rocket from '$lib/images/rocket.svg';
+	import Footer from '$lib/components/Footer.svelte';
+	import Header from '$lib/components/Header.svelte';
 
-	import Header from './Header.svelte';
-	import Hero from './Hero.svelte';
-	import Footer from './Footer.svelte';
-	import './styles.css';
-
-	let isBrowserDarkMode = false;
-
-	if (browser) {
-		isBrowserDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-	}
+	import type { PageData } from './$types';
 
 	injectSpeedInsights();
 	inject({ mode: dev ? 'development' : 'production' });
+
+	export let data: PageData;
 </script>
 
 <svelte:head>
-	<link rel="icon" type="image/svg" href={isBrowserDarkMode ? faviconDark : favicon} />
+	<link rel="icon" type="image/svg" href={rocket} />
 </svelte:head>
 
-<div class="app">
-	<Header />
-	<Hero />
+<QueryClientProvider client={data.queryClient}>
+	<div class="app">
+		<Header />
 
-	<main>
-		<slot />
-	</main>
+		<main>
+			<slot />
+		</main>
 
-	<Footer />
-</div>
+		<Footer />
+	</div>
+	<SvelteQueryDevtools />
+</QueryClientProvider>
