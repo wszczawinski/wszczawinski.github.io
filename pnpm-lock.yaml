@@ -4,6 +4,9 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  cookie: 0.7.0
+
 importers:
 
   .:
@@ -835,8 +838,8 @@ packages:
     resolution: {integrity: sha512-5IKcdX0nnYavi6G7TtOhwkYzyjfJlatbjMjuLSfE2kYT5pMDOilZ4OvMhi637CcDICTmz3wARPoyhqyX1Y+XvA==}
     engines: {node: ^14.18.0 || >=16.10.0}
 
-  cookie@0.6.0:
-    resolution: {integrity: sha512-U71cyTamuh1CRNCfpGY6to28lxvNwPG4Guz/EVjgf3Jmzv0vlDp1atT9eS5dDjMYHucpHbWns6Lwf3BKz6svdw==}
+  cookie@0.7.0:
+    resolution: {integrity: sha512-qCf+V4dtlNhSRXGAZatc1TasyFO6GjohcOul807YOb5ik3+kQSnb4d7iajeCL8QHaJ4uZEjCgiCJerKXwdRVlQ==}
     engines: {node: '>= 0.6'}
 
   cross-spawn@7.0.6:
@@ -2053,7 +2056,7 @@ snapshots:
       '@sveltejs/vite-plugin-svelte': 5.1.0(svelte@5.34.4)(vite@6.3.5(@types/node@22.14.1)(jiti@2.4.2)(lightningcss@1.30.1))
       '@types/cookie': 0.6.0
       acorn: 8.15.0
-      cookie: 0.6.0
+      cookie: 0.7.0
       devalue: 5.1.1
       esm-env: 1.2.2
       kleur: 4.1.5
@@ -2395,7 +2398,7 @@ snapshots:
 
   consola@3.4.2: {}
 
-  cookie@0.6.0: {}
+  cookie@0.7.0: {}
 
   cross-spawn@7.0.6:
     dependencies:

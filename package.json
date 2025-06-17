@@ -45,6 +45,9 @@
 		"three": "^0.175.0"
 	},
 	"pnpm": {
+		"overrides": {
+		    "cookie": "0.7.0"
+	    },
 		"onlyBuiltDependencies": [
 			"esbuild"
 		]
