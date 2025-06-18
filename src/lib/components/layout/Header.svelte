@@ -33,8 +33,9 @@
 	</button>
 
 	<h3>
-		<img src={logo} alt="Deer_logo" />
-		<a href={ROUTES.HOME}>Wojtek Szczawiński</a>
+		<a href={ROUTES.HOME}>
+			<img src={logo} alt="Deer_logo" />
+		</a>
 	</h3>
 
 	<nav id="main" class={`main-navbar ${isMobileNavigation && 'active-main'}`}>

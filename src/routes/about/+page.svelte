@@ -2,15 +2,20 @@
 	import { Linkedin, Github } from '@lucide/svelte';
 
 	import avatar from '$lib/images/avatar.png';
-	import Hero from '$lib/components/Hero.svelte';
+	import Hero from '$lib/components/layout/Hero.svelte';
 </script>
 
 <Hero>
-	<h1>About</h1>
+	<h1>Beyond The Code</h1>
 	<p class="hero-text">
-		I'm a software engineer who loves building things that actually solve problems. I've worked
-		across the stack—mostly with TypeScript, React, and Java—developing full features from
-		business idea to user-ready code.
+		Engineering isn't just about the tools we use - it's about the approach to problem-solving.
+		Whether designing mechanical systems or developing software, I've found that the core engineering
+		principles remain constant: analyzing requirements, designing solutions, prototyping, testing, improving
+		and delivering robust results. My journey from mechanical design to software development has
+		shown me that both fields share the same methodical approach to problem-solving. Today, I apply
+		this engineering mindset to create full-stack applications with TypeScript, React, and Java,
+		following the same cycle of design, iterate, test, and improve that I used when developing
+		mechanical systems.
 	</p>
 	<p class="contact-btn">
 		<a href="https://github.com/wszczawinski" class="btn btn-contact">
@@ -26,13 +31,27 @@
 
 <section id="about" class="about">
 	<p>
-		I care about clean code, flexible design, and shipping stuff that works (and keeps working). I'm
-		not tied to a single language or framework—just give me a good challenge and a keyboard.
+		I believe engineers should be active partners in shaping ideas into viable solutions, not just
+		implementers of predetermined specifications. By collaborating closely with stakeholders, I help
+		translate business vision into technical reality, offering expertise that balances immediate
+		needs with future possibilities.
 	</p>
 	<p>
-		In everything that surrounds me, I appreciate functionality that goes hand in hand with good
-		design, so I try to keep this balance in the things I create. In addition, I like technological
-		innovations, sports, books and quality coffee.
+		The only constant is change, and the same is true in engineering - requirements evolve and new
+		challenges emerge. That's why I focus on creating flexible, adaptable systems from the start.
+		Making strategic architectural decisions today means building foundations that can support
+		tomorrow's growth, even when specific future requirements aren't yet defined.
+	</p>
+	<p>
+		In everything I create, I seek that perfect balance of functionality and <b>good design</b>.
+		There's a certain elegance when a solution flows naturally - not just in its visual aspects,
+		but in its underlying architecture. Good design reveals itself when revisiting the work feels
+		intuitive, making it easier to understand and build upon.
+	</p>
+	<p>
+		Outside of tech, I maintain an active lifestyle through various sports including cycling, hiking,
+		swimming, and skiing. When not in motion, you can find me immersed in a good book alongside a cup
+		of quality coffee.
 	</p>
 	<img class="avt" src={avatar} alt="Avatar" />
 </section>

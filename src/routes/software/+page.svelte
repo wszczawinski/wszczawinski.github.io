@@ -1,5 +1,5 @@
 <script>
-	import Hero from '$lib/components/Hero.svelte';
+	import Hero from '$lib/components/layout/Hero.svelte';
 	import Projects from './Projects.svelte';
 	import TechStack from './TechStack.svelte';
 </script>

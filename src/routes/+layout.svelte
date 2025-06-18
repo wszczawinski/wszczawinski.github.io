@@ -7,8 +7,8 @@
 
 	import { dev } from '$app/environment';
 	import rocket from '$lib/images/rocket.svg';
-	import Footer from '$lib/components/Footer.svelte';
-	import Header from '$lib/components/Header.svelte';
+	import Footer from '$lib/components/layout/Footer.svelte';
+	import Header from '$lib/components/layout/Header.svelte';
 
 	import type { PageData } from './$types';
 

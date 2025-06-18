@@ -11,16 +11,17 @@
 	import Helmet from './Helmet.svelte';
 	import { Canvas } from '@threlte/core';
 
-	import Hero from '$lib/components/Hero.svelte';
+	import Hero from '$lib/components/layout/Hero.svelte';
 </script>
 
 <Hero>
 	<h1>Mechanical Design Engineer</h1>
 	<p class="hero-text">
-		My study background is mechatronics and mechanical engineering. My main interests are
-		designing mechanical structures and guiding projects through all stages: from the concept
-		phase, through 3D modeling, calculations and improvements, up to the implementation of
-		working devices as the end result.
+		With a background in mechatronics and mechanical engineering, I spent several years focused on designing mechanical
+		components and systems for complex devices. My work covered the entire development lifecycle: from initial concept
+		creation through detailed 3D modeling to final implementation. I leveraged advanced CAD tools for assembly
+		validation and optimization, while utilizing FEA analyses in Ansys for structural integrity assessments. Modern
+		prototyping techniques, including 3D printing, helped streamline the development process from concept to production.
 	</p>
 </Hero>
 
@@ -45,15 +46,15 @@
 		</i>
 		<i>
 			<BookCheck size="18" />
-			working with standards (eg. MIL)
+			Standards: ISO, DIN, MIL
 		</i>
 		<i>
 			<Factory size="18" />
-			understanding of technological processes
+			Technological Processes
 		</i>
 		<i>
 			<Wrench size="18" />
-			workshop experience
+			Workshop hands-on experience
 		</i>
 	</article>
 	<article class="mech-example">
@@ -69,6 +70,7 @@
         flex-direction: column;
         width: 80%;
         font-size: 0.8rem;
+        gap: 4px;
     }
 
     .tech-skills i {
