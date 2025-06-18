@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Rocket, IdCard, Computer } from '@lucide/svelte';
 
-	import Hero from '$lib/components/Hero.svelte';
+	import Hero from '$lib/components/layout/Hero.svelte';
 	import { ROUTES } from '$lib/constants';
 </script>
 
@@ -24,6 +24,9 @@
 		</a>
 	</div>
 </Hero>
+<section>
+	<h3 class="title">Blog coming soon...</h3>
+</section>
 
 <style>
     .hero-links {
