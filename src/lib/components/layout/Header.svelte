@@ -1,18 +1,50 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import { Rocket, IdCard, Computer, Hamburger, Menu } from '@lucide/svelte';
+
 	import { page } from '$app/state';
 	import logo from '$lib/images/deer_logo.png';
-
 	import { ROUTES } from '$lib/constants';
 
 	let isMobileNavigation = false;
-	let windowPosition = 0;
+	let headerBackground = false;
+	let observer: IntersectionObserver;
 
-	const togleMobileNavVisibility = () => (isMobileNavigation = !isMobileNavigation);
+	const toggleMobileNavVisibility = () => (isMobileNavigation = !isMobileNavigation);
+	const unsetMobileNavVisibility = () => (isMobileNavigation = false);
 
-	const checkScrollPosition = () => {
-		windowPosition = window.scrollY;
-	};
+	onMount(() => {
+		const sentinel = document.createElement('div');
+
+		Object.assign(sentinel.style, {
+			position: 'absolute',
+			top: '0',
+			left: '0',
+			width: '100%',
+			height: '1px',
+			pointerEvents: 'none',
+			opacity: '0'
+		});
+
+		document.body.prepend(sentinel);
+
+		observer = new IntersectionObserver(
+			([entry]) => {
+				headerBackground = !entry.isIntersecting;
+			},
+			{
+				threshold: [1.0],
+				rootMargin: '0px'
+			}
+		);
+
+		observer.observe(sentinel);
+
+		return () => {
+			observer.disconnect();
+			sentinel.remove();
+		};
+	});
 
 	const navElements = [
 		{ route: ROUTES.SOFTWARE, label: 'software', icon: Computer },
@@ -21,14 +53,12 @@
 	];
 </script>
 
-<svelte:window on:scroll={checkScrollPosition} />
-
-<header class={`${!!windowPosition && `headerBackground`}`}>
-	<button class="navigation-toggle" on:click={togleMobileNavVisibility}>
+<header class:headerBackground>
+	<button class="navigation-toggle" on:click={toggleMobileNavVisibility}>
 		{#if isMobileNavigation}
-			<Hamburger />
+			<Hamburger color="#555" />
 		{:else}
-			<Menu />
+			<Menu color="#555" />
 		{/if}
 	</button>
 
@@ -38,11 +68,11 @@
 		</a>
 	</h3>
 
-	<nav id="main" class={`main-navbar ${isMobileNavigation && 'active-main'}`}>
+	<nav id="main" class="main-navbar" class:active-main={isMobileNavigation}>
 		{#each navElements as navElement (navElement.route)}
 			<a
 				href={navElement.route}
-				on:click={togleMobileNavVisibility}
+				on:click={unsetMobileNavVisibility}
 				aria-current={page.url.pathname === navElement.route ? 'page' : undefined}
 			>
 				<svelte:component this={navElement.icon} size={18} />
@@ -62,11 +92,11 @@
         flex-direction: column;
         padding: 20px;
         opacity: 1;
+        transition: background-color 0.3s ease;
     }
 
     .headerBackground {
         background-color: rgba(255, 255, 255, 0.8);
-        transition: all 0.5s ease-in-out;
     }
 
     header img {
@@ -195,7 +225,7 @@
 
     @media (min-width: 950px) {
         header {
-            padding: 35px 100px;
+            padding: 30px 100px;
         }
 
         header img {
