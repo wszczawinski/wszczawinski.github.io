@@ -1,11 +1,11 @@
 <script>
 	import Icon from '@iconify/svelte';
+
 	import Tooltip from '$lib/components/ui/Tooltip.svelte';
+	import Section from '$lib/components/ui/Section.svelte';
 </script>
 
-<section>
-	<h4 class="title">Tech Stack</h4>
-
+<Section title="Tech Stack">
 	<p>
 		I learn best by doing - diving into documentation, working through tutorials, and building
 		real projects. My drive to create more complex solutions pushes me to explore new technologies,
@@ -86,7 +86,7 @@
 			<Icon icon="material-icon-theme:docker" />
 		</Tooltip>
 	</p>
-</section>
+</Section>
 
 <style>
     .tech-row {

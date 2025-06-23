@@ -3,18 +3,18 @@
 
 	import avatar from '$lib/images/avatar.png';
 	import Hero from '$lib/components/layout/Hero.svelte';
+	import Section from '$lib/components/ui/Section.svelte';
 </script>
 
-<Hero>
-	<h1>Beyond The Code</h1>
-	<p class="hero-text">
-		Engineering isn't just about the tools we use - it's about the approach to problem-solving.
+<Hero
+	title="Beyond The Code"
+	textContent="Engineering isn't just about the tools we use - it's about the approach to problem-solving.
 		Whether designing mechanical systems or developing software, I've found that the core engineering
 		principles remain constant: analyzing requirements, designing solutions, prototyping, testing, improving
 		and delivering robust results. My journey from mechanical design to software development has
-		shown me that both fields share the same methodical approach to problem-solving.
-	</p>
-	<p class="contact-btn">
+		shown me that both fields share the same methodical approach to problem-solving."
+>
+	<p class="contact">
 		<a href="https://github.com/wszczawinski" class="btn btn-contact">
 			<Github size="18" />
 			GitHub
@@ -26,7 +26,7 @@
 	</p>
 </Hero>
 
-<section id="about" class="about">
+<Section>
 	<p>
 		Today, I apply this engineering mindset to create full-stack applications with TypeScript and
 		Java, following the same cycle of design, iterate, test, and improve that I used
@@ -55,14 +55,11 @@
 		swimming, and skiing. When not in motion, you can find me immersed in a good book alongside a cup
 		of quality coffee.
 	</p>
+
 	<img class="avt" src={avatar} alt="Avatar" />
-</section>
+</Section>
 
 <style>
-    .about {
-        padding-top: 50px;
-    }
-
     .avt {
         margin: 20px;
         width: 90%;
@@ -71,11 +68,19 @@
         border: 1px solid rgba(201, 198, 198, 0.7);
     }
 
-    .contact-btn {
+    .contact {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
+    }
+
+    .btn-contact {
+        margin: 10px;
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        align-items: center;
     }
 
     @media (min-width: 600px) {
@@ -85,7 +90,7 @@
             max-width: 500px;
         }
 
-        .contact-btn {
+        .contact {
             width: 90%;
             max-width: 630px;
             margin-left: 0;

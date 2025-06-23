@@ -1,3 +1,16 @@
-// since there's no dynamic data here, we can prerender
-// it so that it gets served as a static asset in production
-export const prerender = true;
+import { getCategories, getPosts, QUERY_KEY } from '$lib/api';
+import type { PageLoad } from './$types';
+
+export const load: PageLoad = async ({ parent }) => {
+	const { queryClient } = await parent();
+
+	await queryClient.prefetchQuery({
+		queryKey: [QUERY_KEY.POSTS],
+		queryFn: getPosts
+	});
+
+	await queryClient.prefetchQuery({
+		queryKey: [QUERY_KEY.CATEGORIES],
+		queryFn: getCategories
+	});
+};

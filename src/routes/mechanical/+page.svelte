@@ -12,21 +12,19 @@
 	import { Canvas } from '@threlte/core';
 
 	import Hero from '$lib/components/layout/Hero.svelte';
+	import Section from '$lib/components/ui/Section.svelte';
 </script>
 
-<Hero>
-	<h1>Mechanical Design Engineer</h1>
-	<p class="hero-text">
-		With a background in mechatronics and mechanical engineering, I spent several years focused on designing mechanical
+<Hero
+	title="Mechanical Design Engineer"
+	textContent="With a background in mechatronics and mechanical engineering, I spent several years focused on designing mechanical
 		components and systems for complex devices. My work covered the entire development lifecycle: from initial concept
 		creation through detailed 3D modeling to final implementation. I leveraged advanced CAD tools for assembly
 		validation and optimization, while utilizing FEA analyses in Ansys for structural integrity assessments. Modern
-		prototyping techniques, including 3D printing, helped streamline the development process from concept to production.
-	</p>
-</Hero>
+		prototyping techniques, including 3D printing, helped streamline the development process from concept to production."
+/>
 
-<section id="technologies">
-	<h4 class="title">Skills</h4>
+<Section title="Skills">
 	<article class="tech-skills">
 		<i>
 			<Move3d size="18" />
@@ -62,7 +60,7 @@
 			<Helmet />
 		</Canvas>
 	</article>
-</section>
+</Section>
 
 <style>
     .tech-skills {

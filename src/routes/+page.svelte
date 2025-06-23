@@ -1,14 +1,13 @@
 <script lang="ts">
 	import { Rocket, IdCard, Computer } from '@lucide/svelte';
 
-	import Hero from '$lib/components/layout/Hero.svelte';
 	import { ROUTES } from '$lib/constants';
+	import Hero from '$lib/components/layout/Hero.svelte';
 </script>
 
 <svelte:head></svelte:head>
 
-<Hero>
-	<h1><b>Hi</b>, I'm Wojtek.</h1>
+<Hero title="Hi, I'm Wojtek." isChevrons={false}>
 	<div class="hero-links">
 		<a href={ROUTES.SOFTWARE} class="btn btn-hero">
 			<Computer size="16" />
@@ -24,9 +23,6 @@
 		</a>
 	</div>
 </Hero>
-<section>
-	<h3 class="title">Blog coming soon...</h3>
-</section>
 
 <style>
     .hero-links {
@@ -36,9 +32,24 @@
         align-items: center;
     }
 
+    .btn-hero {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        width: 220px;
+    }
+
     @media all and (min-width: 610px) {
         .hero-links {
             align-items: flex-start;
+        }
+
+        .btn-hero {
+            margin-bottom: 20px;
+            width: 300px;
+            margin-left: 0;
+            font-size: 1.2rem;
         }
     }
 </style>

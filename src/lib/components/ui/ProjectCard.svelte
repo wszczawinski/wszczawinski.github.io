@@ -54,7 +54,6 @@
 <style>
     .card {
         font-family: 'Open Sans', sans-serif;
-        margin: 15px 20px;
         display: flex;
         flex-direction: column;
         border: 1px solid #30bd1e;
@@ -62,7 +61,7 @@
         flex-basis: 200px;
         flex-shrink: 0;
         flex-grow: 1;
-        max-width: 300px;
+        max-width: 340px;
         background-color: white;
     }
 
@@ -76,13 +75,8 @@
     }
 
     .card .header h4 {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 10px;
-        font-size: 18px;
+        font-size: 1.2rem;
         font-weight: 100;
-        border-bottom: #555;
         text-align: left;
     }
 
@@ -91,7 +85,6 @@
         align-items: center;
         justify-content: space-between;
         padding: 8px 12px;
-        margin: 0;
     }
 
     .card .header .links {
@@ -103,22 +96,18 @@
 
     .card img.cover {
         width: 100%;
-        border-top: 1px solid lightgray;
     }
 
     .card p {
-        margin: 0;
         font-size: 13px;
         text-align: justify;
         padding: 12px;
-        flex-grow: 2;
     }
 
     @media (min-width: 480px) {
         .card {
             flex-basis: 300px;
             max-width: 400px;
-            margin: 15px 20px;
         }
     }
 
@@ -126,7 +115,6 @@
         .card {
             height: 350px;
             flex-basis: 250px;
-            margin: 0 20px 30px 20px;
             max-width: 300px;
         }
     }

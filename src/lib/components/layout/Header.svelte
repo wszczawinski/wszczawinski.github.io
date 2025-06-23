@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { Rocket, IdCard, Computer, Hamburger, Menu } from '@lucide/svelte';
+	import { Rocket, IdCard, Computer, Hamburger, Menu, Newspaper } from '@lucide/svelte';
 
 	import { page } from '$app/state';
-	import logo from '$lib/images/deer_logo.png';
 	import { ROUTES } from '$lib/constants';
+	import logo from '$lib/images/deer_logo.png';
 
 	let isMobileNavigation = false;
 	let headerBackground = false;
@@ -49,6 +49,7 @@
 	const navElements = [
 		{ route: ROUTES.SOFTWARE, label: 'software', icon: Computer },
 		{ route: ROUTES.MECHANICAL, label: 'mechanical', icon: Rocket },
+		{ route: ROUTES.BLOG, label: 'blog', icon: Newspaper },
 		{ route: ROUTES.ABOUT, label: 'about', icon: IdCard }
 	];
 </script>
@@ -197,7 +198,7 @@
         }
     }
 
-    @media (min-width: 615px) {
+    @media (min-width: 610px) {
         header {
             flex-direction: row;
             justify-content: space-between;

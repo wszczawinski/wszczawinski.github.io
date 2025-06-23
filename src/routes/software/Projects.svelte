@@ -1,4 +1,5 @@
 <script>
+	import Section from '$lib/components/ui/Section.svelte';
 	import ProjectCard from '$lib/components/ui/ProjectCard.svelte';
 
 	import newsImg from '$lib/images/projects/p_news.png';
@@ -8,9 +9,7 @@
 	import weatherImg from '$lib/images/projects/p_weather.png';
 </script>
 
-<section>
-	<h3 class="title">Recent Projects</h3>
-
+<Section title="Recent Projects">
 	<p>
 		Here are some of my latest projects that represent interesting challenges and learning opportunities.
 		<br />
@@ -95,16 +94,15 @@
 		</ProjectCard>
 
 	</div>
-</section>
+</Section>
 
 <style>
     .project-cards {
-        padding-top: 30px;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        max-width: 1000px;
+				gap: 40px;
     }
 </style>
