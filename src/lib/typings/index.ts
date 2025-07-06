@@ -1,10 +1,11 @@
 export interface Post {
 	id: number;
 	title: string;
+	slug: string;
 	content: string;
 	createdAt: Date;
 	category: Category;
-	tagId: string;
+	tag: Tag;
 }
 
 export interface Category {

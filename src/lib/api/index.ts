@@ -1,14 +1,16 @@
 import axios from 'axios';
-import type { Category, Post, Tag } from '$lib/types';
+import type { Category, Post, Tag } from '$lib/typings';
 
 export const API_ENDPOINT = {
 	POSTS: '/posts',
+	POST_SLUG: "/posts/slug/",
 	TAGS: '/tags',
 	CATEGORIES: '/categories'
 };
 
 export const QUERY_KEY = {
 	POSTS: 'posts',
+	POST: 'post',
 	TAGS: 'tags',
 	CATEGORIES: 'categories'
 };
@@ -34,3 +36,8 @@ export const getCategories = async () => {
 	const { data } = await api.get<Category[]>(API_ENDPOINT.CATEGORIES);
 	return data;
 }
+
+export const getPostBySlug = async ({ slug }: { slug: string }) => {
+	const { data } = await api.get<Post>(API_ENDPOINT.POST_SLUG + slug);
+	return data;
+};
