@@ -1,11 +1,26 @@
 <script lang="ts">
 	import type { Post } from '$lib/typings';
+	import { ArrowRight } from '@lucide/svelte';
+	import { goto } from '$app/navigation';
 	import PostCategoryIcon from '$lib/components/ui/PostCategoryIcon.svelte';
 
 	export let post: Post;
-	const { title, content, createdAt, category } = post;
+	export let isCard: boolean = false;
+	const { title, content, createdAt, category, slug } = post;
 
 	const formatDatePL = (date: Date) => new Intl.DateTimeFormat('pl-PL').format(new Date(date));
+
+	const cutAfterFirstParagraph = (html: string) => {
+		const endIndex = html.indexOf('</p>');
+		if (endIndex !== -1) {
+			return html.slice(0, endIndex + 4);
+		}
+		return html;
+	};
+
+	const goToSlug = (slug: string) => {
+		goto(`/blog/${slug}`);
+	};
 </script>
 
 <article class="post">
@@ -18,7 +33,11 @@
 	</div>
 
 	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
-	<div>{@html content}</div>
+	<div>{@html isCard ? cutAfterFirstParagraph(content) : content}</div>
+
+	{#if isCard}
+		<button class="more" on:click={() => goToSlug(slug)}>More <ArrowRight size={14} /> </button>
+	{/if}
 </article>
 
 <style>
@@ -26,14 +45,12 @@
 		font-family: 'Open Sans', sans-serif;
 		display: flex;
 		flex-direction: column;
-		gap: 20px;
 		border-radius: 4px;
 		width: 100%;
-		padding: 16px 12px 0 12px;
+		padding: 16px 12px 16px 12px;
 		background-color: #fff;
 		transition: all 0.3s ease;
 		max-width: 610px;
-		text-align: justify;
 		font-size: 17px;
 	}
 
@@ -49,7 +66,8 @@
 		flex-direction: column;
 		justify-content: space-between;
 		align-items: flex-start;
-		gap: 20px;
+		gap: 16px;
+		padding-bottom: 16px;
 	}
 
 	.date {
@@ -57,15 +75,39 @@
 		align-self: flex-end;
 	}
 
-	:global(.post div p) {
-		text-align: justify;
-		font-size: 16px;
-		padding-bottom: 16px;
+	.more {
+		display: flex;
+		flex-direction: row;
+		gap: 4px;
+		align-items: center;
+		justify-content: center;
+		width: fit-content;
+		padding: 4px 10px;
+		align-self: flex-end;
+		cursor: pointer;
+		border: 1px solid #21be0c;
+		border-radius: 4px;
+		background-color: transparent;
+		transition: all .2s ease-in-out;
+	}
+
+	.more:hover{
+		background-color: #efefef;
 	}
 
 	:global(.post h3) {
 		font-size: 18px;
 		padding-bottom: 16px;
+	}
+	:global(.post p) {
+		text-align: justify;
+		font-size: 16px;
+		padding-bottom: 16px;
+	}
+
+	:global(.post p a) {
+		color: #21be0c;
+		font-weight: 700;
 	}
 
 	@media (min-width: 610px) {
@@ -76,23 +118,23 @@
 		.header {
 			flex-direction: row;
 			align-items: center;
+			padding-bottom: 20px;
 		}
 
-		:global(.post div p) {
+		:global(.post p) {
 			text-align: justify;
-			padding-bottom: 20px;
 			font-size: 17px;
 		}
 
 		:global(.post h3) {
 			font-size: 20px;
-            padding-bottom: 20px;
+			padding-bottom: 20px;
 		}
 	}
 
 	@media (min-width: 950px) {
 		.post {
-			padding: 16px 16px 0 16px;
+			padding: 16px 16px 16px 16px;
 			max-width: 850px;
 		}
 	}

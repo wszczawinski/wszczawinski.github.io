@@ -3,10 +3,10 @@
 	import { createQuery, useQueryClient } from '@tanstack/svelte-query';
 
 	import { getCategories, getPosts, QUERY_KEY } from '$lib/api/index.js';
-	import BlogPostCard from '$lib/components/ui/BlogPostCard.svelte';
 	import Section from '$lib/components/ui/Section.svelte';
 	import Loading from '$lib/components/ui/Loading.svelte';
 	import Error from '$lib/components/ui/Error.svelte';
+	import BlogPost from '$lib/components/ui/BlogPost.svelte';
 
 	const queryClient = useQueryClient();
 
@@ -50,7 +50,7 @@
 		<Error />
 	{:else if $canRender}
 		{#each $filteredPosts ?? [] as post (post.id)}
-			<BlogPostCard {post} />
+			<BlogPost {post} isCard />
 			<h3 class="more">More posts coming soon...</h3>
 		{/each}
 	{/if}

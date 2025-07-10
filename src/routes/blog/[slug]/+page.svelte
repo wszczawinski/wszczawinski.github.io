@@ -2,6 +2,7 @@
 	import { createQuery } from '@tanstack/svelte-query';
 
 	import type { PageData } from './$types';
+
 	import { getPostBySlug, QUERY_KEY } from '$lib/api';
 	import type { Post } from '$lib/typings';
 	import BlogPost from '$lib/components/ui/BlogPost.svelte';
