@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Post } from '$lib/typings';
-	import { ArrowRight } from '@lucide/svelte';
+	import { ArrowLeft, ArrowRight } from '@lucide/svelte';
 	import { goto } from '$app/navigation';
 	import PostCategoryIcon from '$lib/components/ui/PostCategoryIcon.svelte';
 
@@ -36,7 +36,15 @@
 	<div>{@html isCard ? cutAfterFirstParagraph(content) : content}</div>
 
 	{#if isCard}
-		<button class="more" on:click={() => goToSlug(slug)}>More <ArrowRight size={14} /> </button>
+		<button class="more" on:click={() => goToSlug(slug)}>
+			More
+			<ArrowRight size={16} color="#21be0c" strokeWidth="2.5" />
+		</button>
+	{:else}
+		<button class="more back" on:click={() => goto('/blog')}>
+			<ArrowLeft size={16} color="#21be0c" strokeWidth="2.5" />
+			Blog
+		</button>
 	{/if}
 </article>
 
@@ -85,13 +93,19 @@
 		padding: 4px 10px;
 		align-self: flex-end;
 		cursor: pointer;
-		border: 1px solid #21be0c;
+		border: 1px solid #353535;
 		border-radius: 4px;
 		background-color: transparent;
-		transition: all .2s ease-in-out;
+		transition: all 0.2s ease-in-out;
+		color: inherit;
+		font-weight: 600;
 	}
 
-	.more:hover{
+	.back {
+		align-self: flex-start;
+	}
+
+	.more:hover {
 		background-color: #efefef;
 	}
 

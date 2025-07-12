@@ -3,11 +3,12 @@
 	import { Rocket, IdCard, Computer, Hamburger, Menu, Newspaper } from '@lucide/svelte';
 
 	import { page } from '$app/state';
+
 	import { ROUTES } from '$lib/constants';
 	import logo from '$lib/images/deer_logo.png';
 
 	let isMobileNavigation = false;
-	let headerBackground = false;
+	let isHeaderBackground = false;
 	let observer: IntersectionObserver;
 
 	const toggleMobileNavVisibility = () => (isMobileNavigation = !isMobileNavigation);
@@ -30,7 +31,7 @@
 
 		observer = new IntersectionObserver(
 			([entry]) => {
-				headerBackground = !entry.isIntersecting;
+				isHeaderBackground = !entry.isIntersecting;
 			},
 			{
 				threshold: [1.0],
@@ -54,26 +55,18 @@
 	];
 </script>
 
-<header class:headerBackground>
-	<button class="navigation-toggle" on:click={toggleMobileNavVisibility}>
-		{#if isMobileNavigation}
-			<Hamburger color="#555" />
-		{:else}
-			<Menu color="#555" />
-		{/if}
-	</button>
-
-	<h3>
-		<a href={ROUTES.HOME}>
+<header class:headerBackground={isHeaderBackground || isMobileNavigation}>
+	<span class="logo">
+		<a href={ROUTES.HOME} on:click={isMobileNavigation ? unsetMobileNavVisibility : null}>
 			<img src={logo} alt="Deer_logo" />
 		</a>
-	</h3>
+	</span>
 
 	<nav id="main" class="main-navbar" class:active-main={isMobileNavigation}>
 		{#each navElements as navElement (navElement.route)}
 			<a
 				href={navElement.route}
-				on:click={unsetMobileNavVisibility}
+				on:click={isMobileNavigation ? unsetMobileNavVisibility : null}
 				aria-current={page.url.pathname === navElement.route ? 'page' : undefined}
 			>
 				<svelte:component this={navElement.icon} size={18} />
@@ -81,160 +74,132 @@
 			</a>
 		{/each}
 	</nav>
+
+	<button class="navigation-toggle" on:click={toggleMobileNavVisibility}>
+		{#if isMobileNavigation}
+			<Hamburger color="#555" />
+		{:else}
+			<Menu color="#555" />
+		{/if}
+	</button>
 </header>
 
 <style>
-    header {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 100;
-        display: flex;
-        flex-direction: column;
-        padding: 20px;
-        opacity: 1;
-        transition: background-color 0.3s ease;
-    }
+	header {
+		position: fixed;
+		top: 0;
+		width: 100vw;
+		z-index: 100;
+		display: flex;
+		flex-direction: column;
+		padding: 20px;
+		opacity: 1;
+		transition: background-color 0.3s ease-in-out;
+	}
 
-    .headerBackground {
-        background-color: rgba(255, 255, 255, 0.8);
-    }
+	.headerBackground {
+		background-color: rgba(255, 255, 255, 0.8);
+	}
 
-    header img {
-        height: 50px;
-    }
+	header img {
+		height: 50px;
+	}
 
-    header h3 {
-        font-family: 'Quicksand', sans-serif;
-        font-size: 1.25rem;
-        display: flex;
-        align-items: center;
-    }
+	.logo {
+		width: auto;
+	}
 
-    .main-navbar {
-        opacity: 0;
-        height: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+	.main-navbar {
+		opacity: 0;
+		height: 0;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		align-items: center;
+	}
 
-    .main-navbar a {
-        margin-top: 20px;
-        font-size: 0.9rem;
-        display: flex;
-        flex-direction: row;
-        gap: 5px;
-        align-items: center;
-        justify-content: center;
-    }
+	.main-navbar a {
+		font-size: 0.9rem;
+		display: flex;
+		flex-direction: row;
+		gap: 10px;
+		align-items: center;
+		justify-content: center;
+	}
 
-    a {
-        display: flex;
-        flex-direction: row;
-        gap: 5px;
-        align-items: center;
-    }
+	a[aria-current='page'] {
+		opacity: 1;
+		pointer-events: none;
+		cursor: default;
+		color: #21be0c;
+	}
 
-    a[aria-current='page'] {
-        opacity: 1;
-        pointer-events: none;
-        cursor: default;
-        color: #21be0c;
-    }
+	button {
+		border: none;
+		background: transparent;
+	}
 
-    button {
-        border: none;
-        background: transparent;
-    }
+	.navigation-toggle {
+		position: absolute;
+		top: 35px;
+		right: 20px;
+		cursor: pointer;
+		font-size: 1.1rem;
+	}
 
-    .navigation-toggle {
-        position: absolute;
-        top: 35px;
-        right: 20px;
-        cursor: pointer;
-        font-size: 1.1rem;
-    }
+	@media (max-width: 610px) {
+		.active-main {
+			opacity: 1;
+			height: auto;
+			align-items: flex-end;
+		}
 
-    @media (max-width: 450px) {
-        .main-navbar {
-            padding: 0 7px;
-        }
+		.active-main a {
+			width: 65%;
+			padding: 10px;
+			border: 1px solid #000000;
+			background-color: #fff;
+			border-radius: 8px;
+			margin: 0 auto;
+		}
+	}
 
-        .main-navbar a {
-            margin: 7px 0;
-        }
-    }
+	@media (min-width: 610px) {
+		header {
+			flex-direction: row;
+			justify-content: space-between;
+			padding: 30px;
+		}
 
-    @media (min-width: 450px) {
-        .main-navbar {
-            padding: 0 12px;
-        }
+		.main-navbar {
+			flex-direction: row;
+			opacity: 1;
+			gap: 30px;
+			height: auto;
+		}
 
-        .main-navbar a {
-            margin: 12px 0;
-        }
-    }
+		.main-navbar a {
+			font-size: 1rem;
+			border: none;
+		}
 
-    @media (max-width: 615px) {
-        .active-main {
-            opacity: 1;
-            height: auto;
-            align-items: flex-end;
-        }
+		.navigation-toggle {
+			display: none;
+		}
+	}
 
-        .active-main a {
-            margin-top: 10px;
-            width: 100%;
-            padding: 10px;
-            background: #f7f7f7;
-            border: 1px solid #000000;
-            border-radius: 8px;
-        }
+	@media (min-width: 950px) {
+		header {
+			padding: 30px 100px;
+		}
 
-        .main-navbar {
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 5px;
-        }
-    }
+		.logo img {
+			height: 60px;
+		}
 
-    @media (min-width: 610px) {
-        header {
-            flex-direction: row;
-            justify-content: space-between;
-            padding: 30px;
-        }
-
-        .main-navbar {
-            height: auto;
-            opacity: 1;
-            flex-direction: row;
-            padding: 0;
-        }
-
-        .main-navbar a {
-            width: 100%;
-            margin: 0;
-            margin-left: 20px;
-            font-size: 1rem;
-        }
-
-        .navigation-toggle {
-            display: none;
-        }
-    }
-
-    @media (min-width: 950px) {
-        header {
-            padding: 30px 100px;
-        }
-
-        header img {
-            height: 60px;
-        }
-
-        .main-navbar a {
-            margin-left: 40px;
-        }
-    }
+		.main-navbar {
+			gap: 40px;
+		}
+	}
 </style>

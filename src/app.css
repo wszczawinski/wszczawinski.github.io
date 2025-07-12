@@ -28,15 +28,15 @@ a {
     opacity: 0.75;
     color: #000;
     transition: 0.5s ease-in-out;
+    -webkit-tap-highlight-color: transparent;
+}
+
+button {
+    -webkit-tap-highlight-color: transparent;
 }
 
 a:hover {
     opacity: 1;
-}
-
-h1 {
-    font: 200 1.6rem 'Open Sans',
-    sans-serif;
 }
 
 .btn {
@@ -61,10 +61,6 @@ h1 {
 }
 
 @media (min-width: 600px) {
-    h1 {
-        font-size: 3rem;
-    }
-
     .btn {
         font-size: 1rem;
         padding: 10px 10px;
