@@ -33,7 +33,7 @@
 	</div>
 
 	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
-	<div>{@html isCard ? cutAfterFirstParagraph(content) : content}</div>
+	<div class="content">{@html isCard ? cutAfterFirstParagraph(content) : content}</div>
 
 	{#if isCard}
 		<button class="more" on:click={() => goToSlug(slug)}>
@@ -109,17 +109,18 @@
 		background-color: #efefef;
 	}
 
-	:global(.post h3) {
+	:global(.content h3) {
 		font-size: 18px;
 		padding-bottom: 16px;
 	}
-	:global(.post p) {
+	
+	:global(.content p) {
 		text-align: justify;
 		font-size: 16px;
 		padding-bottom: 16px;
 	}
 
-	:global(.post p a) {
+	:global(.content p a) {
 		color: #21be0c;
 		font-weight: 700;
 	}
@@ -135,7 +136,7 @@
 			padding-bottom: 20px;
 		}
 
-		:global(.post p) {
+		:global(.content p) {
 			text-align: justify;
 			font-size: 17px;
 		}

@@ -29,8 +29,8 @@
 <Section>
 	<p>
 		Today, I apply this engineering mindset to create full-stack applications with TypeScript and
-		Java, following the same cycle of design, iterate, test, and improve that I used
-		when developing mechanical systems.
+		Java, following the same cycle of design, iterate, test, and improve that I used when developing
+		mechanical systems.
 	</p>
 	<p>
 		I believe engineers should be active partners in shaping ideas into viable solutions, not just
@@ -45,55 +45,66 @@
 		tomorrow's growth, even when specific future requirements aren't yet defined.
 	</p>
 	<p>
-		In everything I create, I seek that perfect balance of functionality and good design.
-		There's a certain elegance when a solution flows naturally - not just in its visual aspects,
-		but in its underlying architecture. <b>Good design</b> reveals itself when revisiting the work
-		feels intuitive, making it easier to understand and build upon.
+		In everything I create, I seek that perfect balance of functionality and good design. There's a
+		certain elegance when a solution flows naturally - not just in its visual aspects, but in its
+		underlying architecture. <b>Good design</b> reveals itself when revisiting the work feels intuitive,
+		making it easier to understand and build upon.
 	</p>
 	<p>
-		Outside of tech, I maintain an active lifestyle through various sports including cycling, hiking,
-		swimming, and skiing. When not in motion, you can find me immersed in a good book alongside a cup
-		of quality coffee.
+		Outside of tech, I maintain an active lifestyle through various sports including cycling,
+		hiking, swimming, and skiing. When not in motion, you can find me immersed in a good book
+		alongside a cup of quality coffee.
 	</p>
 
 	<img class="avt" src={avatar} alt="Avatar" />
 </Section>
 
 <style>
-    .avt {
-        margin: 20px;
-        width: 90%;
-        max-width: 350px;
-        border-radius: 10px;
-        border: 1px solid rgba(201, 198, 198, 0.7);
-    }
+	.avt {
+		margin: 20px;
+		width: 90%;
+		max-width: 350px;
+		border-radius: 10px;
+		border: 1px solid rgba(201, 198, 198, 0.7);
+	}
 
-    .contact {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-    }
+	.contact {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+	}
 
-    .btn-contact {
-        margin: 10px;
-        display: flex;
-        flex-direction: row;
-        gap: 5px;
-        align-items: center;
-    }
+	.btn-contact {
+		margin: 10px;
+		display: flex;
+		flex-direction: row;
+		gap: 5px;
+		align-items: center;
+	}
 
-    @media (min-width: 600px) {
-        .avt {
-            margin: 0;
-            width: 40vh;
-            max-width: 500px;
-        }
+	p {
+		line-height: 1.5;
+		font-size: 0.9rem;
+		text-align: justify;
+	}
 
-        .contact {
-            width: 90%;
-            max-width: 630px;
-            margin-left: 0;
-        }
-    }
+	@media (min-width: 600px) {
+		p {
+			font-size: 1.05rem;
+			text-align: center;
+		}
+
+		.avt {
+			margin: 0;
+			width: 40vh;
+			max-width: 500px;
+		}
+
+		.contact {
+			width: 90%;
+			max-width: 630px;
+			margin-left: 0;
+		}
+	}
 </style>

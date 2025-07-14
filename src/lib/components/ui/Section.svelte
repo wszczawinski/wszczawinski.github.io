@@ -44,18 +44,7 @@
 		width: 100%;
 	}
 
-	:global(.section p) {
-		line-height: 1.5;
-		font-size: 0.9rem;
-		text-align: justify;
-	}
-
 	@media (min-width: 600px) {
-		:global(.section p) {
-			font-size: 1.05rem;
-			text-align: center;
-		}
-
 		.section .title {
 			font-size: 1.5rem;
 		}

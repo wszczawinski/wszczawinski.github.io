@@ -7,8 +7,8 @@
 
 <Section title="Tech Stack">
 	<p>
-		I learn best by doing - diving into documentation, working through tutorials, and building
-		real projects. My drive to create more complex solutions pushes me to explore new technologies,
+		I learn best by doing - diving into documentation, working through tutorials, and building real
+		projects. My drive to create more complex solutions pushes me to explore new technologies,
 		making each project a learning opportunity.
 	</p>
 
@@ -89,12 +89,25 @@
 </Section>
 
 <style>
-    .tech-row {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.6rem;
-        height: auto;
-        gap: 12px;
-    }
+	.tech-row {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 1.6rem;
+		height: auto;
+		gap: 12px;
+	}
+
+	p {
+		line-height: 1.5;
+		font-size: 0.9rem;
+		text-align: justify;
+	}
+
+	@media (min-width: 600px) {
+		p {
+			font-size: 1.05rem;
+			text-align: center;
+		}
+	}
 </style>
