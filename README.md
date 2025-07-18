@@ -29,14 +29,29 @@ software development. Features a responsive design, projects showcase, and dynam
 
 ## 📋 Roadmap
 
-- **Blog Integration**: Planning to add a technical blog covering:
-    - Project development stories and insights
-    - DevOps adventures and learnings
-    - Technical and SciFi book reviews
+### Blog Features
+
+- [x] **Blog Subpage**: List of all blog posts with pagination
+- [x] **Post Subpage**: Individual post view with dynamic routing by slug
+- [ ] **Post Gallery**: Interactive image gallery with lightbox support
+- [ ] **Post Thumbnails**: Featured images for posts in the blog list
+- [ ] **Inline Images**: Rich content support with markdown image integration
 
 ## 💻 Development
 
+1. Install dependencies:
+
 ```bash
 pnpm install
+```
+
+2. Create `.env` file in the project root with:
+```bash
+VITE_API_BASE_URL=api_url
+```
+
+3. Start the development server:
+
+```bash
 pnpm run dev
 ```

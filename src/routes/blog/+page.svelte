@@ -51,8 +51,8 @@
 	{:else if $canRender}
 		{#each $filteredPosts ?? [] as post (post.id)}
 			<BlogPost {post} isCard />
-			<h3 class="more">More posts coming soon...</h3>
 		{/each}
+		<h3 class="more">More posts coming soon...</h3>
 	{/if}
 </Section>
 
