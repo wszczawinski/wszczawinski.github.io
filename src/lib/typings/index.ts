@@ -19,3 +19,13 @@ export interface Tag {
 	name: string;
 	postCount: number;
 }
+
+export interface Paginated<T> {
+  content: T[];
+  first: boolean;
+  last: boolean;
+  size: number;
+  number: number;
+  numberOfElements: number;
+  empty: boolean;
+}

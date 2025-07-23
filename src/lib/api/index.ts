@@ -1,5 +1,5 @@
 import axios from 'axios';
-import type { Category, Post, Tag } from '$lib/typings';
+import type { Category, Paginated, Post, Tag } from '$lib/typings';
 
 export const API_ENDPOINT = {
 	POSTS: '/posts',
@@ -23,7 +23,7 @@ export const api = axios.create({
 });
 
 export const getPosts = async () => {
-	const { data } = await api.get<Post[]>(API_ENDPOINT.POSTS);
+	const { data } = await api.get<Paginated<Post>>(API_ENDPOINT.POSTS);
 	return data;
 };
 

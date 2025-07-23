@@ -36,10 +36,10 @@
 	const filteredPosts = derived([posts], ([$p]) => {
 		if (!$p.data) return [];
 
-		if (!selectedCategory) return $p.data;
+		if (!selectedCategory) return $p.data.content;
 		console.log(selectedCategory);
 
-		return $p.data.filter((post) => post.category.id === selectedCategory);
+		return $p.data.content.filter((post) => post.category.id === selectedCategory);
 	});
 </script>
 
