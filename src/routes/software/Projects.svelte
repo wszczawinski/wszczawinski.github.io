@@ -7,6 +7,7 @@
 	import sendEthImg from '$lib/images/projects/p_sendeth.png';
 	import passiveImg from '$lib/images/projects/p_passive.png';
 	import weatherImg from '$lib/images/projects/p_weather.png';
+	import booktrackerImg from '$lib/images/projects/p_booktracker-api.png';
 </script>
 
 <Section title="Recent Projects">
@@ -38,29 +39,30 @@
 			project={{
 				name: 'News',
 				img: newsImg,
-				linkCode: 'https://github.com/wszczawinski/FullstackNews'
+				linkCode: 'https://github.com/wszczawinski/News'
 			}}
 		>
 			<svelte:fragment>
-				Modern news platform built as a monorepo using <b>React</b>, <b>TypeScript</b>, and
-				<b>NX</b>. Features a public news website and an admin panel, sharing a component library
-				based on
-				<b>Shadcn UI</b>. Integrates with a separate <b>Spring Boot</b> backend Api.
+				Modern, responsive news platform built with <b>React</b>, <b>TypeScript</b>, Shadcn UI,
+				TanStack Query for optimal user experience and performance. Integrated with a
+				<b>Spring Boot</b>
+				backend API and deployed to a self-hosted VPS using <b>Docker</b> and <b>Nginx</b>.
 			</svelte:fragment>
 		</ProjectCard>
 
 		<ProjectCard
 			project={{
-				name: 'Weather',
-				img: weatherImg,
-				linkLive: 'https://weather-lite.vercel.app',
-				linkCode: 'https://github.com/wszczawinski/Weather'
+				name: 'BookTracker API',
+				img: booktrackerImg,
+				linkCode: 'https://github.com/wszczawinski/BookTrackerApi'
 			}}
 		>
 			<svelte:fragment>
-				Minimalist weather application built with <b>React Native</b>, <b>TypeScript</b>,
-				<b>Expo</b>, and <b>React Query</b>. Designed to provide quick access to essential weather
-				information, focusing on frequently checked metrics in a clean, personalized interface.
+				Lightweight, self-hosted reading tracker built with <b>FastAPI</b>, <b>PostgreSQL</b>,
+				<b>Pydantic</b>
+				and <b>Supabase Auth</b>. Log books, track progress, and link to OpenLibrary — built as a
+				hands-on project to explore
+				<b>Python</b> backend development.
 			</svelte:fragment>
 		</ProjectCard>
 
@@ -81,16 +83,16 @@
 
 		<ProjectCard
 			project={{
-				name: 'SendEth',
-				img: sendEthImg,
-				linkLive: 'https://ethandgif.onrender.com',
-				linkCode: 'https://github.com/wszczawinski/send-eth'
+				name: 'Weather',
+				img: weatherImg,
+				linkLive: 'https://weather-lite.vercel.app',
+				linkCode: 'https://github.com/wszczawinski/Weather'
 			}}
 		>
 			<svelte:fragment>
-				Web3 application built with <b>React</b> and <b>Solidity</b> that enables interaction with the
-				Ethereum (Rinkeby) testnet. Users can connect their MetaMask wallet to send and track transactions
-				on the blockchain.
+				Minimalist weather application built with <b>React Native</b>, <b>TypeScript</b>,
+				<b>Expo</b>, and <b>React Query</b>. Designed to provide quick access to essential weather
+				information, focusing on frequently checked metrics in a clean, personalized interface.
 			</svelte:fragment>
 		</ProjectCard>
 	</div>
