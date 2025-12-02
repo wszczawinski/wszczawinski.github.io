@@ -14,20 +14,20 @@
 
 	const { slug } = data;
 
-	const post = createQuery<Post>({
+	const post = createQuery<Post>(() => ({
 		queryKey: [QUERY_KEY.POST, slug],
 		queryFn: () => getPostBySlug({ slug }),
 		enabled: !!slug
-	});
+	}));
 </script>
 
 <Section isHero>
-	{#if $post.isPending}
+	{#if post.isPending}
 		<Loading />
-	{:else if $post.error}
+	{:else if post.error}
 		<Error />
-	{:else if $post.isSuccess}
-		<BlogPost post={$post.data} />
+	{:else if post.isSuccess}
+		<BlogPost post={post.data} />
 	{/if}
 </Section>
 
