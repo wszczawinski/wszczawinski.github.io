@@ -46,6 +46,7 @@
 		"prettier-plugin-tailwindcss": "^0.7.2",
 		"three": "^0.183.2"
 	},
+  "packageManager": "pnpm@10.30.3",
 	"pnpm": {
 		"overrides": {
 			"cookie": "0.7.0"
