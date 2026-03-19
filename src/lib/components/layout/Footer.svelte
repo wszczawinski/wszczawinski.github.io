@@ -19,45 +19,45 @@
 </footer>
 
 <style>
-    footer {
-        font-size: 0.8rem;
-        border-top: 1px solid rgba(201, 198, 198, 0.7);
-        display: flex;
-        justify-content: space-between;
-        padding: 30px 20px;
-        margin: 0 auto;
-        width: 100%;
-    }
+	footer {
+		font-size: 0.8rem;
+		border-top: 1px solid rgba(201, 198, 198, 0.7);
+		display: flex;
+		justify-content: space-between;
+		padding: 30px 20px;
+		margin: 0 auto;
+		width: 100%;
+	}
 
-    .copy {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: 5px;
-    }
+	.copy {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		gap: 5px;
+	}
 
-    .socials {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 30px;
-    }
+	.socials {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 30px;
+	}
 
-    @media (min-width: 600px) {
-        footer {
-            font-size: 1rem;
-            padding: 40px 50px;
-        }
+	@media (min-width: 600px) {
+		footer {
+			font-size: 1rem;
+			padding: 40px 50px;
+		}
 
-        .socials {
-            gap: 50px;
-        }
-    }
+		.socials {
+			gap: 50px;
+		}
+	}
 
-    @media (min-width: 950px) {
-        footer {
-            padding: 45px 100px;
-        }
-    }
+	@media (min-width: 950px) {
+		footer {
+			padding: 45px 100px;
+		}
+	}
 </style>

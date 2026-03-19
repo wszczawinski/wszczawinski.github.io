@@ -3,6 +3,7 @@
 	import { ArrowLeft, ArrowRight } from '@lucide/svelte';
 	import { goto } from '$app/navigation';
 	import PostCategoryIcon from '$lib/components/ui/PostCategoryIcon.svelte';
+	import { resolve } from '$app/paths';
 
 	export let post: Post;
 	export let isCard: boolean = false;
@@ -19,7 +20,7 @@
 	};
 
 	const goToSlug = (slug: string) => {
-		goto(`/blog/${slug}`);
+		goto(resolve(`/blog/${slug}`));
 	};
 </script>
 
@@ -41,7 +42,7 @@
 			<ArrowRight size={16} color="#21be0c" strokeWidth="2.5" />
 		</button>
 	{:else}
-		<button class="more back" on:click={() => goto('/blog')}>
+		<button class="more back" on:click={() => goto(resolve('/blog'))}>
 			<ArrowLeft size={16} color="#21be0c" strokeWidth="2.5" />
 			Blog
 		</button>
@@ -113,7 +114,7 @@
 		font-size: 18px;
 		padding-bottom: 16px;
 	}
-	
+
 	:global(.content p) {
 		text-align: justify;
 		font-size: 16px;

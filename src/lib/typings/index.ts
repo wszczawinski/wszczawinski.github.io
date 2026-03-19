@@ -21,11 +21,11 @@ export interface Tag {
 }
 
 export interface Paginated<T> {
-  content: T[];
-  first: boolean;
-  last: boolean;
-  size: number;
-  number: number;
-  numberOfElements: number;
-  empty: boolean;
+	content: T[];
+	first: boolean;
+	last: boolean;
+	size: number;
+	number: number;
+	numberOfElements: number;
+	empty: boolean;
 }

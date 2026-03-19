@@ -6,6 +6,7 @@
 
 	import { ROUTES } from '$lib/constants';
 	import logo from '$lib/images/deer_logo.png';
+	import { resolve } from '$app/paths';
 
 	let isMobileNavigation = false;
 	let isHeaderBackground = false;
@@ -57,7 +58,10 @@
 
 <header class:headerBackground={isHeaderBackground || isMobileNavigation}>
 	<span class="logo">
-		<a href={ROUTES.HOME} on:click={isMobileNavigation ? unsetMobileNavVisibility : null}>
+		<a
+			href={resolve(ROUTES.HOME)}
+			on:click={isMobileNavigation ? unsetMobileNavVisibility : null}
+		>
 			<img src={logo} alt="Deer_logo" />
 		</a>
 	</span>
@@ -65,7 +69,7 @@
 	<nav id="main" class="main-navbar" class:active-main={isMobileNavigation}>
 		{#each navElements as navElement (navElement.route)}
 			<a
-				href={navElement.route}
+				href={resolve(navElement.route)}
 				on:click={isMobileNavigation ? unsetMobileNavVisibility : null}
 				aria-current={page.url.pathname === navElement.route ? 'page' : undefined}
 			>

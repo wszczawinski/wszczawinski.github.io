@@ -4,9 +4,9 @@
 	export let categoryName;
 </script>
 
-{#if categoryName === "Books"}
+{#if categoryName === 'Books'}
 	<LibraryBig />
-{:else if categoryName === "Projects"}
+{:else if categoryName === 'Projects'}
 	<SquareTerminal />
 {:else}
 	<NotebookText />

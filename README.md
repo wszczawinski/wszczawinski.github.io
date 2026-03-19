@@ -46,6 +46,7 @@ pnpm install
 ```
 
 2. Create `.env` file in the project root with:
+
 ```bash
 VITE_API_BASE_URL=api_url
 ```

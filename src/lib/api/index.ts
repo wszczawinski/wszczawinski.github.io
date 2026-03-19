@@ -3,7 +3,7 @@ import type { Category, Paginated, Post, Tag } from '$lib/typings';
 
 export const API_ENDPOINT = {
 	POSTS: '/posts',
-	POST_SLUG: "/posts/slug/",
+	POST_SLUG: '/posts/slug/',
 	TAGS: '/tags',
 	CATEGORIES: '/categories'
 };
@@ -35,7 +35,7 @@ export const getTags = async () => {
 export const getCategories = async () => {
 	const { data } = await api.get<Category[]>(API_ENDPOINT.CATEGORIES);
 	return data;
-}
+};
 
 export const getPostBySlug = async ({ slug }: { slug: string }) => {
 	const { data } = await api.get<Post>(API_ENDPOINT.POST_SLUG + slug);

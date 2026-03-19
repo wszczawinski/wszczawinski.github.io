@@ -63,46 +63,46 @@
 </Section>
 
 <style>
-    .tech-skills {
-        display: flex;
-        flex-direction: column;
-        width: 80%;
-        font-size: 0.8rem;
-        gap: 4px;
-    }
+	.tech-skills {
+		display: flex;
+		flex-direction: column;
+		width: 80%;
+		font-size: 0.8rem;
+		gap: 4px;
+	}
 
-    .tech-skills i {
-        padding-bottom: 3px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 10px;
-    }
+	.tech-skills i {
+		padding-bottom: 3px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 10px;
+	}
 
-    .mech-example {
-        width: 100%;
-        height: 50vh;
-    }
+	.mech-example {
+		width: 100%;
+		height: 50vh;
+	}
 
-    @media (min-width: 610px) {
-        .tech-skills {
-            font-size: 0.9rem;
-            width: auto;
-        }
+	@media (min-width: 610px) {
+		.tech-skills {
+			font-size: 0.9rem;
+			width: auto;
+		}
 
-        .tech-skills i {
-            padding-bottom: 10px;
-        }
+		.tech-skills i {
+			padding-bottom: 10px;
+		}
 
-        .mech-example {
-            width: 100%;
-            height: 60vh;
-        }
-    }
+		.mech-example {
+			width: 100%;
+			height: 60vh;
+		}
+	}
 
-    @media (min-width: 900px) {
-        .tech-skills {
-            font-size: 1rem;
-        }
-    }
+	@media (min-width: 900px) {
+		.tech-skills {
+			font-size: 1rem;
+		}
+	}
 </style>

@@ -28,27 +28,27 @@
 
 <Section>
 	<p>
-		Today, I apply this engineering mindset to create full-stack applications with TypeScript and
-		Java, following the same cycle of design, iterate, test, and improve that I used when developing
-		mechanical systems.
+		Today, I apply this engineering mindset to create full-stack applications with TypeScript
+		and Java, following the same cycle of design, iterate, test, and improve that I used when
+		developing mechanical systems.
 	</p>
 	<p>
-		I believe engineers should be active partners in shaping ideas into viable solutions, not just
-		implementers of predetermined specifications. By collaborating closely with stakeholders, I help
-		translate business vision into technical reality, offering expertise that balances immediate
-		needs with future possibilities.
+		I believe engineers should be active partners in shaping ideas into viable solutions, not
+		just implementers of predetermined specifications. By collaborating closely with
+		stakeholders, I help translate business vision into technical reality, offering expertise
+		that balances immediate needs with future possibilities.
 	</p>
 	<p>
-		The only constant is change, and the same is true in engineering - requirements evolve and new
-		challenges emerge. That's why I focus on creating flexible, adaptable systems from the start.
-		Making strategic architectural decisions today means building foundations that can support
-		tomorrow's growth, even when specific future requirements aren't yet defined.
+		The only constant is change, and the same is true in engineering - requirements evolve and
+		new challenges emerge. That's why I focus on creating flexible, adaptable systems from the
+		start. Making strategic architectural decisions today means building foundations that can
+		support tomorrow's growth, even when specific future requirements aren't yet defined.
 	</p>
 	<p>
-		In everything I create, I seek that perfect balance of functionality and good design. There's a
-		certain elegance when a solution flows naturally - not just in its visual aspects, but in its
-		underlying architecture. <b>Good design</b> reveals itself when revisiting the work feels intuitive,
-		making it easier to understand and build upon.
+		In everything I create, I seek that perfect balance of functionality and good design.
+		There's a certain elegance when a solution flows naturally - not just in its visual aspects,
+		but in its underlying architecture. <b>Good design</b> reveals itself when revisiting the work
+		feels intuitive, making it easier to understand and build upon.
 	</p>
 	<p>
 		Outside of tech, I maintain an active lifestyle through various sports including cycling,

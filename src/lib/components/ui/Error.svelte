@@ -8,7 +8,7 @@
 </span>
 
 <style>
-    .error {
+	.error {
 		margin: 200px 20px;
 		font-size: 16px;
 		display: flex;

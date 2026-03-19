@@ -4,53 +4,50 @@ Command: npx @threlte/gltf@3.0.1 DamagedHelmet.glb -t
 -->
 
 <script lang="ts">
-  import type * as THREE from 'three'
+	import type * as THREE from 'three';
 
-  import type { Snippet } from 'svelte'
-  import { T, type Props } from '@threlte/core'
-  import { useGltf } from '@threlte/extras'
+	import type { Snippet } from 'svelte';
+	import { T, type Props } from '@threlte/core';
+	import { useGltf } from '@threlte/extras';
 
-  let {
-    fallback,
-    error,
-    children,
-    ref = $bindable(),
-    ...props
-  }: Props<THREE.Group> & {
-    ref?: THREE.Group
-    children?: Snippet<[{ ref: THREE.Group | undefined }]>
-    fallback?: Snippet
-    error?: Snippet<[{ error: Error }]>
-  } = $props()
+	let {
+		fallback,
+		error,
+		children,
+		ref = $bindable(),
+		...props
+	}: Props<THREE.Group> & {
+		ref?: THREE.Group;
+		children?: Snippet<[{ ref: THREE.Group | undefined }]>;
+		fallback?: Snippet;
+		error?: Snippet<[{ error: Error }]>;
+	} = $props();
 
-  type GLTFResult = {
-    nodes: {
-      ['node_damagedHelmet_-6514']: THREE.Mesh
-    }
-    materials: {
-      Material_MR: THREE.MeshStandardMaterial
-    }
-  }
+	type GLTFResult = {
+		nodes: {
+			['node_damagedHelmet_-6514']: THREE.Mesh;
+		};
+		materials: {
+			Material_MR: THREE.MeshStandardMaterial;
+		};
+	};
 
-  const gltf = useGltf<GLTFResult>('/DamagedHelmet.glb')
+	const gltf = useGltf<GLTFResult>('/DamagedHelmet.glb');
 </script>
 
-<T.Group
-  bind:ref
-  dispose={false}
-  {...props}
->
-  {#await gltf}
-    {@render fallback?.()}
-  {:then gltf}
-    <T.Mesh
-      geometry={gltf.nodes['node_damagedHelmet_-6514'].geometry}
-      material={gltf.materials.Material_MR}
-      rotation={[Math.PI / 2, 0, 0]}
-    />
-  {:catch err}
-    {@render error?.({ error: err })}
-  {/await}
+<T.Group bind:ref dispose={false} {...props}>
+	<!-- eslint-disable-next-line  svelte/require-store-reactive-access -->
+	{#await gltf}
+		{@render fallback?.()}
+	{:then gltf}
+		<T.Mesh
+			geometry={gltf.nodes['node_damagedHelmet_-6514'].geometry}
+			material={gltf.materials.Material_MR}
+			rotation={[Math.PI / 2, 0, 0]}
+		/>
+	{:catch err}
+		{@render error?.({ error: err })}
+	{/await}
 
-  {@render children?.({ ref })}
+	{@render children?.({ ref })}
 </T.Group>
