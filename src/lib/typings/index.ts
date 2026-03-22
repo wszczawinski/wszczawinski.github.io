@@ -3,6 +3,7 @@ export interface Post {
 	title: string;
 	slug: string;
 	content: string;
+	shortDescription: string;
 	createdAt: Date;
 	category: Category;
 	tag: Tag;

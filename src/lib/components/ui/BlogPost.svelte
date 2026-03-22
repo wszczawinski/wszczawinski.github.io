@@ -7,21 +7,9 @@
 
 	export let post: Post;
 	export let isCard: boolean = false;
-	const { title, content, createdAt, category, slug } = post;
+	const { title, content, createdAt, category, slug, shortDescription } = post;
 
 	const formatDatePL = (date: Date) => new Intl.DateTimeFormat('pl-PL').format(new Date(date));
-
-	const cutAfterFirstParagraph = (html: string) => {
-		const endIndex = html.indexOf('</p>');
-		if (endIndex !== -1) {
-			return html.slice(0, endIndex + 4);
-		}
-		return html;
-	};
-
-	const goToSlug = (slug: string) => {
-		goto(resolve(`/blog/${slug}`));
-	};
 </script>
 
 <article class="post">
@@ -34,10 +22,10 @@
 	</div>
 
 	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
-	<div class="content">{@html isCard ? cutAfterFirstParagraph(content) : content}</div>
+	<div class="content">{@html isCard ? shortDescription : content}</div>
 
 	{#if isCard}
-		<button class="more" on:click={() => goToSlug(slug)}>
+		<button class="more" on:click={() => goto(resolve(`/blog/${slug}`))}>
 			More
 			<ArrowRight size={16} color="#21be0c" strokeWidth="2.5" />
 		</button>
