@@ -1,13 +1,9 @@
 <script lang="ts">
 	import type { Post } from '$lib/typings';
-	import { ArrowLeft, ArrowRight } from '@lucide/svelte';
-	import { goto } from '$app/navigation';
 	import PostCategoryIcon from '$lib/components/ui/PostCategoryIcon.svelte';
-	import { resolve } from '$app/paths';
 
 	export let post: Post;
-	export let isCard: boolean = false;
-	const { title, content, createdAt, category, slug, shortDescription } = post;
+	const { title, createdAt, category } = post;
 
 	const formatDatePL = (date: Date) => new Intl.DateTimeFormat('pl-PL').format(new Date(date));
 </script>
@@ -21,20 +17,11 @@
 		<span class="date">{formatDatePL(createdAt)}</span>
 	</div>
 
-	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
-	<div class="content">{@html isCard ? shortDescription : content}</div>
+	<div class="content">
+		<slot name="content" />
+	</div>
 
-	{#if isCard}
-		<button class="more" on:click={() => goto(resolve(`/blog/${slug}`))}>
-			More
-			<ArrowRight size={16} color="#21be0c" strokeWidth="2.5" />
-		</button>
-	{:else}
-		<button class="more back" on:click={() => goto(resolve('/blog'))}>
-			<ArrowLeft size={16} color="#21be0c" strokeWidth="2.5" />
-			Blog
-		</button>
-	{/if}
+	<slot name="footer" />
 </article>
 
 <style>
@@ -70,32 +57,6 @@
 	.date {
 		font-size: 14px;
 		align-self: flex-end;
-	}
-
-	.more {
-		display: flex;
-		flex-direction: row;
-		gap: 4px;
-		align-items: center;
-		justify-content: center;
-		width: fit-content;
-		padding: 4px 10px;
-		align-self: flex-end;
-		cursor: pointer;
-		border: 1px solid #353535;
-		border-radius: 4px;
-		background-color: transparent;
-		transition: all 0.2s ease-in-out;
-		color: inherit;
-		font-weight: 600;
-	}
-
-	.back {
-		align-self: flex-start;
-	}
-
-	.more:hover {
-		background-color: #efefef;
 	}
 
 	:global(.content h3) {

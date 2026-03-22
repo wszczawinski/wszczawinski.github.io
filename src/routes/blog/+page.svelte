@@ -5,7 +5,7 @@
 	import Section from '$lib/components/ui/Section.svelte';
 	import Loading from '$lib/components/ui/Loading.svelte';
 	import Error from '$lib/components/ui/Error.svelte';
-	import BlogPost from '$lib/components/ui/BlogPost.svelte';
+	import PostCard from '$lib/components/ui/PostCard.svelte';
 	import type { Post } from '$lib/typings';
 
 	const queryClient = useQueryClient();
@@ -46,7 +46,7 @@
 		<Error />
 	{:else if posts.isSuccess && categories.isSuccess}
 		{#each filteredPosts ?? [] as post (post.id)}
-			<BlogPost {post} isCard />
+			<PostCard {post} />
 		{/each}
 		<h3 class="more">More posts coming soon...</h3>
 	{/if}
