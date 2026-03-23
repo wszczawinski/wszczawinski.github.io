@@ -4,6 +4,7 @@ export interface Post {
 	slug: string;
 	content: string;
 	shortDescription: string;
+	readingTime: number;
 	createdAt: Date;
 	category: Category;
 	tag: Tag;

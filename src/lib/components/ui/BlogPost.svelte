@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { onMount, tick } from 'svelte';
+	import { Calendar, Timer } from '@lucide/svelte';
+
 	import hljs from 'highlight.js/lib/core';
 	import python from 'highlight.js/lib/languages/python';
 	import 'highlight.js/styles/github-dark.css';
@@ -11,7 +13,7 @@
 	hljs.registerLanguage('py', python);
 
 	export let post: Post;
-	const { title, createdAt, category } = post;
+	const { title, createdAt, category, readingTime } = post;
 
 	const formatDatePL = (date: Date) => new Intl.DateTimeFormat('pl-PL').format(new Date(date));
 
@@ -53,7 +55,16 @@
 			<PostCategoryIcon categoryName={category.name} />
 			{title}
 		</h2>
-		<span class="date">{formatDatePL(createdAt)}</span>
+		<div class="info">
+			<span class="date">
+				<Calendar size={14} />
+				{formatDatePL(createdAt)}
+			</span>
+			<span class="date">
+				<Timer size={14} />
+				{readingTime} min
+			</span>
+		</div>
 	</div>
 
 	<div class="content">
@@ -87,15 +98,25 @@
 	.header {
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
 		align-items: flex-start;
 		gap: 16px;
 		padding-bottom: 16px;
 	}
 
+	.info {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+	}
+
 	.date {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
 		font-size: 14px;
-		align-self: flex-end;
+		gap: 4px;
 	}
 
 	:global(.content h3) {
@@ -168,8 +189,6 @@
 		}
 
 		.header {
-			flex-direction: row;
-			align-items: center;
 			padding-bottom: 20px;
 		}
 

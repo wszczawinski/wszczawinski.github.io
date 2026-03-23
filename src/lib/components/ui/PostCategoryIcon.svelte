@@ -1,13 +1,18 @@
 <script lang="ts">
 	import { LibraryBig, SquareTerminal, NotebookText } from '@lucide/svelte';
+	import Tooltip from './Tooltip.svelte';
 
 	export let categoryName;
 </script>
 
 {#if categoryName === 'Books'}
-	<LibraryBig />
+	<Tooltip content="Books">
+		<LibraryBig />
+	</Tooltip>
 {:else if categoryName === 'Projects'}
-	<SquareTerminal />
+	<Tooltip content="Projects">
+		<SquareTerminal />
+	</Tooltip>
 {:else}
 	<NotebookText />
 {/if}
