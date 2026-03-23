@@ -16,12 +16,10 @@
 
 	export let data: PageData;
 
-	const { slug } = data;
-
 	const post = createQuery<Post>(() => ({
-		queryKey: [QUERY_KEY.POST, slug],
-		queryFn: () => getPostBySlug({ slug }),
-		enabled: !!slug
+		queryKey: [QUERY_KEY.POST, data.slug],
+		queryFn: () => getPostBySlug({ slug: data.slug }),
+		enabled: !!data.slug
 	}));
 </script>
 
