@@ -14,6 +14,9 @@
 	span {
 		position: relative;
 		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 
 	span .content {

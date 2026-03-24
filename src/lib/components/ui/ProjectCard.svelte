@@ -27,10 +27,6 @@
 						<Globe size="16" />
 					</a>
 				</Tooltip>
-			{:else}
-				<Tooltip content="Work in progress" position="top">
-					<Construction size="18" />
-				</Tooltip>
 			{/if}
 
 			<Tooltip content="View code" position="top">
