@@ -5,6 +5,7 @@
 	import { QueryClientProvider } from '@tanstack/svelte-query';
 	import { SvelteQueryDevtools } from '@tanstack/svelte-query-devtools';
 
+	import { onNavigate } from '$app/navigation';
 	import { dev } from '$app/environment';
 	import rocket from '$lib/images/rocket.svg';
 	import Footer from '$lib/components/layout/Footer.svelte';
@@ -14,6 +15,17 @@
 
 	injectSpeedInsights();
 	inject({ mode: dev ? 'development' : 'production' });
+
+	onNavigate((navigation) => {
+		if (!document.startViewTransition) return;
+
+		return new Promise((resolve) => {
+			document.startViewTransition(async () => {
+				resolve();
+				await navigation.complete;
+			});
+		});
+	});
 
 	export let data: PageData;
 </script>

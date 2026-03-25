@@ -52,8 +52,8 @@
 
 	.hero-content-area {
 		opacity: 0;
-		margin-right: 100px;
-		animation: 0.6s slidefade 0.6s forwards;
+		margin-right: 20px;
+		animation: 0.5s slidefade 0.5s forwards;
 		width: 90%;
 	}
 

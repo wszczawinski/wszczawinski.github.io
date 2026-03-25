@@ -13,7 +13,7 @@
 	hljs.registerLanguage('py', python);
 
 	export let post: Post;
-	const { title, createdAt, category, readingTime } = post;
+	const { title, createdAt, category, readingTime, slug } = post;
 
 	const formatDatePL = (date: Date) => new Intl.DateTimeFormat('pl-PL').format(new Date(date));
 
@@ -50,7 +50,7 @@
 </script>
 
 <article class="post">
-	<div class="header">
+	<div class="header" style="view-transition-name: post-title-{slug}">
 		<h2 class="title">
 			<PostCategoryIcon categoryName={category.name} />
 			{title}
@@ -93,6 +93,7 @@
 		align-items: center;
 		gap: 16px;
 		font-size: 17px;
+		/* view-transition-name set dynamically via inline style using slug */
 	}
 
 	.header {
