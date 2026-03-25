@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Construction, Github, Globe } from '@lucide/svelte';
+	import { Github, Globe } from '@lucide/svelte';
 
 	import Tooltip from '$lib/components/ui/Tooltip.svelte';
 
