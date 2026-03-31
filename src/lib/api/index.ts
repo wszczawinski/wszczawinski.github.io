@@ -1,4 +1,3 @@
-import axios from 'axios';
 import type { Category, Paginated, Post, Tag } from '$lib/typings';
 
 export const API_ENDPOINT = {
@@ -15,29 +14,34 @@ export const QUERY_KEY = {
 	CATEGORIES: 'categories'
 };
 
-export const api = axios.create({
-	baseURL: import.meta.env.VITE_API_BASE_URL,
-	headers: {
-		'Content-Type': 'application/json'
+const BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
+const fetchJson = async <T>(url: string): Promise<T> => {
+	const response = await fetch(url, {
+		headers: {
+			'Content-Type': 'application/json'
+		}
+	});
+
+	if (!response.ok) {
+		throw new Error(`HTTP error! status: ${response.status}`);
 	}
-});
+
+	return response.json();
+};
 
 export const getPosts = async () => {
-	const { data } = await api.get<Paginated<Post>>(API_ENDPOINT.POSTS);
-	return data;
+	return fetchJson<Paginated<Post>>(BASE_URL + API_ENDPOINT.POSTS);
 };
 
 export const getTags = async () => {
-	const { data } = await api.get<Tag[]>(API_ENDPOINT.TAGS);
-	return data;
+	return fetchJson<Tag[]>(BASE_URL + API_ENDPOINT.TAGS);
 };
 
 export const getCategories = async () => {
-	const { data } = await api.get<Category[]>(API_ENDPOINT.CATEGORIES);
-	return data;
+	return fetchJson<Category[]>(BASE_URL + API_ENDPOINT.CATEGORIES);
 };
 
 export const getPostBySlug = async ({ slug }: { slug: string }) => {
-	const { data } = await api.get<Post>(API_ENDPOINT.POST_SLUG + slug);
-	return data;
+	return fetchJson<Post>(BASE_URL + API_ENDPOINT.POST_SLUG + slug);
 };
