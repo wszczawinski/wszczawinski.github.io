@@ -2,6 +2,6 @@ export enum ROUTES {
 	HOME = '/',
 	SOFTWARE = '/software',
 	MECHANICAL = '/mechanical',
-	BLOG = '/blog',
+	NOTES = '/notes',
 	ABOUT = '/about'
 }

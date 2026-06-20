@@ -12,7 +12,7 @@
 
 <BlogPost {post}>
 	<p slot="content">{shortDescription}</p>
-	<PostButton slot="footer" on:click={() => goto(resolve(`/blog/${slug}`))}>
+	<PostButton slot="footer" on:click={() => goto(resolve(`/notes/${slug}`))}>
 		More
 		<ArrowRight size={16} color="#21be0c" strokeWidth="2.5" />
 	</PostButton>

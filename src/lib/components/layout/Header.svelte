@@ -51,7 +51,7 @@
 	const navElements = [
 		{ route: ROUTES.SOFTWARE, label: 'software', icon: Computer },
 		{ route: ROUTES.MECHANICAL, label: 'mechanical', icon: Rocket },
-		{ route: ROUTES.BLOG, label: 'blog', icon: Newspaper },
+		{ route: ROUTES.NOTES, label: 'notes', icon: Newspaper },
 		{ route: ROUTES.ABOUT, label: 'about', icon: IdCard }
 	];
 </script>
