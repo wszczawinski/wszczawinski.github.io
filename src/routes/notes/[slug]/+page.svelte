@@ -34,7 +34,7 @@
 				<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 				{@html post.data.content}
 			</div>
-			<PostButton slot="footer" className="back" on:click={() => goto(resolve('/blog'))}>
+			<PostButton slot="footer" className="back" on:click={() => goto(resolve('/notes'))}>
 				<ArrowLeft size={16} color="#21be0c" strokeWidth="2.5" />
 				Blog
 			</PostButton>
